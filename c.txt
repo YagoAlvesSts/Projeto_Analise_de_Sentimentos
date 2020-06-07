@@ -1,6 +1,10 @@
+ARQUIVO DE/PARA TESTES DO GITHUB
+
 <<<<<<< HEAD
 mesmo codigo
 =======
 entendendo HEAD
 esta linha foi modificada no ramo teste
 >>>>>>> teste
+
+
