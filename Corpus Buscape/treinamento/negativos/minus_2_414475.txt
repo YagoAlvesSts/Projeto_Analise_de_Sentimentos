@@ -1,0 +1,2 @@
+O celular tem 157mb de memória do sistema (não pode ser expandida). A cada programa que instalo (mesmo direcionando pra memória externa) ele grava alguns dados no sistema, ou seja, atualmente possuo apenas 6 apps. Impossível instalar qualquer outro, e sequer atualizar algum desses.
+A câmera não tem flash

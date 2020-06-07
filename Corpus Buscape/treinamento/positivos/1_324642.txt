@@ -1,0 +1,14 @@
+Celular bem simples para quem usa apenas o básico e precisa de um "dual chip" pra telefonar e mandar algumas mensagens por dia.
+Não recomendo NEM UM POUCO para que usa muito SMS pelos seguintes motivos:
+- pouca memória (obriga a viver apagando as mensagens);
+- teclado horrível (o teclado é apertado, duro, barulhento e acarreta em erros de digitação quando deseja-se escrever rapidamente);
+- T9 patético (conhece poucas palavras, não é capaz de memorizar palavras personalizadas, muda a posição dos resultados para uma combinação de teclas digitadas, p/ex. se vc digita "em" ou "do", que usa a mesma combinação de teclas, nunca se sabe qual aparecerá primeiro);
+- enquanto manda uma mensagem ele não permite que nenhuma outra tarefa seja feita no celular. Então se a mensagem demora para ir, o que ocorre com a TIM, você fica vários segundos olhando para a tela até poder ler uma outra mensagem que veio, olhar a agenda, fazer uma ligação, etc.
+- A resolução da tela é horrível. Se você receber um MMS (o que leva vários minutos nesse aparelho), mal conseguirá visualizar a imagem.
+- Outro detalhe é que enquanto se usa uma das linhas para ligação a outra fica completamente inativa, não origina nem recebe chamadas nem mensagens.
+Essa combinação de fatores faz esse aparelho ser extremamente irritante em determinadas situações.
+O lado positivo é a robustez. Embora se desmonte em 3 partes toda vez que cai, ele não estraga facilmente. Já derrubei na água e após a alguns dias voltou a funcionar.
+
+O que gostei: bateria, robustez, facilidade de uso, qualidade do som em chamadas
+
+O que não gostei: display de baixíssima resolução, teclado apertado, teclas duras, pouca memória para mensagens

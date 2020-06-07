@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<data-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G1</Group>
+		<Explicit>Smartphone, Aparelho Celular, Aparelho, Telefone, Produto, Celular</Explicit>
+		<Implicit>Porcaria</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G2</Group>
+		<Explicit>Internet, |Wifi, Wi-fi, Wi fi|, Net, Wireless, 3G, Conexão, Conectividade, Wap</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G3</Group>
+		<Explicit>Usabilidade, Manuseio, Interface, Menu, Praticidade, Facilidade, Funcao, Recurso, Funcionalidade, Extra, Opcao</Explicit>
+		<Implicit>Linguagem, Operacao, Facil de manusear, Facil de Usar, Facil de Mexer, Pratico</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G4</Group>
+		<Explicit>Velocidade</Explicit>
+		<Implicit>Rapido, Trava, Lento, Demora a responder, Congela, Restarta, Bugs, Tempo de resposta</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G5</Group>
+		<Explicit>Custo, Valor, Preco, Investimento, Preco-beneficio, |Custo-beneficio, Custo/beneficio|</Explicit>
+		<Implicit>Acessivel, Barato</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G6</Group>
+		<Explicit>Bateria, Autonomia da bateria, Duração da bateria</Explicit>
+		<Implicit>Descarrega</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G7</Group>
+		<Explicit>Teclado, Tecla</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G8</Group>
+		<Explicit>GPS, Google Maps</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G9</Group>
+		<Explicit>Aplicativo</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G10</Group>
+		<Explicit>Tela, Visor, Vidro do flip, Display, Tamanho do visor, |Touch, Touch Screen, Tocscreen |</Explicit>
+		<Implicit>Sensibilidade</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G11</Group>
+		<Explicit>Som, Audio, Volume, Sonorizacao, Musica, |Mp3, Mp3 player|, Qualidade do audio, Qualidade do som, Volume do audio, Qualidade sonora</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G12</Group>
+		<Explicit>Toque, Hit polifonico, Toque polifonico</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G13</Group>
+		<Explicit>|Alto-falante, Auto falante|</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G14</Group>
+		<Explicit>|Design, Designer, Designe, Desing|, Estetica, Estilo, Modelo, Elegancia, Beleza</Explicit>
+		<Implicit>Robusto, Lindo, Moderno, Arrojado, Chique, Atual, Bonito</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G15</Group>
+		<Explicit>Camera, Foco da camera, Resolucao da camera, Flash da camera, Luz do flash, Zoom da camera, Camera imbutida, Filmadora, Camera digital</Explicit>
+		<Implicit>Modulo de filmar</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G16</Group>
+		<Explicit>Foto, Fotografia, Qualidade da foto, Foto Panorama</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G17</Group>
+		<Explicit>Bluetooth</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G18</Group>
+		<Explicit>Marca, Fabricante, Fabrica, Empresa, Motorola, LG, Sony, Nokia, Sony Ericson, Siemens</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G19</Group>
+		<Explicit>Sim, Dual Chip</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G20</Group>
+		<Explicit>Sinal, Recepcao, Ligacao, Quadri-band</Explicit>
+		<Implicit> Recebi chamadas até na beira do rio são francisco, Funciona em qualquer lugar</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G21</Group>
+		<Explicit>Tv</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G22</Group>
+		<Explicit>s/n</Explicit>
+		<Implicit>Pesado, Leve, Leveza, Levinho, Versatil</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G23</Group>
+		<Explicit>Botao liga/desliga, Botao de toque</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G24</Group>
+		<Explicit>Memoria, Sd de memoria, Memoria interna, Cartao de memoria, Expansao de memoria, Cartao de expansao, Espaco de memoria</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G25</Group>
+		<Explicit>Cabo para TV, |Cabo de dados, Cabo-de-dados|</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G26</Group>
+		<Explicit>Email</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G27</Group>
+		<Explicit>Radio</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G28</Group>
+		<Explicit>Imagem, Definicao de imagem</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G29</Group>
+		<Explicit>Video </Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G30</Group>
+		<Explicit>Leitor de PDF</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G31</Group>
+		<Explicit>Sistema operacional, Programa Operacional, Sistema Symbiam/Java, Software</Explicit>
+		<Implicit>Falta de compatibilidade</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G32</Group>
+		<Explicit>Sincronizacao de dados, Sincronizacao com PC</Explicit>
+		<Implicit>Acesso aos dados</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G33</Group>
+		<Explicit>Fone, Fone de ouvido</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G34</Group>
+		<Explicit>Jogo</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G35</Group>
+		<Explicit>Carregador, Carregador de carro</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G36</Group>
+		<Explicit>Manual </Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G37</Group>
+		<Explicit>Tamanho </Explicit>
+		<Implicit>Volumoso, Pequeno, Compacto</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G38</Group>
+		<Explicit>Processador</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G39</Group>
+		<Explicit>Durabilidade</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G40</Group>
+		<Explicit>Usb</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G41</Group>
+		<Explicit>Gravador de voz, Gravador, |viva voz, viva-voz| </Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G42</Group>
+		<Explicit>Despertador</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G43</Group>
+		<Explicit>Acessorio</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G44</Group>
+		<Explicit>Bloco de notas</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G45</Group>
+		<Explicit>Confiabilidade</Explicit>
+		<Implicit>Confianca na marca</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G46</Group>
+		<Explicit>Calendario</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G47</Group>
+		<Explicit>Antena</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+	<record>
+		<Domain>Smartphone</Domain>
+		<Group>G48</Group>
+		<Explicit>Agenda telefonica</Explicit>
+		<Implicit>s/n</Implicit>
+	</record>
+</data-set>

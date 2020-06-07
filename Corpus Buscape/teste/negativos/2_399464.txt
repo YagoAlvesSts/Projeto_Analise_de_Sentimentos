@@ -1,0 +1,2 @@
+A função Duos realmente não funciona como descrito pelo fabricante. Se estiver em uma ligação no chip1 o chip 2 ficara fora de area.
+E pelo que vi na loja havia mais duas pessoas informando o mesmo problema.

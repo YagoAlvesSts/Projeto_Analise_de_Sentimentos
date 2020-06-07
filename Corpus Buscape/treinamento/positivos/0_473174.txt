@@ -1,0 +1,11 @@
+Apresenta um design bonito e compacto.
+O custo benefício ainda é alto para esse tipo de produto,
+apresenta boas características facilitadas pelo sistema android,
+tem baixa duração da bateria, em virtude de ser dois chips, comparando, a exemplo,
+com o samsung galaxy pocket neo.
+Vale ressaltar que não possui atalho para restringir o uso da 3G, tem que
+acessar as configurações para ativar e desativar essa função, ao contrário
+do WI-FI que é de fácil acesso na barra de ferramentas.
+Também não existe indicador de percentual da bateria, tem que baixar um app específico para isto.
+Existem um jogos pré-definidos em que não é possível fazer a exclusão, que ocupam um espaço em
+que poderia ser utilizado para outros fins de interesse do usuário.
