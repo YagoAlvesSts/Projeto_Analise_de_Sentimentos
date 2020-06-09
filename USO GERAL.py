@@ -1,5 +1,67 @@
 # -*- coding: utf-8 -*-
 
+
+import gensim
+import numpy as np
+import os
+import pickle
+import fnmatch
+from enelvo import normaliser
+from unidecode import unidecode
+from nltk.tokenize import sent_tokenize, word_tokenize
+import string
+from nltk.corpus import stopwords
+import re
+from unicodedata import normalize
+
+def pre_processing_text(text, use_normalizer=False):
+
+    if use_normalizer:
+        norm = normaliser.Normaliser()
+        text = norm.normalise(text)
+
+
+    input_chars = ["\n"," / ", " - ", "|","@","#", "$", "%", "&", "*", "(", ")", "[", "]", "{", "}", ";", ":", "<", ">", "=", "_", "+",]
+    output_chars = [".","/", "-", "","","","","","","","","","","","","","","","","","","","",]
+
+    for i in range(len(input_chars)):
+        text = text.replace(input_chars[i], output_chars[i])  
+
+    text.strip()
+
+    return text
+
+
+
+
+
+def removerCaracteresEspeciais(text):
+    
+    #Método para remover caracteres especiais do texto
+    
+    return normalize('NFKD', text).encode('ASCII', 'ignore').decode('ASCII')
+
+
+all_tokenized_reviews = []
+print("reviews_for_Palavras.txt couldn't be found. All reviews will be loaded from txt files, this will take a fell minutes")
+all_reviews = []
+for dirpath, _, files in os.walk("./Corpus Buscape/treinamento/testando/negativo"):
+    for filename in fnmatch.filter(files, '*.txt'):
+        f = open(os.path.join(dirpath, filename), "r", encoding="utf8")
+        review = f.read()
+        review = pre_processing_text(review)
+
+        #rev = removerCaracteresEspeciais(review)
+
+        #rev = re.sub('[#$%^&*()[]{};:,<>\`~=_+]', ' ', review)
+        
+        all_reviews.append(review)
+        
+arquivo = open('rt_polarity_neg.txt','w')
+arquivo.write('\n'.join(all_reviews))
+arquivo.close()
+
+"""
 import pprint
 import pickle
 import nltk
@@ -19,7 +81,7 @@ from spacy import tokens
 from pathlib import Path
 
 
-"""
+
 def pre_processing_text(text, use_normalizer=False):
 
     if use_normalizer:
@@ -289,7 +351,7 @@ with open(os.path.join("USO_GERAL.p"), "rb") as file:
 
 
 tec_posicao_adjetivo_spacy(all_reviews)
-"""
+
 
 with open(os.path.join("reviews_for_Palavras.p"), "rb") as file:
         all_reviews = pickle.load(file)
@@ -298,3 +360,4 @@ with open(os.path.join("reviews_for_Palavras.p"), "rb") as file:
 arquivo = open('reviews_for_Palavras.txt','w')
 arquivo.writelines(str(all_reviews))
 arquivo.close()
+"""
