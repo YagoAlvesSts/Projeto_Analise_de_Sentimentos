@@ -4,6 +4,7 @@ Created on Wed Dec  4 10:54:31 2019
 
 @author: yagoa
 """
+#BLIBLIOTECAS GERAIS
 import pprint
 import pickle
 import nltk
@@ -13,7 +14,12 @@ import gensim
 import fnmatch
 import enelvo
 import re
+from enelvo import normaliser
 
+#BIBLIOTECA PARA LER SENTIWORDNET-PT-BR
+import pandas as pd
+
+#BIBLIOTECAS DO NLTK
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('pos_tag')
@@ -23,10 +29,12 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk import pos_tag
 from unidecode import unidecode
 from nltk import FreqDist
-from enelvo import normaliser
+
+#BIBLIOTECAS PARA ABRIR PASTAS
 from collections import Counter
 from pathlib import Path
 
+#BIBLIOTECAS PARA UTILIZAR O SPACY
 import spacy
 from spacy import tokens
 
@@ -54,14 +62,22 @@ def lexico_sentimento_SentiLex(review):
   
 
     #lendo arquivo com informações de polaridade
-    sentilexpt = open("SentiLex-PT01/SentiLex-lem-PT01.txt",'r',encoding="utf8")
+    sentilexpt = open("SentiLex-PT02/SentiLex-flex-PT02.txt",'r',encoding="utf8")
     dic_palavra_polaridade = {}
-    for i in sentilexpt.readlines():
-        pos_ponto = i.find('.')
-        palavra = pre_processing_text((i[:pos_ponto]))
-        pol_pos = i.find('POL')
-        polaridade = (i[pol_pos+4:pol_pos+6]).replace(';','')
-        dic_palavra_polaridade[palavra] = polaridade
+
+    text = sentilexpt.readlines()
+    sent_words = []
+    for line in text:
+            line = line.split(',')
+            word = line[0]
+            word = pre_processing_text(word)
+            #word = N.unidecode(word) #tira acentuação
+            try:
+                polarity = line[1].split('N0=')[1].split(';')[0]
+            except:
+                polarity = line[1].split('N1=')[1].split(';')[0]
+            sent_words.append(word)
+            dic_palavra_polaridade[word] = polarity
 
     l_sentimento= []
     word_sentimento = []
@@ -76,17 +92,72 @@ def lexico_sentimento_SentiLex(review):
 
 def Sentilex():
 
-    sentilexpt = open("SentiLex-PT01/SentiLex-lem-PT01.txt",'r',encoding="utf8")
+    sentilexpt = open("SentiLex-PT02/SentiLex-flex-PT02.txt",'r',encoding="utf8")
     dic_palavra_polaridade = {}
-    for i in sentilexpt.readlines():
-        pos_ponto = i.find('.')
-        palavra = pre_processing_text((i[:pos_ponto]))
-        pol_pos = i.find('POL')
-        polaridade = (i[pol_pos+4:pol_pos+6]).replace(';','')
-        dic_palavra_polaridade[palavra] = polaridade
+    text = sentilexpt.readlines()
+    sent_words = []
+    for line in text:
+            line = line.split(',')
+            word = line[0]
+            word = pre_processing_text(word)
+            #word = N.unidecode(word) #tira acentuação
+            try:
+                polarity = line[1].split('N0=')[1].split(';')[0]
+            except:
+                polarity = line[1].split('N1=')[1].split(';')[0]
+            sent_words.append(word)
+            dic_palavra_polaridade[word] = polarity
 
     #retorna dicionário do SentiLex
     return(dic_palavra_polaridade)
+
+
+def lexico_sentimento_SentWordNetPT(review):
+   
+
+    word_sentimento = []
+    
+    pol = 0
+    word_pol = []
+    #print(SentiWordNet)
+    for word in review:
+        word = pre_processing_text(word)
+        polaridade = atribui_polaridade_sentiwordnet(word)
+        if(polaridade !=  None ):
+            #print()
+            scorepos= polaridade[0]
+            scoreneg=polaridade[1]
+            if(scorepos > scoreneg):
+                pol = '1'
+            elif(scorepos < scoreneg):
+                pol = '-1'
+            else:
+                pol = '0'
+            word_pol = [word,pol]
+            word_sentimento.append(word_pol)
+        if(polaridade == None):
+            word_pol = [word,'0']
+            word_sentimento.append(word_pol)
+        
+    return (word_sentimento)
+
+
+def atribui_polaridade_sentiwordnet(word):
+    SentiWordNet = []
+    df = pd.read_csv('léxico/SentiWordNet_PT/SentiWord Pt-BR v1.0b.txt', delimiter="\t", header=None, names=["ID","PosScore", "NegScore", "Termo"])
+    #print(df.values)
+    SentiWordNet = df.values
+    scorepos = 0.0
+    scoreneg = 0.0
+    for i,termo in enumerate(SentiWordNet):
+        trm = pre_processing_text(termo[3])
+        if trm == word:
+            scorepos = scorepos + float(termo[1])
+            scoreneg = scoreneg + float(termo[2])
+            
+            #print("termo:",termo[3],"\tposscore: ",scorepos,"\tnegscore: ",scoreneg)
+
+            return (scorepos,scoreneg)
 
         
 
@@ -96,17 +167,22 @@ def tec_posicao_adjetivo_nltk(all_reviews):
     negacao = ['jamais','nada','nem','nenhum','ninguem','nunca','nao','tampouco', 'mal'] #mal
     
 
-    with open(os.path.join("Processed_Reviews_polarity.p"), "rb") as file:
+    with open(os.path.join("Processed_Reviews_polarity.p"), "rb") as file: #-.Processed_Reviews_polarity
         polarity_reviews = pickle.load(file)
+        
     result_review = []
 
+    
+    
     #CHAMA DICIONARIO DO SENTILEX Processed_Reviews_polarity
     #print("DICIONARIO SENTILEX: \n",Sentilex())
     sent_words = Sentilex()
     cont = 0
     
-    for review in all_reviews:
-        
+    
+    for i,review in enumerate(all_reviews):
+
+        review = ''.join(review)
         norm = normaliser.Normaliser()
         #normaliza a sentença
         norm_sentence = norm.normalise(review)
@@ -132,7 +208,10 @@ def tec_posicao_adjetivo_nltk(all_reviews):
         words = [w for w in words if not w in stop_words]
 
 
-        #CHAMANDO FUNÇÃO DE ATRIBUIR POLARIDADE
+        #REALIZAR AVALIAÇÃO COM SENTWORDNET-PT-BR
+        #frase_polarity = lexico_sentimento_SentWordNetPT(words)
+        
+        #REALIZAR AVALIAÇÃO COM SENTILEX
         frase_polarity = lexico_sentimento_SentiLex(words)
         
         
@@ -283,7 +362,6 @@ def tec_posicao_adjetivo_spacy(all_reviews):
     all_tokenized_reviews = []
     negacao = ['jamais','nada','nem','nenhum','ninguem','nunca','nao','tampouco', 'mal'] #mal
     
-    spc = spacy.load('pt_core_news_sm')
     
     with open(os.path.join("Processed_Reviews_polarity.p"), "rb") as file:  #Processed_Reviews_polarity
         polarity_reviews = pickle.load(file)
@@ -316,12 +394,15 @@ def tec_posicao_adjetivo_spacy(all_reviews):
                     plvra = palavra.text
                     lista.append(plvra)
 
+        #REALIZAR AVALIAÇÃO COM SENTWORDNET-PT-BR
+        #frase_polarity = lexico_sentimento_SentWordNetPT(lista)
+                    
+                    
+        #REALIZAR AVALIAÇÃO COM SENTILEX
         frase_polarity = lexico_sentimento_SentiLex(lista)
-        #print("FRASE_POLARITY:\t",frase_polarity)
+        #print(frase_polarity)
         print("\n")
 
-        #print(wd)
-        #print("\n")
         
         tagger = []
         wd = []
@@ -336,7 +417,8 @@ def tec_posicao_adjetivo_spacy(all_reviews):
             if i > len(words):
                 break
 
-        
+        #print(wd)
+        #print("\n")
         
         for j,termo in enumerate(wd):
             apont = j
@@ -371,7 +453,7 @@ def tec_posicao_adjetivo_spacy(all_reviews):
                                 
                         for w,p in poeio:
                             pt = w
-                                   
+                        #print(palavra,item[0])           
                         if palavra == item[0] and post == pt:
                             item[1] = '-1'
                     
@@ -493,10 +575,10 @@ for dirpath, _, files in os.walk("./Corpus Buscape/treinamento/lexico"):
     with open("tec_linha_de_base.p", "wb") as f:
         pickle.dump(all_reviews, f) Processed_Reviews 
 """
-with open(os.path.join("Processed_Reviews.p"), "rb") as file:
+
+with open(os.path.join("Processed_Reviews.p"), "rb") as file: #->Processed_Reviews
         all_reviews = pickle.load(file)
 
-
-tec_posicao_adjetivo_spacy(all_reviews)
+tec_posicao_adjetivo_nltk(all_reviews)
 
 

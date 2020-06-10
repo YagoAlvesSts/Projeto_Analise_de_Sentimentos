@@ -8,3 +8,17 @@ esta linha foi modificada no ramo teste
 >>>>>>> teste
 
 
+# SentiWordNet Pt-BR v1.0b (13 Agosto 2017)
+# Todos os direitos reservados.
+#
+# Link: https://github.com/Pedro-Thales/SentiWordNet-PT-BR
+#
+# Data format.
+# 
+# A primeira coluna corresponde ao ID baseado na identificação
+# 	internacional baseada no WordNet 3.0.
+# Os valores PosPont e NegPont são respectivamente a pontuação 
+# 	positiva e negativa dos termos.
+#
+# A identação padrão utiliza tabulação entre as colunas.
+#
