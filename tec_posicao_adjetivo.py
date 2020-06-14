@@ -58,33 +58,43 @@ def pre_processing_text(text, use_normalizer=False):
 
     return text
 
-def lexico_sentimento_SentiLex(review):
+def lexico_sentimento_SentiLex(review,save=True):
   
+    try:
+        with open(os.path.join("léxico/","SentiLex_sent_words.p"), "rb") as f:
+            sent_words = pickle.load(f)
+        with open(os.path.join("léxico/","SentiLex_sent_words_polarity.p"), "rb") as f:
+            sent_words_polarity = pickle.load(f)
+    except:
+        #lendo arquivo com informações de polaridade
+        sentilexpt = open("SentiLex-PT02/SentiLex-flex-PT02.txt",'r',encoding="utf8")
+        sent_words_polarity = {}
 
-    #lendo arquivo com informações de polaridade
-    sentilexpt = open("SentiLex-PT02/SentiLex-flex-PT02.txt",'r',encoding="utf8")
-    dic_palavra_polaridade = {}
-
-    text = sentilexpt.readlines()
-    sent_words = []
-    for line in text:
-            line = line.split(',')
-            word = line[0]
-            word = pre_processing_text(word)
-            #word = N.unidecode(word) #tira acentuação
-            try:
-                polarity = line[1].split('N0=')[1].split(';')[0]
-            except:
-                polarity = line[1].split('N1=')[1].split(';')[0]
-            sent_words.append(word)
-            dic_palavra_polaridade[word] = polarity
-
+        text = sentilexpt.readlines()
+        sent_words = []
+        for line in text:
+                line = line.split(',')
+                word = line[0]
+                word = pre_processing_text(word)
+                #word = N.unidecode(word) #tira acentuação
+                try:
+                    polarity = line[1].split('N0=')[1].split(';')[0]
+                except:
+                    polarity = line[1].split('N1=')[1].split(';')[0]
+                sent_words.append(word)
+                sent_words_polarity[word] = polarity
+    if save:
+        with open(os.path.join("léxico/","SentiLex_sent_words.p"), "wb") as f:
+            pickle.dump(sent_words, f)
+        with open(os.path.join("léxico/","SentiLex_sent_words_polarity.p"), "wb") as f:
+            pickle.dump(sent_words_polarity, f)
+            
     l_sentimento= []
     word_sentimento = []
     w = []
 
     for word in review:
-        w = [word,int(dic_palavra_polaridade.get(word,0))]
+        w = [word,int(sent_words_polarity.get(word,0))]
         word_sentimento.append(w)
 
     #retorna lista palavra e a polaridade de cada palavra
@@ -159,7 +169,138 @@ def atribui_polaridade_sentiwordnet(word):
 
             return (scorepos,scoreneg)
 
+def lexico_sentimento_LIWC(review, save=True):
+    
+    try:
+        with open(os.path.join("léxico/","LIWC_sent_words.p"), "rb") as f:
+            sent_words = pickle.load(f)
+        with open(os.path.join("léxico/","LIWC_sent_words_polarity.p"), "rb") as f:
+            sent_words_polarity = pickle.load(f)
+    except:
+        sent_words = []
+        sent_words_polarity = {}
+        with open("léxico/liwc.txt", encoding="utf8") as f:
+            text = f.readlines()
+            for line in text:
+                word = line.split()[0]
+                #print("Line",line)
+                
+                word = pre_processing_text(word)
+                #word = line.split()[0]
+                if "126" in line:
+                    # Positive sentiment word
+                    sent_words.append(word)
+                    sent_words_polarity[word] = "1"
+                if "127" in line:
+                    sent_words.append(word)
+                    sent_words_polarity[word] = "-1"
+                else:
+                    sent_words.append(word)
+                    sent_words_polarity[word] = "0"
+        # Remove duplicated words
+        sent_words = list(set(sent_words))
+    if save:
+        with open(os.path.join("léxico/","LIWC_sent_words.p"), "wb") as f:
+            pickle.dump(sent_words, f)
+        with open(os.path.join("léxico/","LIWC_sent_words_polarity.p"), "wb") as f:
+            pickle.dump(sent_words_polarity, f)
+
+    l_sentimento= []
+    word_sentimento = []
+    w = []
+    for termo in review:
+        w = [termo,int(sent_words_polarity.get(termo,0))]
+        word_sentimento.append(w)
+
+    return (word_sentimento)
+
+def lexico_sentimento_OpLexicon(review):
+    try:
+        with open(os.path.join("léxico/","OpLexicon_sent_words.p"), "rb") as f:
+            sent_words = pickle.load(f)
+        with open(os.path.join("léxico/","OpLexicon_sent_words_polarity.p"), "rb") as f:
+            sent_words_polarity = pickle.load(f)
+    except:
+        print("\nProcessing Lexico")
+        sent_words = []
+        sent_words_polarity = {}
+        f = open("léxico/lexico_v3.0.txt",'r',encoding="utf8")
+        text = f.readlines()
+        for line in text:
+            line = line.split(',')
+            word = line[0]
+            word = pre_processing_text(word)
+            #word = N.unidecode(word) #tira acentuação
+            polarity = line[2]
+            sent_words.append(word)
+            sent_words_polarity[word] = polarity
         
+    with open(os.path.join("léxico/","OpLexicon_sent_words.p"), "wb") as f:
+        pickle.dump(sent_words, f)
+    with open(os.path.join("léxico/","OpLexicon_sent_words_polarity.p"), "wb") as f:
+        pickle.dump(sent_words_polarity, f)
+
+    l_sentimento= []
+    word_sentimento = []
+    w = []
+    for termo in review:
+        w = [termo,int(sent_words_polarity.get(termo,0))]
+        word_sentimento.append(w)
+
+    return (word_sentimento)
+
+def concatenar(lexico_1, lexico_2, lexico_3, review, save=True):
+
+    try:
+        with open(os.path.join("léxico/",lexico_1+ '_'+ lexico_2+ '_'+ lexico_3+"_sent_words.p"), "rb") as f:
+            sent_words = pickle.load(f)
+        with open(os.path.join("léxico/",lexico_1+ '_'+ lexico_2+ '_'+ lexico_3+"_sent_words_polarity.p"), "rb") as f:
+            sent_words_polarity = pickle.load(f)
+    except:
+        lexico_sentimento_OpLexicon(review)
+        lexico_sentimento_SentiLex(review)
+        lexico_sentimento_LIWC(review)
+
+        f = open(os.path.join("léxico/",lexico_1+"_sent_words.p"), "rb")
+        sent_words = pickle.load(f)
+        f = open(os.path.join("léxico/",lexico_1+"_sent_words_polarity.p"), "rb")
+        sent_words_polarity = pickle.load(f)
+        
+        f = open(os.path.join("léxico/",lexico_2+"_sent_words.p"), "rb")
+        sent_words_lexico_2 = pickle.load(f)
+        f = open(os.path.join("léxico/",lexico_2+"_sent_words_polarity.p"), "rb")
+        sent_words_polarity_lexico_2 = pickle.load(f)
+
+        f = open(os.path.join("léxico/",lexico_3+"_sent_words.p"), "rb")
+        sent_words_lexico_3 = pickle.load(f)
+        f = open(os.path.join("léxico/",lexico_3+"_sent_words_polarity.p"), "rb")
+        sent_words_polarity_lexico_3 = pickle.load(f)
+
+        for word in sent_words_lexico_2:
+            if word not in sent_words:
+                sent_words.append(word)
+                sent_words_polarity[word] = sent_words_polarity_lexico_2[word]
+
+        for word in sent_words_lexico_3:
+            if word not in sent_words:
+                sent_words.append(word)
+                sent_words_polarity[word] = sent_words_polarity_lexico_3[word]
+                
+        with open(os.path.join("léxico/",lexico_1+ '_'+ lexico_2+ '_'+ lexico_3+"_sent_words.p"), "wb") as f:
+            pickle.dump(sent_words, f)
+        with open(os.path.join("léxico/",lexico_1+ '_'+ lexico_2+ '_'+ lexico_3+"_sent_words_polarity.p"), "wb") as f:
+            pickle.dump(sent_words_polarity, f)   
+
+    l_sentimento= []
+    word_sentimento = []
+    w = []
+    for word in review:
+        w = [word,int(sent_words_polarity.get(word,0))]
+        word_sentimento.append(w)
+
+    #retorna lista palavra e a polaridade de cada palavra
+    return (word_sentimento)
+
 
 def tec_posicao_adjetivo_nltk(all_reviews):
 
@@ -212,16 +353,17 @@ def tec_posicao_adjetivo_nltk(all_reviews):
         #frase_polarity = lexico_sentimento_SentWordNetPT(words)
         
         #REALIZAR AVALIAÇÃO COM SENTILEX
-        frase_polarity = lexico_sentimento_SentiLex(words)
+        #frase_polarity = lexico_sentimento_SentiLex(words)
         
+        #REALIZAR AVALIAÇÃO COM LIWC
+        #frase_polarity = lexico_sentimento_LIWC(words)
         
-        #dic_frase_polarity = {}
-        
-        #for item in frase_polarity:
-         #   dic_frase_polarity[item[0]] = item[1]
-                        
-        #print("\nDicionário:\n",dic_frase_polarity,"\n")
+        #REALIZAR AVALIAÇÃO COM OpLexicon
+        #frase_polarity = lexico_sentimento_OpLexicon(words)
 
+        #REALIZAR AVALIAÇÃO COM LÉXICOS CONCATENADOS
+        frase_polarity = concatenar('LIWC', 'OpLexicon', 'SentiLex', words)
+        
         
         
         #print("\nPALAVRAS COM POLARIDADE:\n",frase_polarity)
@@ -250,6 +392,8 @@ def tec_posicao_adjetivo_nltk(all_reviews):
                 if anterior[0] in negacao:
                     palavra = termo[0]
                     for j,item in enumerate(frase_polarity):
+                        
+                        #print("Entrou negação")
                         ap = j
                         y = j+2
                         
@@ -262,6 +406,7 @@ def tec_posicao_adjetivo_nltk(all_reviews):
                             item[1] = '-1'
                             
                 elif(anterior[1]=='JJ'):
+                    #print(anterior[0])
                     #print("Entrou Adjetivo antes\n")
                     palavra = termo[0]
                     ant = anterior[0]
@@ -276,19 +421,27 @@ def tec_posicao_adjetivo_nltk(all_reviews):
                         
                         for wd,p in poeio:
                             pt = wd
+                            polaridade_adj=p
 
                             
                         if ant == item[0]:
                             polaridade_adj = item[1]
+                            #print("Pegou")
                             
-                        if palavra == item[0] and post == pt:
+                        if palavra == item[0]:
+                            #print("Atribuiu",polaridade_adj)
                             item[1] = polaridade_adj
                             
                             
-                        
+                       
                 
                 for wrd,ps in posterior:
+                    
+                    
                     if(ps == 'JJ'):
+                        polaridade_adj_pos=0
+                        #print("Entrou adjetivo depois")
+                        #print(wrd)
                                                 
                         palavra = termo[0]
                         ant = anterior[0]
@@ -303,15 +456,19 @@ def tec_posicao_adjetivo_nltk(all_reviews):
                             post_polar = frase_polarity[k+1:z]
                             
                             for a,b in post_polar:
-                                    polaridade_adj_pos = b
+                                polaridade_adj_pos = b
                                 
                                 
                             
                             if wrd == item[0]:
                                 polaridade_adj_pos = item[1]
+                                #print("Pegou")
+                                #if frase_polarity[k-1]
                                 
-                            if palavra == item[0] and ant == antes:
-                                item[1] = polaridade_adj_pos
+                            for g,item in enumerate(frase_polarity):
+                                if palavra == item[0] and ant == antes:
+                                    #print("Atribuiu depois",polaridade_adj_pos)
+                                    item[1] = polaridade_adj_pos
                         
                            
                 
@@ -363,7 +520,7 @@ def tec_posicao_adjetivo_spacy(all_reviews):
     negacao = ['jamais','nada','nem','nenhum','ninguem','nunca','nao','tampouco', 'mal'] #mal
     
     
-    with open(os.path.join("Processed_Reviews_polarity.p"), "rb") as file:  #Processed_Reviews_polarity
+    with open(os.path.join("USO_GERAL1.p"), "rb") as file:  #Processed_Reviews_polarity
         polarity_reviews = pickle.load(file)
     result_review = []
 
@@ -399,8 +556,18 @@ def tec_posicao_adjetivo_spacy(all_reviews):
                     
                     
         #REALIZAR AVALIAÇÃO COM SENTILEX
-        frase_polarity = lexico_sentimento_SentiLex(lista)
-        #print(frase_polarity)
+        #frase_polarity = lexico_sentimento_SentiLex(lista)
+
+        #REALIZAR AVALIAÇÃO COM LIWC
+        #frase_polarity = lexico_sentimento_LIWC(lista)
+
+        #REALIZAR AVALIAÇÃO COM OpLexicon
+        #frase_polarity = lexico_sentimento_OpLexicon(lista)
+
+        #REALIZAR AVALIAÇÃO COM LÉXICOS CONCATENADOS
+        frase_polarity = concatenar('LIWC', 'OpLexicon', 'SentiLex', lista)
+        
+        print(frase_polarity)
         print("\n")
 
         
@@ -417,8 +584,8 @@ def tec_posicao_adjetivo_spacy(all_reviews):
             if i > len(words):
                 break
 
-        #print(wd)
-        #print("\n")
+        print(wd)
+        print("\n")
         
         for j,termo in enumerate(wd):
             apont = j
@@ -513,14 +680,14 @@ def tec_posicao_adjetivo_spacy(all_reviews):
                                 if wrd == item[0]:
                                     polaridade_adj_pos = item[1]
                                     #print("entrou e recolheu polaridade1")
-                                    
-                                if palavra == item[0]:
-                                    item[1] = polaridade_adj_pos
-                                    #print("entrou e atribuiu polaridade")
+                                for g,item in enumerate(frase_polarity):    
+                                    if palavra == item[0]:
+                                        item[1] = polaridade_adj_pos
+                                        #print("entrou e atribuiu polaridade")
                         
                            
               
-        #print("\nFRASE COM POLARIDADE PÓS TÉCNICA:\n",frase_polarity)
+        print("\nFRASE COM POLARIDADE PÓS TÉCNICA:\n",frase_polarity)
          
         polaridade_rev = 0
         for item,pol in frase_polarity:

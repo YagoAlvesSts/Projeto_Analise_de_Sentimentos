@@ -150,3 +150,35 @@ def concatenar(lexico_1, lexico_2, lexico_3, save=False):
     return sent_words, sent_words_polarity
 
 sent_words, sent_words_polarity = concatenar('LIWC', 'OpLexicon', 'SentiLex')
+
+
+
+
+#lendo arquivo com informações de polaridade
+    sentilexpt = open("SentiLex-PT02/SentiLex-flex-PT02.txt",'r',encoding="utf8")
+    dic_palavra_polaridade = {}
+
+    text = sentilexpt.readlines()
+    sent_words = []
+    for line in text:
+            line = line.split(',')
+            word = line[0]
+            word = pre_processing_text(word)
+            #word = N.unidecode(word) #tira acentuação
+            try:
+                polarity = line[1].split('N0=')[1].split(';')[0]
+            except:
+                polarity = line[1].split('N1=')[1].split(';')[0]
+            sent_words.append(word)
+            dic_palavra_polaridade[word] = polarity
+
+    l_sentimento= []
+    word_sentimento = []
+    w = []
+
+    for word in review:
+        w = [word,int(dic_palavra_polaridade.get(word,0))]
+        word_sentimento.append(w)
+
+    #retorna lista palavra e a polaridade de cada palavra
+    return (word_sentimento)
