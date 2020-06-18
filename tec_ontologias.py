@@ -12,6 +12,7 @@ from enelvo import normaliser
 import fnmatch
 import string
 
+#pre processa texto
 def pre_processing_text(text, use_normalizer=False):
     
     if use_normalizer:
@@ -30,33 +31,37 @@ def pre_processing_text(text, use_normalizer=False):
 
     return text
 
-
+#busca aspectos através de ontologias
 def create_aspects_lexicon_ontologies(save=True):
     """Create a list of the aspects indicated in the groups file"""
     explicit_aspects = []
     implicit_aspects = []
-    with open("groups.xml", "r", encoding="utf8") as file:
+    with open("groups.xml", "r", encoding="utf8") as file:#busca aspectos e arquivo xml
         text = file.readlines()
         for line in text:
             if "Explicit" in line:
+                #busca aspectos explicitos
                 for word in line.split(">")[1].split("<")[0].split(","):
                     explicit_aspects.append(pre_processing_text(word))
             elif "Implicit" in line:
+                #busca aspectos implicitos
                 for word in line.split(">")[1].split("<")[0].split(","):
                     implicit_aspects.append(pre_processing_text(word))
     # Do some cleaning rules
     _explicit_aspects = []
     _implicit_aspects = []
+    #busca aspectos explicitos associados a aspecto anterior encontrado
     for aspect in explicit_aspects:
         if aspect != "s/n" and aspect != " . ":
-            _explicit_aspects.append(aspect)
+            _explicit_aspects.append(aspect) #adiciona a lista
+    #busca aspectos implicito associados a aspecto anterior encontrado
     for aspect in implicit_aspects:
         if aspect != "s/n" and aspect != " . ":
-            _implicit_aspects.append(aspect)
+            _implicit_aspects.append(aspect)#adiciona a lista
     # Remove repetition on aspects list
     _explicit_aspects = list(set(_explicit_aspects))
     _implicit_aspects = list(set(_implicit_aspects))
-    if save:
+    if save: #salva aspectos
         with open(os.path.join("Aspectos","ontology_explicit_aspects.p"), "wb") as f:
             pickle.dump(_explicit_aspects, f)
             arquivo = open('Aspectos/ontology_explicit_aspects.txt','w')
@@ -101,10 +106,10 @@ def create_aspects_lexicon_ontologies(save=True):
     print(_implicit_aspects)
     """
     
-    return [_explicit_aspects, _implicit_aspects]
+    return [_explicit_aspects, _implicit_aspects] #retorna aspectos
 
 
 
-print(create_aspects_lexicon_ontologies())
+print(create_aspects_lexicon_ontologies())#chama função
 
 

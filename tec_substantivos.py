@@ -39,6 +39,7 @@ letters = [letter.read_text(encoding = 'utf-8') for letter in sorted(letters_fil
 print(letters)
 """
 all_reviews = []
+#realiza leitura de todos os reviews de treinamento
 for dirpath, _, files in os.walk("./Corpus Buscape/treinamento"):
         for filename in fnmatch.filter(files, '*.txt'):
             f = open(os.path.join(dirpath, filename), "r", encoding="utf8")
@@ -101,20 +102,21 @@ print("\nPOS_TAG:\n",nltk.pos_tag(words))
  #    if str(pos) == 'NN' or str(pos) == 'NNP' or str(pos) == 'NNS' or str(pos) == 'NNPS'])
 nouns = [] #empty to array to hold all nouns
 #for word in words:
+#verifica se palavra é substantivo
 for Word,pos in nltk.pos_tag(words):
            if (pos == 'NN' or pos == 'NNP' or pos == 'NNS' or pos == 'NNPS'):
                 nouns.append(Word)
 
 print("\nSUBSTANTIVOS:\n",nouns)
 
-
-def freq(list):
+#verifica frequencia que palavras aparece
+def freq(list): 
      frequencia = FreqDist(list)
      print("\nFrequência das palavras: \n", frequencia)
 
 freq(nouns)
 
-        
+#realiza poda, pegando apenas 3% das palavras mais frequentes        
 def frequen(list):
      lenght = len(nouns)
      porc = (3*lenght)/100

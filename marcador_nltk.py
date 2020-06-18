@@ -61,19 +61,22 @@ stripped = [w.translate(table) for w in tokens]
 words = [word for word in stripped if word.isalpha()]
 
 print("\nSEM PONTUAÇÃO:\n",words)
-
+#retira stop words
 stop_words = set(stopwords.words('portuguese'))
 words = [w for w in words if not w in stop_words]
 
 print("\nSEM STOP WORDS:\n",words)
 
+#realiza marcador dos termos
 words = nltk.pos_tag(words)
 print("\nPOS_TAG:\n", words)
 
+#escrevendo resultado de marcador em .txt
 arquivo = open('tagger_nltk.txt','w')
 arquivo.write(' '.join(map(str, words)))
 arquivo.close()
 
+#escrevendo resultado de marcador em .p
 with open(os.path.join("tagger_nltk.p"), "wb") as f:
         pickle.dump(list(words), f)
         

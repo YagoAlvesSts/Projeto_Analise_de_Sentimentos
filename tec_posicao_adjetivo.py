@@ -39,7 +39,7 @@ import spacy
 from spacy import tokens
 
 
-
+#pre processa texto
 def pre_processing_text(text, use_normalizer=False):
 
     if use_normalizer:
@@ -58,9 +58,10 @@ def pre_processing_text(text, use_normalizer=False):
 
     return text
 
+#atribui polaridade com Sentilex
 def lexico_sentimento_SentiLex(review,save=True):
   
-    try:
+    try:#verifica se léxico já foi lido uma vez e salvo
         with open(os.path.join("léxico/","SentiLex_sent_words.p"), "rb") as f:
             sent_words = pickle.load(f)
         with open(os.path.join("léxico/","SentiLex_sent_words_polarity.p"), "rb") as f:
@@ -77,13 +78,14 @@ def lexico_sentimento_SentiLex(review,save=True):
                 word = line[0]
                 word = pre_processing_text(word)
                 #word = N.unidecode(word) #tira acentuação
-                try:
+                try:#busca polaridade
                     polarity = line[1].split('N0=')[1].split(';')[0]
                 except:
                     polarity = line[1].split('N1=')[1].split(';')[0]
                 sent_words.append(word)
+                #cria dicionário com polaridades
                 sent_words_polarity[word] = polarity
-    if save:
+    if save:#salva léxico
         with open(os.path.join("léxico/","SentiLex_sent_words.p"), "wb") as f:
             pickle.dump(sent_words, f)
         with open(os.path.join("léxico/","SentiLex_sent_words_polarity.p"), "wb") as f:
@@ -92,16 +94,16 @@ def lexico_sentimento_SentiLex(review,save=True):
     l_sentimento= []
     word_sentimento = []
     w = []
-
+    #busca polaridade de cada palavra do review
     for word in review:
         w = [word,int(sent_words_polarity.get(word,0))]
-        word_sentimento.append(w)
+        word_sentimento.append(w)#adiciona palavra com polaridade em lista
 
     #retorna lista palavra e a polaridade de cada palavra
     return (word_sentimento)
 
 def Sentilex():
-
+    #lendo arquivo com informações de polaridade
     sentilexpt = open("SentiLex-PT02/SentiLex-flex-PT02.txt",'r',encoding="utf8")
     dic_palavra_polaridade = {}
     text = sentilexpt.readlines()
@@ -111,11 +113,12 @@ def Sentilex():
             word = line[0]
             word = pre_processing_text(word)
             #word = N.unidecode(word) #tira acentuação
-            try:
+            try:#busca polaridade
                 polarity = line[1].split('N0=')[1].split(';')[0]
             except:
                 polarity = line[1].split('N1=')[1].split(';')[0]
             sent_words.append(word)
+            #cria dicionário com polaridades
             dic_palavra_polaridade[word] = polarity
 
     #retorna dicionário do SentiLex
@@ -130,10 +133,13 @@ def lexico_sentimento_SentWordNetPT(review):
     pol = 0
     word_pol = []
     #print(SentiWordNet)
+    #atribui polaridade a cada palavra do review
     for word in review:
-        word = pre_processing_text(word)
+        word = pre_processing_text(word) #trata o texto
+        #chama função de atribuir polaridade a palavra
         polaridade = atribui_polaridade_sentiwordnet(word)
-        if(polaridade !=  None ):
+        
+        if(polaridade !=  None ):#se polaridade existir no léxico, atribui ao score
             #print()
             scorepos= polaridade[0]
             scoreneg=polaridade[1]
@@ -144,34 +150,40 @@ def lexico_sentimento_SentWordNetPT(review):
             else:
                 pol = '0'
             word_pol = [word,pol]
+            #adiciona palavra e polaridade a lista
             word_sentimento.append(word_pol)
-        if(polaridade == None):
+        if(polaridade == None):#se palavra não existe no léxico, atribui 0
             word_pol = [word,'0']
             word_sentimento.append(word_pol)
         
-    return (word_sentimento)
+    return (word_sentimento) #retorna review com polaridades
 
 
 def atribui_polaridade_sentiwordnet(word):
+    #lista que será adicionado valores do léxico
     SentiWordNet = []
+    #lê léxico com o pandas
     df = pd.read_csv('léxico/SentiWordNet_PT/SentiWord Pt-BR v1.0b.txt', delimiter="\t", header=None, names=["ID","PosScore", "NegScore", "Termo"])
     #print(df.values)
-    SentiWordNet = df.values
+    SentiWordNet = df.values #pega valores do léxico de polaridades
     scorepos = 0.0
     scoreneg = 0.0
+    #busca palavra no léxico
     for i,termo in enumerate(SentiWordNet):
-        trm = pre_processing_text(termo[3])
-        if trm == word:
-            scorepos = scorepos + float(termo[1])
-            scoreneg = scoreneg + float(termo[2])
+        trm = pre_processing_text(termo[3]) #trata a palavra a ser buscada
+        if trm == word: #compara palavra do review com o léxico
+            #aqui o ideal seria somar, mas atualmente ele só pega polaridade da ultima palavra encontrada
+            scorepos = scorepos + float(termo[1]) #soma polaridades positivas
+            scoreneg = scoreneg + float(termo[2]) #soma polaridades negativas
+
             
             #print("termo:",termo[3],"\tposscore: ",scorepos,"\tnegscore: ",scoreneg)
 
-            return (scorepos,scoreneg)
+            return (scorepos,scoreneg) #retorna score de polaridades
 
 def lexico_sentimento_LIWC(review, save=True):
     
-    try:
+    try: #verifica se léxico já foi lido uma vez e salvo
         with open(os.path.join("léxico/","LIWC_sent_words.p"), "rb") as f:
             sent_words = pickle.load(f)
         with open(os.path.join("léxico/","LIWC_sent_words_polarity.p"), "rb") as f:
@@ -179,24 +191,26 @@ def lexico_sentimento_LIWC(review, save=True):
     except:
         sent_words = []
         sent_words_polarity = {}
+        #busca arquivo com léxico LIWC
         with open("léxico/liwc.txt", encoding="utf8") as f:
             text = f.readlines()
-            for line in text:
+            for line in text: 
                 word = line.split()[0]
                 #print("Line",line)
                 
                 word = pre_processing_text(word)
                 #word = line.split()[0]
+                #BUSCA POLARIDADE
                 if "126" in line:
                     # Positive sentiment word
                     sent_words.append(word)
-                    sent_words_polarity[word] = "1"
+                    sent_words_polarity[word] = "1" #cria dicionário de léxico com polaridade
                 if "127" in line:
                     sent_words.append(word)
-                    sent_words_polarity[word] = "-1"
+                    sent_words_polarity[word] = "-1" #cria dicionário de léxico com polaridade
                 else:
                     sent_words.append(word)
-                    sent_words_polarity[word] = "0"
+                    sent_words_polarity[word] = "0" #cria dicionário de léxico com polaridade
         # Remove duplicated words
         sent_words = list(set(sent_words))
     if save:
@@ -208,14 +222,17 @@ def lexico_sentimento_LIWC(review, save=True):
     l_sentimento= []
     word_sentimento = []
     w = []
-    for termo in review:
+
+    #busca polaridade de cada palavra do review
+    for termo in review: 
         w = [termo,int(sent_words_polarity.get(termo,0))]
         word_sentimento.append(w)
 
-    return (word_sentimento)
+    return (word_sentimento) #retorna lista com palavras e polaridades
 
+#Atribui polaridade com léxico OpLexicon
 def lexico_sentimento_OpLexicon(review):
-    try:
+    try: #verifica se léxico já foi lido uma vez e salvo
         with open(os.path.join("léxico/","OpLexicon_sent_words.p"), "rb") as f:
             sent_words = pickle.load(f)
         with open(os.path.join("léxico/","OpLexicon_sent_words_polarity.p"), "rb") as f:
@@ -224,8 +241,10 @@ def lexico_sentimento_OpLexicon(review):
         print("\nProcessing Lexico")
         sent_words = []
         sent_words_polarity = {}
+        #busca arquivo com léxico OpLexicon
         f = open("léxico/lexico_v3.0.txt",'r',encoding="utf8")
         text = f.readlines()
+        #BUSCA POLARIDADE
         for line in text:
             line = line.split(',')
             word = line[0]
@@ -233,7 +252,7 @@ def lexico_sentimento_OpLexicon(review):
             #word = N.unidecode(word) #tira acentuação
             polarity = line[2]
             sent_words.append(word)
-            sent_words_polarity[word] = polarity
+            sent_words_polarity[word] = polarity #cria dicionário com polaridade
         
     with open(os.path.join("léxico/","OpLexicon_sent_words.p"), "wb") as f:
         pickle.dump(sent_words, f)
@@ -243,24 +262,27 @@ def lexico_sentimento_OpLexicon(review):
     l_sentimento= []
     word_sentimento = []
     w = []
+    #busca polaridade de cada palavra do review
     for termo in review:
         w = [termo,int(sent_words_polarity.get(termo,0))]
         word_sentimento.append(w)
 
-    return (word_sentimento)
+    return (word_sentimento) #retorna lista com palavras e polaridades
 
+#função que concatena léxicos de polaridade
 def concatenar(lexico_1, lexico_2, lexico_3, review, save=True):
 
-    try:
+    try: #busca se léxicos já foram concatenados anteriormente
         with open(os.path.join("léxico/",lexico_1+ '_'+ lexico_2+ '_'+ lexico_3+"_sent_words.p"), "rb") as f:
             sent_words = pickle.load(f)
         with open(os.path.join("léxico/",lexico_1+ '_'+ lexico_2+ '_'+ lexico_3+"_sent_words_polarity.p"), "rb") as f:
             sent_words_polarity = pickle.load(f)
-    except:
+    except:#chama cada léxico separadamente para depois concatenar
         lexico_sentimento_OpLexicon(review)
         lexico_sentimento_SentiLex(review)
         lexico_sentimento_LIWC(review)
 
+        #SALVA LÉXICOS QUE FORAM ABERTOS ATRAVÉS DE CHAMADA DE FUNÇÃO
         f = open(os.path.join("léxico/",lexico_1+"_sent_words.p"), "rb")
         sent_words = pickle.load(f)
         f = open(os.path.join("léxico/",lexico_1+"_sent_words_polarity.p"), "rb")
@@ -276,14 +298,18 @@ def concatenar(lexico_1, lexico_2, lexico_3, review, save=True):
         f = open(os.path.join("léxico/",lexico_3+"_sent_words_polarity.p"), "rb")
         sent_words_polarity_lexico_3 = pickle.load(f)
 
+        #Busca palavra no segundo léxico
         for word in sent_words_lexico_2:
             if word not in sent_words:
                 sent_words.append(word)
+                #cria dicionário com polaridade
                 sent_words_polarity[word] = sent_words_polarity_lexico_2[word]
 
+        #busca palavra no terceiro léxico
         for word in sent_words_lexico_3:
             if word not in sent_words:
                 sent_words.append(word)
+                #cria dicionário com polaridade
                 sent_words_polarity[word] = sent_words_polarity_lexico_3[word]
                 
         with open(os.path.join("léxico/",lexico_1+ '_'+ lexico_2+ '_'+ lexico_3+"_sent_words.p"), "wb") as f:
@@ -294,6 +320,7 @@ def concatenar(lexico_1, lexico_2, lexico_3, review, save=True):
     l_sentimento= []
     word_sentimento = []
     w = []
+    #busca polaridade de cada palavra do review
     for word in review:
         w = [word,int(sent_words_polarity.get(word,0))]
         word_sentimento.append(w)
@@ -305,6 +332,7 @@ def concatenar(lexico_1, lexico_2, lexico_3, review, save=True):
 def tec_posicao_adjetivo_nltk(all_reviews):
 
     all_tokenized_reviews = []
+    #palavras de negação para utilizar em técnica
     negacao = ['jamais','nada','nem','nenhum','ninguem','nunca','nao','tampouco', 'mal'] #mal
     
 
@@ -320,15 +348,18 @@ def tec_posicao_adjetivo_nltk(all_reviews):
     sent_words = Sentilex()
     cont = 0
     
-    
+    #pega um review de cada vez
     for i,review in enumerate(all_reviews):
 
         review = ''.join(review)
         norm = normaliser.Normaliser()
+        
         #normaliza a sentença
         norm_sentence = norm.normalise(review)
+        
         #coloca toda sentença em minúsculo
         norm_sentence = norm_sentence.lower()
+        
         #possibilita mudar o atributo que desejar
         norm.capitalize_inis = True
 
@@ -368,29 +399,29 @@ def tec_posicao_adjetivo_nltk(all_reviews):
         
         #print("\nPALAVRAS COM POLARIDADE:\n",frase_polarity)
 
-
+        #realizar marcação de termos da lista
         words = nltk.pos_tag(words)
 
         
         #print("\n",words)
 
         
-        #forma 2 de buscar adjetivo antes
-        
+        #pega cada palavra do review
         for i,termo in enumerate(words):
             apont = i
             anterior=words[apont-1]
-            
+            #busca termos que são substantivos
             if(termo[1] == 'NN' or termo[1] == 'NNS'):
                 x=i+2
-                posterior = words[i+1:x]
+                posterior = words[i+1:x] #fatia a lista para pegar termo posterior
                 #print("Verificou substantivo\n")
                 
                 for wrd,ps in posterior:
                     post = wrd
                 
-                if anterior[0] in negacao:
+                if anterior[0] in negacao: #busca se termo anterior é palavra de negação
                     palavra = termo[0]
+                    #busca palavra na lista que contém polaridade
                     for j,item in enumerate(frase_polarity):
                         
                         #print("Entrou negação")
@@ -401,17 +432,18 @@ def tec_posicao_adjetivo_nltk(all_reviews):
                         
                         for wd,p in poeio:
                             pt = wd
-                           
+                        #se palavra de negação existe, atribui polaridade negativa   
                         if palavra == item[0] and post == pt:
                             item[1] = '-1'
                             
-                elif(anterior[1]=='JJ'):
+                elif(anterior[1]=='JJ'): #verifica se termo anterior é adjetivo
                     #print(anterior[0])
                     #print("Entrou Adjetivo antes\n")
                     palavra = termo[0]
                     ant = anterior[0]
                     #print(ant)
-                    
+
+                    #busca palavra na lista que contém polaridade
                     for k,item in enumerate(frase_polarity):
                         ap = k
                         
@@ -423,11 +455,11 @@ def tec_posicao_adjetivo_nltk(all_reviews):
                             pt = wd
                             polaridade_adj=p
 
-                            
+                        #pega polaridade do adjetivo    
                         if ant == item[0]:
                             polaridade_adj = item[1]
                             #print("Pegou")
-                            
+                        #atribui polaridade do adjetivo ao substantivo    
                         if palavra == item[0]:
                             #print("Atribuiu",polaridade_adj)
                             item[1] = polaridade_adj
@@ -437,7 +469,7 @@ def tec_posicao_adjetivo_nltk(all_reviews):
                 
                 for wrd,ps in posterior:
                     
-                    
+                    #verifica se termo posterior é adjetivo
                     if(ps == 'JJ'):
                         polaridade_adj_pos=0
                         #print("Entrou adjetivo depois")
@@ -445,7 +477,8 @@ def tec_posicao_adjetivo_nltk(all_reviews):
                                                 
                         palavra = termo[0]
                         ant = anterior[0]
-                        
+
+                        #busca palavra na lista que contém polaridade 
                         for k,item in enumerate(frase_polarity):
                             ap = k
                             
@@ -459,12 +492,13 @@ def tec_posicao_adjetivo_nltk(all_reviews):
                                 polaridade_adj_pos = b
                                 
                                 
-                            
+                            #pega polaridade do adjetivo
                             if wrd == item[0]:
                                 polaridade_adj_pos = item[1]
                                 #print("Pegou")
                                 #if frase_polarity[k-1]
-                                
+
+                            #atribui polaridade do adjetivo ao substantivo      
                             for g,item in enumerate(frase_polarity):
                                 if palavra == item[0] and ant == antes:
                                     #print("Atribuiu depois",polaridade_adj_pos)
@@ -475,22 +509,26 @@ def tec_posicao_adjetivo_nltk(all_reviews):
         #print("\nFRASE COM POLARIDADE PÓS TÉCNICA:\n",frase_polarity)
          
         polaridade_rev = 0
+        #soma polaridades do review após aplicar técnica
         for item,pol in frase_polarity:
             valor = int(pol)
             polaridade_rev = polaridade_rev + valor
         
         print("\n",polaridade_rev)
-        
+
+        #busca se resultado da soma torna review positivo
         if polaridade_rev >= 1:
             polaridade_rev = 1
             cont +=1
             result_review.append(1)
-            
+
+        #busca se resultado da soma torna review negativo    
         if polaridade_rev <= -1:
             polaridade_rev = -1
             cont +=1
             result_review.append(-1)
-            
+
+        #busca se resultado da soma torna review neutro    
         if polaridade_rev == 0:
             polaridade_rev = 0
             cont +=1
@@ -498,12 +536,13 @@ def tec_posicao_adjetivo_nltk(all_reviews):
 
         print("REVIEW Nº:\t",cont)
             
-    acertos = 0 
+    acertos = 0
+    #busca reviews com polaridade atribuido (de 0 a 5) e compara com resultado da técnica
     for i,polarity in enumerate(polarity_reviews):
         #print(polarity)
         print("\n")
         if int(polarity[1]) == result_review[i]:
-            acertos += 1
+            acertos += 1 #conta acertos
         else:
             print("")
     
@@ -511,19 +550,22 @@ def tec_posicao_adjetivo_nltk(all_reviews):
     print("\nTOTAL REVIEWS AVALIADOS:\t",cont)
     print("total de reviews com polaridade:\t",len(all_reviews))
     print("ACERTOS:\t",acertos)
+    #realiza acurácia
     acuracia = acertos/(len(all_reviews))*100
     print("\n\n\n\n\nacuracia:\t",acuracia,"%")
 
             
 def tec_posicao_adjetivo_spacy(all_reviews):
     all_tokenized_reviews = []
+    #palavras de negação para utilizar em técnica
     negacao = ['jamais','nada','nem','nenhum','ninguem','nunca','nao','tampouco', 'mal'] #mal
     
     
     with open(os.path.join("USO_GERAL1.p"), "rb") as file:  #Processed_Reviews_polarity
         polarity_reviews = pickle.load(file)
     result_review = []
-
+    
+    #faz chamada da biblioteca spacy e atribui a uma variável
     spc = spacy.load('pt_core_news_sm')
     tratados = []
 
@@ -533,7 +575,7 @@ def tec_posicao_adjetivo_spacy(all_reviews):
     cont = 0
 
     
-    
+    #verifica cada review
     for review in all_reviews:
 
         review= str(review)
@@ -544,11 +586,12 @@ def tec_posicao_adjetivo_spacy(all_reviews):
         #dando split no texto
         words.text.split()
         lista = []
-        
+
+        #retira pontuação e espaços do review
         for i,palavra in enumerate(words):
             if not palavra.is_punct:
                 if not palavra.is_space:
-                    plvra = palavra.text
+                    plvra = palavra.text 
                     lista.append(plvra)
 
         #REALIZAR AVALIAÇÃO COM SENTWORDNET-PT-BR
@@ -573,20 +616,23 @@ def tec_posicao_adjetivo_spacy(all_reviews):
         
         tagger = []
         wd = []
+
+        #realiza marcação de cada palavra
         for i,word in enumerate(words):
             #print(i,word)
             
             if not word.is_punct:
                 if not word.is_space:
                     #print(word.text, word.pos_)
-                    tagger = [word.text, word.pos_]
-                    wd.append(tagger)
+                    tagger = [word.text, word.pos_] #pega palavra e pos tagger
+                    wd.append(tagger) #atribui palavra e pos tagger a lista
             if i > len(words):
                 break
 
         print(wd)
         print("\n")
-        
+
+        #pega cada palavra do review
         for j,termo in enumerate(wd):
             apont = j
                 
@@ -594,12 +640,13 @@ def tec_posicao_adjetivo_spacy(all_reviews):
                 
             #print("ANTERIOR: ",anterior)
             #print("PALAVRA \t",j,termo)
-                
+            
+            #busca termos que são substantivos
             if(termo[1] == 'NOUN'):
                 #print("\n****** ENTROU \t 1 ******\n", termo)
                 x=j+2
                     
-                posterior = wd[j+1:x]
+                posterior = wd[j+1:x] #fatia a lista para pegar termo posterior
                 #print("POSTERIOR", posterior)
                 #print("Verificou substantivo\n")
                         
@@ -607,11 +654,13 @@ def tec_posicao_adjetivo_spacy(all_reviews):
                     post = wrd
                         
                 #print("verificando se: ",anterior[0]," é negação")
-                    
+
+                #busca se termo anterior é palavra de negação    
                 if anterior[0] in negacao:
                     #print("\n****** ENTROU \t 2 ******\n", anterior)
                     #print("verificou negação")
                     palavra = termo[0]
+                    #busca palavra na lista que contém polaridade
                     for l,item in enumerate(frase_polarity):
                         ap = l
                         y = l+2
@@ -620,12 +669,13 @@ def tec_posicao_adjetivo_spacy(all_reviews):
                                 
                         for w,p in poeio:
                             pt = w
-                        #print(palavra,item[0])           
+                        #print(palavra,item[0])
+                        #se palavra de negação existe, atribui polaridade negativa
                         if palavra == item[0] and post == pt:
                             item[1] = '-1'
                     
                     
-                if(anterior[1]=='ADJ'):
+                if(anterior[1]=='ADJ'): #verifica se termo anterior é adjetivo
                     ant = anterior[0]
                     #print("\n****** ENTROU \t 3 ******\n", anterior)
                     #print("Entrou Adjetivo antes\n")
@@ -634,7 +684,7 @@ def tec_posicao_adjetivo_spacy(all_reviews):
                     palavra = termo[0]
                         
                         
-                        
+                    #busca palavra na lista que contém polaridade    
                     for k,item in enumerate(frase_polarity):
                         #print("\n****** ENTROU \t 4 ******\n", item)
                         ap = k
@@ -646,23 +696,25 @@ def tec_posicao_adjetivo_spacy(all_reviews):
                         for w,p in poeio:
                             pt = w
 
-                                
+                        #pega polaridade do adjetivo        
                         if ant == item[0]:
                             polaridade_adj = item[1]
                             #print("\n****** ENTROU \t 5 ******\n", item)
 
-                                 
+                        #atribui polaridade do adjetivo ao substantivo          
                         if palavra == item[0]:
                             item[1] = polaridade_adj
                             #print("\n****** ENTROU \t 6 ******\n", item)
                                           
             
                 for wrd,ps in posterior:
+                    #verifica se termo posterior é adjetivo
                     if(ps == 'ADJ'):
                         #print("Entrou adjetivo depois",)                        
                         palavra = termo[0]
                         ant = anterior[0]
-                            
+
+                        #busca palavra na lista que contém polaridade    
                         for k,item in enumerate(frase_polarity):
                             ap = k
                                 
@@ -677,9 +729,11 @@ def tec_posicao_adjetivo_spacy(all_reviews):
                                     
                                     
                             #print("VERIFICANDO DENTRO DA LISTA COM POLARIDADE")
+                                #pega polaridade do adjetivo
                                 if wrd == item[0]:
                                     polaridade_adj_pos = item[1]
                                     #print("entrou e recolheu polaridade1")
+                                #atribui polaridade do adjetivo ao substantivo
                                 for g,item in enumerate(frase_polarity):    
                                     if palavra == item[0]:
                                         item[1] = polaridade_adj_pos
@@ -690,22 +744,25 @@ def tec_posicao_adjetivo_spacy(all_reviews):
         print("\nFRASE COM POLARIDADE PÓS TÉCNICA:\n",frase_polarity)
          
         polaridade_rev = 0
+        #soma polaridades do review após aplicar técnica
         for item,pol in frase_polarity:
             valor = int(pol)
             polaridade_rev = polaridade_rev + valor
         
         print("\n",polaridade_rev,"\n")
-        
+        #busca se resultado da soma torna review positivo
         if polaridade_rev >= 1:
             polaridade_rev = 1
             cont +=1
             result_review.append(1)
-            
+
+        #busca se resultado da soma torna review negativo    
         if polaridade_rev <= -1:
             polaridade_rev = -1
             cont +=1
             result_review.append(-1)
-            
+
+        #busca se resultado da soma torna review neutro    
         if polaridade_rev == 0:
             polaridade_rev = 0
             cont +=1
@@ -713,12 +770,13 @@ def tec_posicao_adjetivo_spacy(all_reviews):
 
         print("REVIEW Nº:\t",cont)
             
-    acertos = 0 
+    acertos = 0
+    #busca reviews com polaridade atribuido (de 0 a 5) e compara com resultado da técnica
     for i,polarity in enumerate(polarity_reviews):
         #print(polarity)
         print("\n")
         if int(polarity[1]) == result_review[i]:
-            acertos += 1
+            acertos += 1 #conta acertos
         else:
             print("")
     
@@ -726,6 +784,7 @@ def tec_posicao_adjetivo_spacy(all_reviews):
     print("TOTAL REVIEWS AVALIADOS:\t",cont)
     print("total de reviews com polaridade:\t",len(all_reviews))
     print("ACERTOS:\t",acertos)
+    #realiza acurácia
     acuracia = acertos/(len(all_reviews))*100
     print("\n\n\n\n\nacuracia:\t",acuracia,"%")
     

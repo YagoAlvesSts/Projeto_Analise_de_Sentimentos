@@ -41,6 +41,7 @@ for i,termo in enumerate(SentiWordNet):
         print(pol)
 
 """
+#realiza tratamento do texto
 def pre_processing_text(text, use_normalizer=False):
 
     if use_normalizer:
@@ -61,16 +62,18 @@ def pre_processing_text(text, use_normalizer=False):
 
 def lexico_sentimento_SentWordNetPT(review):
    
-
+    #lista que será adicionado review pós adiconar polaridade de cada palavra
     word_sentimento = []
     
     pol = 0
     word_pol = []
-    #print(SentiWordNet)
+    #atribui polaridade a cada palavra do review
     for word in review:
-        word = pre_processing_text(word)
+        word = pre_processing_text(word) #trata o texto
+        #chama função de atribuir polaridade a palavra
         polaridade = atribui_polaridade_sentiwordnet(word)
-        if(polaridade !=  None ):
+        
+        if(polaridade !=  None ):#se polaridade existir no léxico, atribui ao score
             #print()
             scorepos= polaridade[0]
             scoreneg=polaridade[1]
@@ -80,32 +83,38 @@ def lexico_sentimento_SentWordNetPT(review):
                 pol = '-1'
             else:
                 pol = '0'
+                
             word_pol = [word,pol]
+            #adiciona palavra e polaridade a lista
             word_sentimento.append(word_pol)
-        if(polaridade == None):
+        if(polaridade == None): #se palavra não existe no léxico, atribui 0
             word_pol = [word,'0']
             word_sentimento.append(word_pol)
         
-    return (word_sentimento)
+    return (word_sentimento) #retorna review com polaridades
 
 
 def atribui_polaridade_sentiwordnet(word):
+    #lista que será adicionado valores do léxico
     SentiWordNet = []
+    #lê léxico com o pandas
     df = pd.read_csv('léxico/SentiWordNet_PT/SentiWord Pt-BR v1.0b.txt', delimiter="\t", header=None, names=["ID","PosScore", "NegScore", "Termo"])
     #print(df.values)
-    SentiWordNet = df.values
+    SentiWordNet = df.values #pega valores do léxico de polaridades
     scorepos = 0.0
     scoreneg = 0.0
+    #busca palavra no léxico
     for i,termo in enumerate(SentiWordNet):
-        trm = pre_processing_text(termo[3])
-        if trm == word:
+        trm = pre_processing_text(termo[3]) #trata a palavra a ser buscada
+        if trm == word: #compara palavra do review com o léxico
             print(termo[3],trm,word)
-            scorepos = scorepos + float(termo[1])
-            scoreneg = scoreneg + float(termo[2])
+            #aqui o ideal seria somar, mas atualmente ele só pega polaridade da ultima palavra encontrada
+            scorepos = scorepos + float(termo[1])#soma polaridades positivas
+            scoreneg = scoreneg + float(termo[2])#soma polaridades negativas
             
             print("termo:",termo[3],"\tposscore: ",scorepos,"\tnegscore: ",scoreneg)
 
-            return (scorepos,scoreneg)
+            return (scorepos,scoreneg) #retorna score de polaridades
 
 def tec_posicao_adjetivo_spacy(all_reviews):
     all_tokenized_reviews = []

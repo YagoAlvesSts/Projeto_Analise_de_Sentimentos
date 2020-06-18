@@ -14,7 +14,7 @@ import os
 from spacy import tokens
 from pathlib import Path
 
-
+#faz chamada da biblioteca spacy e atribui a uma variável
 spc = spacy.load('pt_core_news_sm')
 
 with(open("USO_GERAL.p", "rb")) as f:
@@ -22,10 +22,12 @@ with(open("USO_GERAL.p", "rb")) as f:
 #print(all_reviews)
 
 
-
+#converte reviews lidos em string
 reviews = str(all_reviews)
 tratados = []
 
+
+#verifica cada review
 for review in reviews:
     
     #atribuindo o texto ao modelo spacy
@@ -37,22 +39,26 @@ for review in reviews:
 
     tagger = []
     words = []
+    #realiza marcação de cada palavra
     for i, word in enumerate(doc):
         if not word.is_punct:
             if not word.is_space:
                 #print(word.text, word.pos_)
-                tagger = [(word.text, word.pos_)]
-                words.append(tagger)
+                
+                tagger = [(word.text, word.pos_)]#pega palavra e pos tagger
+                words.append(tagger) #atribui palavra e pos tagger a lista
         if i > len(doc):
             break
 
     print(words)
-    tratados.append(words)
+    tratados.append(words) #adiciona cada review a lista após tratado a lista
 
+#escreve resultado em .txt
 arquivo = open('tagger_spacy.txt','w')
 arquivo.write(' '.join(map(str, words)))
 arquivo.close()
 
+#escreve resultado em .p
 with open(os.path.join("tagger_spacy.p"), "wb") as f:
         pickle.dump(list(words), f)
 
