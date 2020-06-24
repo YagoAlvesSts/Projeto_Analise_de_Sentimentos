@@ -1,5 +1,0 @@
-O milestone 2 vem com o Android 2.2. Usei pouco com esta versão e pude notar os defeitos que todos declaram na web: interface escura, celular que esquenta demais  Mas no site da Motorola tem o upgrade grátis para Android 2.3, que elimina estes problemas (apesar de ser meio confuso fazer o upgrade). O diferencial é o teclado Qwerty, pois digitar no touch screen é impreciso. Se você usa serviços do Google, como Google Contacts, Agenda, Gmail e outros, é um ótimo custo benefício.
-
-O que gostei: Teclado Qwerty muito bom. Custo benefício excelente. Bem rápido. Bem integrado com serviços do Google. Qualidade de sinal e chamada ótimas. Vem com carregador veicular e dock. Duração de bateria boa (use o carregador veicular).
-
-O que não gostei: Vem com o Android 2.2. Algumas vezes ele entra em stand-by sozinho. A camera é lenta e tira fotos razoáveis.

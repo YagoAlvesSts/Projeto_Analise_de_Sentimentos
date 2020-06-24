@@ -1,1 +1,0 @@
-Apesar de ter processador Dual Core, é lento e trava algumas vezes, mesmo utilizando uma versão antiga do Android, o Ginger Bread.

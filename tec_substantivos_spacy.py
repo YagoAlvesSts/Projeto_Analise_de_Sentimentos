@@ -5,9 +5,11 @@ Created on Tue Nov 12 14:34:17 2019
 @author: yagoa
 """
 import fnmatch
+import pprint
 import re
 import numpy as np
 import pickle
+from enelvo import normaliser
 import sys
 import gensim
 import string
@@ -46,50 +48,51 @@ def pre_processing_text(text, use_normalizer=False):
 
 
 
-all_reviews = []
-#realiza leitura de todos os reviews de treinamento
-for dirpath, _, files in os.walk("./Corpus Buscape/treinamento"):
-        for filename in fnmatch.filter(files, '*.txt'):
-            f = open(os.path.join(dirpath, filename), "r", encoding="utf8")
-            conteudo = f.read()
-            all_reviews.append(conteudo)
-            
+#faz chamada da biblioteca spacy e atribui a uma variável
+spc = spacy.load('pt_core_news_sm')
+
+with(open("USO_GERAL.p", "rb")) as f:
+    all_reviews = pickle.load(f)
 #print(all_reviews)
 
 
-# Criando e escrevendo em arquivos de texto (modo 'w').
-arquivo = open('matriz01.txt','w')
-arquivo.writelines(all_reviews)
-arquivo.close()
-
-
-# Lendo o arquivo criado:
-arquivo = open('matriz01.txt','r')
-conteudo=arquivo.read()
-
-#all_tokenized_reviews = []
-    
-#faz chamada da biblioteca spacy e atribui a uma variável
-spc = spacy.load('pt_core_news_sm')
+#converte reviews lidos em string
+reviews = str(all_reviews)
 tratados = []
-cont = 0
+
+#atribuindo o texto ao modelo spacy
+doc = spc(reviews)
+
 #verifica cada review
-conteudo = spc(conteudo)
+for review in doc:
 
-for i,word in enumerate(conteudo):
-
-    #print(word)
-    #dando split no texto
-    #words.text.split()
-    lista = []
-
+    #print(review)
+    #atribuindo o texto ao modelo spacy
     
-    if not word.is_punct:
-        if not word.is_space:
-            tagger = [pre_processing_text(word.text), word.pos_] #pega palavra e pos tagger
-            tratados.append(tagger) #atribui palavra e pos tagger a lista
+
+    #print(review)
+    #dando split no texto
+    doc.text.split()
+    #print(doc)
+    tagger = []
+    words = []
+    #realiza marcação de cada palavra
+    for i, word in enumerate(doc):
+        if not word.is_punct:
+            if not word.is_space:
+                #print(word.text, word.pos_)
                 
+                tagger = [(word.text, word.pos_)]#pega palavra e pos tagger
+                words.append(tagger) #atribui palavra e pos tagger a lista
+        if i > len(doc):
+            break
+
+    #print(words)
+        tratados.append(words) #adiciona cada review a lista após tratado a lista
+
+
 print(tratados)
+
 nouns = []
 for j,termo in enumerate(tratados):
     if termo[1] == 'NOUN':
@@ -98,7 +101,7 @@ for j,termo in enumerate(tratados):
 #verifica frequencia que palavras aparece
 def freq(list): 
      frequencia = FreqDist(list)
-     print("\nFrequência das palavras: \n", frequencia)
+     #print("\nFrequência das palavras: \n", frequencia)
 
 freq(nouns)
 
@@ -106,10 +109,10 @@ freq(nouns)
 def frequen(list):
      lenght = len(nouns)
      porc = (3*lenght)/100
-     print("\nQuantidade correspondente a 3%: \n", porc)
+     #print("\nQuantidade correspondente a 3%: \n", porc)
 
 
-print ("\n",len(nouns))
+#print ("\n",len(nouns))
 frequen(nouns)
 
 fr = []
@@ -117,7 +120,7 @@ c = Counter(nouns)
 
 fr = c.keys()
         
-print("\n",fr,"\n")
+#print("\n",fr,"\n")
 
 lista = []
 
@@ -128,7 +131,7 @@ arquivo.close()
 
 arquivo = open('Aspectos/SUBS_Spacy.txt','r')
 lista = arquivo.read()
-print("SUBSTANTIVOS .txt \n", lista)
+#print("SUBSTANTIVOS .txt \n", lista)
 arquivo.close()
 
 
@@ -137,7 +140,7 @@ with open(os.path.join("Aspectos","SUBS_Spacy.p"), "wb") as f:
 
 file = open(os.path.join("Aspectos","SUBS_Spacy.p"), "rb")
 lista = pickle.load(file)
-print("SUBSTANTIVOS_Spacy .P \n", lista)    
+#print("SUBSTANTIVOS_Spacy .P \n", lista)    
 
 #arquivo txt e .p com substantivos mais frequentes 
 arquivo = open('Aspectos/SUBSfreq_Spacy.txt','w')
@@ -146,7 +149,7 @@ arquivo.close()
 
 arquivo = open('Aspectos/SUBSfreq_Spacy.txt','r')
 lista = arquivo.read()
-print("SUBSTANTIVOS .txt \n", lista)
+#print("SUBSTANTIVOS .txt \n", lista)
 arquivo.close()
 
 
@@ -155,5 +158,5 @@ with open(os.path.join("Aspectos","SUBSfreq_Spacy.p"), "wb") as f:
 
 file = open(os.path.join("Aspectos","SUBSfreq_Spacy.p"), "rb")
 lista = pickle.load(file)
-print("SUBSTANTIVOS .P \n", lista) 
+#print("SUBSTANTIVOS .P \n", lista) 
 

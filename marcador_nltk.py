@@ -25,13 +25,25 @@ from collections import Counter
 from pathlib import Path
 
 
-with(open(os.path.join("USO_GERAL.p"), "rb")) as f:
+with(open(os.path.join("matriz01.txt"), "rb")) as f:
     all_reviews = pickle.load(f)
 #print(all_reviews)
 
 
-str(all_reviews)    
+str(all_reviews)
+"""
+# Criando e escrevendo em arquivos de texto (modo 'w').
+arquivo = open('matriz01.txt','w')
+arquivo.writelines(all_reviews)
+arquivo.close()
 
+
+# Lendo o arquivo criado:
+arquivo = open('matriz01.txt','r')
+conteudo=arquivo.read()
+
+print(conteudo)
+"""
 #cria objeto normalizador com atributos padrão
 norm = normaliser.Normaliser()
 #normaliza a sentença
