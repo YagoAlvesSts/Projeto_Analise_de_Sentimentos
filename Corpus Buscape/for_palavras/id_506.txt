@@ -1,0 +1,1 @@
+a função duos realmente não funciona como descrito pelo fabricante . se estiver em uma ligação no chip1 o chip number ficara fora de area . e pelo que vi na loja havia mais duas pessoas informando o mesmo problema ..

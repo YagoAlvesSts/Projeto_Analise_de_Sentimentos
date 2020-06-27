@@ -259,7 +259,7 @@ arquivo.write('\n'.join(all_reviews))
 arquivo.close()
 
 
-
+"""
 
 import gensim
 import numpy as np
@@ -277,8 +277,8 @@ def pre_processing_text(text, use_normalizer=False):
 
     text = text.lower()
 
-    input_chars = ["\n", ".", "!", "?", "ç", " / ", " - ", "|", "ã", "õ", "á", "é", "í", "ó", "ú", "â", "ê", "î", "ô", "û", "à", "è", "ì", "ò", "ù"]
-    output_chars = [" . ", " . ", " . ", " . ", "c", "/", "-", "", "a", "o", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u"]
+    input_chars = ["\n", ".", "!", "?", " / ", " - ", "|"]
+    output_chars = [" . ", " . ", " . ", " . ",  "/", "-", ""]
 
     for i in range(len(input_chars)):
         text = text.replace(input_chars[i], output_chars[i])  
@@ -313,7 +313,7 @@ print(all_reviews_t)
 with open("Processed_Reviews.p", "wb") as f:
     pickle.dump(all_reviews_t, f)
 
-
+"""
 
 # -*- coding: utf-8 -*-
 
@@ -2142,14 +2142,10 @@ def tec_posicao_adjetivo_nltk(all_reviews):
     acuracia = acertos/(len(all_reviews))*100
     print("\n\n\n\n\nacuracia:\t",acuracia,"%")
 
-"""
+
 
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Dec  4 10:54:31 2019
 
-@author: yagoa
-"""
 #BLIBLIOTECAS GERAIS
 import pprint
 import pickle
@@ -2900,6 +2896,10 @@ def tec_posicao_adjetivo_spacy(all_reviews):
         if polaridade_rev >= 1:
             polaridade_rev = 1
             cont +=1
+
+
+
+
             result_review.append(1)
 
         #busca se resultado da soma torna review negativo    
@@ -2936,7 +2936,7 @@ def tec_posicao_adjetivo_spacy(all_reviews):
     
 
 all_reviews = []
-"""
+
 for dirpath, _, files in os.walk("./Corpus Buscape/treinamento/lexico"):
     for filename in fnmatch.filter(files, '*.txt'):
             f = open(os.path.join(dirpath, filename), "r", encoding="utf8")
@@ -2946,7 +2946,7 @@ for dirpath, _, files in os.walk("./Corpus Buscape/treinamento/lexico"):
             all_reviews.append(review)
     with open("tec_linha_de_base.p", "wb") as f:
         pickle.dump(all_reviews, f) Processed_Reviews 
-"""
+
 
 with open(os.path.join("Processed_Reviews.p"), "rb") as file: #->Processed_Reviews
         all_reviews = pickle.load(file)
@@ -2954,3 +2954,93 @@ with open(os.path.join("Processed_Reviews.p"), "rb") as file: #->Processed_Revie
 tec_posicao_adjetivo_spacy(all_reviews)
 
 
+import os
+import pickle
+
+texto = "Alice é linda.\nAlice é legal.\nAlice é feia tbm."
+file =  open(os.path.join("notepad.txt"), "w", encoding="utf8" )
+file.writelines(texto)    
+file.close()  
+
+
+WINDOWS_LINE_ENDING = b'\r\n'
+UNIX_LINE_ENDING = b'\n'
+
+# relative or absolute file path, e.g.:
+file_path = r"C:\Users\Alice\Desktop\UFG\Projeto\Aprendendo\Projeto_1\notepad.txt"
+
+with open(file_path, 'rb') as open_file:
+    content = open_file.read()
+
+content = content.replace(WINDOWS_LINE_ENDING, UNIX_LINE_ENDING)
+
+with open(file_path, 'wb') as open_file:
+    open_file.write(content)
+
+
+
+
+
+import gensim
+import numpy as np
+import os
+import pickle
+import fnmatch
+from enelvo import normaliser
+from unidecode import unidecode
+from nltk.tokenize import sent_tokenize, word_tokenize
+import string
+from nltk.corpus import stopwords
+import re
+from unicodedata import normalize
+
+def pre_processing_text(text, use_normalizer=False):
+
+    if use_normalizer:
+        norm = normaliser.Normaliser()
+        text = norm.normalise(text)
+
+    text = text.lower()
+
+    input_chars = ["\n", ".", "!", "?", "ç", " / ", " - ", "|", "ã", "õ", "á", "é", "í", "ó", "ú", "â", "ê", "î", "ô", "û", "à", "è", "ì", "ò", "ù", "@","#", "$", "%", "&", "*", "(", ")", "[", "]", "{", "}", ";", ":", "<", ">", "=", "_", "+"]
+    output_chars = [" . ", " . ", " . ", " . ", "c", "/", "-", "", "a", "o", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u","","","","","","","","","","","","","","","","","","",""]
+
+    for i in range(len(input_chars)):
+        text = text.replace(input_chars[i], output_chars[i])  
+
+    text.strip()
+
+    return text
+
+
+
+
+
+def removerCaracteresEspeciais(text):
+    
+    #Método para remover caracteres especiais do texto
+    
+    return normalize('NFKD', text).encode('ASCII', 'ignore').decode('ASCII')
+
+
+all_tokenized_reviews = []
+print("Processed_Reviews.p couldn't be found. All reviews will be loaded from txt files, this will take a fell minutes")
+all_reviews = []
+for dirpath, _, files in os.walk("./Corpus Buscape/treinamento"):
+    for filename in fnmatch.filter(files, '*.txt'):
+        f = open(os.path.join(dirpath, filename), "r", encoding="utf8")
+        review = f.read()
+        review = pre_processing_text(review, use_normalizer=True)
+
+        rev = removerCaracteresEspeciais(review)
+
+        #rev = re.sub('[#$%^&*()[]{};:,<>\`~=_+]', ' ', review)
+        
+        all_reviews.append(rev)
+        
+arquivo = open('Aspectos/reviews_for_Palavras.txt','w')
+arquivo.write('\n'.join(all_reviews))
+arquivo.close()
+
+
+"""
