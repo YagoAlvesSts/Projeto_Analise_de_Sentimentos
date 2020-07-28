@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="amei esse celular, ele é ótimo.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="amei" lemma="amar" pos="v-fin" morph="PS 1S IND VFIN" extra="nosubj nosubj cjt-head cjt-head-STA vH fmc mv"/>
+			<t id="s1_2" word="esse" lemma="esse" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s1_3" word="celular" lemma="celular" pos="adj" morph="M S" extra="n nh"/>
+			<t id="s1_4" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_5" word="ele" lemma="ele" pos="pron-pers" morph="M 3S NOM" extra="--"/>
+			<t id="s1_6" word="é" lemma="ser" pos="v-fin" morph="PR 3S IND VFIN" extra="cjt-STA vK fmc mv"/>
+			<t id="s1_7" word="ótimo" lemma="bom" pos="adj" morph="M S" extra="SUP jh"/>
+			<t id="s1_8" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="CJT" idref="s1_503"/>
+				<edge label="PU" idref="s1_8"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="P" idref="s1_1"/>
+			</nt>
+			<nt id="s1_503" cat="fcl">
+				<edge label="S" idref="s1_504"/>
+				<edge label="Od" idref="s1_3"/>
+				<edge label="P" idref="s1_6"/>
+				<edge label="Cs" idref="s1_7"/>
+			</nt>
+			<nt id="s1_504" cat="np">
+				<edge label="DN" idref="s1_2"/>
+				<edge label="PU" idref="s1_4"/>
+				<edge label="H" idref="s1_5"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

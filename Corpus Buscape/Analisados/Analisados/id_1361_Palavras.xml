@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="minha avaliação foi feita por fidel, mas pretendo compra um..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="minha" lemma="meu" pos="pron-poss" morph="DET F S" extra="poss 1S"/>
+			<t id="s1_2" word="avaliação" lemma="avaliação" pos="n" morph="F S" sem="act" extra="--"/>
+			<t id="s1_3" word="foi" lemma="ser" pos="v-fin" morph="PS 3S IND VFIN" extra="cjt-head cjt-head-STA fmc aux"/>
+			<t id="s1_4" word="feita" lemma="fazer" pos="v-pcp" morph="F S" extra="mv"/>
+			<t id="s1_5" word="por" lemma="por" pos="prp" morph="--" extra="--"/>
+			<t id="s1_6" word="fidel" lemma="fidel" pos="n" morph="M S" extra="heur"/>
+			<t id="s1_7" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_8" word="mas" lemma="mas" pos="conj-c" morph="--" extra="clb"/>
+			<t id="s1_9" word="pretendo" lemma="pretender" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-STA vH fmc mv"/>
+			<t id="s1_10" word="compra" lemma="compra" pos="n" morph="F S" sem="act cc" extra="--"/>
+			<t id="s1_11" word="um" lemma="um" pos="num" morph="M S" extra="card np-close"/>
+			<t id="s1_12" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_13" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="PU" idref="s1_7"/>
+				<edge label="CO" idref="s1_8"/>
+				<edge label="CJT" idref="s1_506"/>
+				<edge label="PU" idref="s1_12"/>
+				<edge label="PU" idref="s1_13"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="S" idref="s1_503"/>
+				<edge label="P" idref="s1_504"/>
+				<edge label="fApass" idref="s1_505"/>
+			</nt>
+			<nt id="s1_503" cat="np">
+				<edge label="DN" idref="s1_1"/>
+				<edge label="H" idref="s1_2"/>
+			</nt>
+			<nt id="s1_504" cat="vp">
+				<edge label="Vaux" idref="s1_3"/>
+				<edge label="Vm" idref="s1_4"/>
+			</nt>
+			<nt id="s1_505" cat="pp">
+				<edge label="H" idref="s1_5"/>
+				<edge label="DP" idref="s1_6"/>
+			</nt>
+			<nt id="s1_506" cat="x">
+				<edge label="P" idref="s1_9"/>
+				<edge label="Od" idref="s1_507"/>
+			</nt>
+			<nt id="s1_507" cat="np">
+				<edge label="H" idref="s1_10"/>
+				<edge label="DN" idref="s1_11"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

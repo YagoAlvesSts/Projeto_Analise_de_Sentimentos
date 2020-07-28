@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="gostei obrigado.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH fmc mv"/>
+			<t id="s1_2" word="obrigado" lemma="obrigado" pos="adj" morph="M S" extra="jh"/>
+			<t id="s1_3" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="P" idref="s1_1"/>
+				<edge label="fCs" idref="s1_2"/>
+				<edge label="PU" idref="s1_3"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

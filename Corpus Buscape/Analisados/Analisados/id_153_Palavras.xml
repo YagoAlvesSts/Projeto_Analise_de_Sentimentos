@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="celular bonito, marca de boa qualidade e não é tão caro o que gostei ótimo celular.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="celular" lemma="celular" pos="adj" morph="M/F S" extra="nh"/>
+			<t id="s1_2" word="bonito" lemma="bonito" pos="adj" morph="M S" extra="jh"/>
+			<t id="s1_3" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_4" word="marca" lemma="marcar" pos="v-fin" morph="PR 3S IND VFIN" extra="nosubj nosubj cjt-head cjt-head-STA vH fmc mv"/>
+			<t id="s1_5" word="de" lemma="de" pos="prp" morph="--" extra="--"/>
+			<t id="s1_6" word="boa" lemma="bom" pos="adj" morph="F S" extra="--"/>
+			<t id="s1_7" word="qualidade" lemma="qualidade" pos="n" morph="F S" sem="percep-f f-c" extra="--"/>
+			<t id="s1_8" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_9" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s1_10" word="é" lemma="ser" pos="v-fin" morph="PR 3S IND VFIN" extra="nosubj nosubj cjt-STA vK fmc mv"/>
+			<t id="s1_11" word="tão" lemma="tão" pos="adv" morph="--" extra="dem quant KOMP"/>
+			<t id="s1_12" word="caro" lemma="caro" pos="adj" morph="M S" extra="jh"/>
+			<t id="s1_13" word="o" lemma="ele" pos="pron-pers" morph="M 3S ACC" extra="--"/>
+			<t id="s1_14" word="que" lemma="que" pos="conj-s" morph="--" extra="clb clb-fs"/>
+			<t id="s1_15" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv"/>
+			<t id="s1_16" word="ótimo" lemma="bom" pos="adj" morph="M S" extra="SUP jh"/>
+			<t id="s1_17" word="celular" lemma="celular" pos="adj" morph="M/F S" extra="nh np-close"/>
+			<t id="s1_18" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="CJT" idref="s1_503"/>
+				<edge label="PU" idref="s1_18"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+			</nt>
+			<nt id="s1_503" cat="x">
+				<edge label="Cs" idref="s1_504"/>
+				<edge label="fCs" idref="s1_2"/>
+				<edge label="PU" idref="s1_3"/>
+				<edge label="P" idref="s1_4"/>
+				<edge label="fA" idref="s1_507"/>
+				<edge label="fA" idref="s1_9"/>
+				<edge label="P" idref="s1_10"/>
+				<edge label="Od" idref="s1_509"/>
+			</nt>
+			<nt id="s1_504" cat="adjp">
+				<edge label="DAcom" idref="s1_505"/>
+				<edge label="DA" idref="s1_11"/>
+				<edge label="H" idref="s1_12"/>
+			</nt>
+			<nt id="s1_505" cat="fcl">
+				<edge label="fCs" idref="s1_506"/>
+			</nt>
+			<nt id="s1_506" cat="np">
+				<edge label="DN" idref="s1_1"/>
+			</nt>
+			<nt id="s1_507" cat="pp">
+				<edge label="H" idref="s1_5"/>
+				<edge label="DP" idref="s1_508"/>
+			</nt>
+			<nt id="s1_508" cat="np">
+				<edge label="DN" idref="s1_6"/>
+				<edge label="H" idref="s1_7"/>
+				<edge label="CO" idref="s1_8"/>
+			</nt>
+			<nt id="s1_509" cat="np">
+				<edge label="H" idref="s1_13"/>
+				<edge label="DAcom" idref="s1_510"/>
+			</nt>
+			<nt id="s1_510" cat="fcl">
+				<edge label="SUB" idref="s1_14"/>
+				<edge label="P" idref="s1_15"/>
+				<edge label="fCs" idref="s1_511"/>
+			</nt>
+			<nt id="s1_511" cat="np">
+				<edge label="H" idref="s1_16"/>
+				<edge label="DN" idref="s1_17"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

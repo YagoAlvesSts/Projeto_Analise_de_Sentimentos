@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="a experiência com este modelo do foi satisfatória.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s1_2" word="experiência" lemma="experiência" pos="n" morph="F S" sem="am ac" extra="--"/>
+			<t id="s1_3" word="com" lemma="com" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_4" word="este" lemma="este" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s1_5" word="modelo" lemma="modelo" pos="n" morph="M S" sem="ac Hprof" extra="--"/>
+			<t id="s1_6" word="de" lemma="de" pos="prp" morph="--" extra="sam- np-close"/>
+			<t id="s1_7" word="o" lemma="o" pos="art" morph="M S" extra="-sam "/>
+			<t id="s1_8" word="foi" lemma="ser" pos="v-fin" morph="PS 3S IND VFIN" extra="mv"/>
+			<t id="s1_9" word="satisfatória" lemma="satisfatório" pos="adj" morph="F S" extra="nh"/>
+			<t id="s1_10" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="fCs" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="np">
+				<edge label="DN" idref="s1_1"/>
+				<edge label="H" idref="s1_2"/>
+				<edge label="DN" idref="s1_502"/>
+				<edge label="PU" idref="s1_10"/>
+			</nt>
+			<nt id="s1_502" cat="pp">
+				<edge label="H" idref="s1_3"/>
+				<edge label="DP" idref="s1_503"/>
+			</nt>
+			<nt id="s1_503" cat="np">
+				<edge label="DN" idref="s1_4"/>
+				<edge label="H" idref="s1_5"/>
+				<edge label="DN" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="pp">
+				<edge label="H" idref="s1_6"/>
+				<edge label="DP" idref="s1_505"/>
+				<edge label="Cs" idref="s1_9"/>
+			</nt>
+			<nt id="s1_505" cat="np">
+				<edge label="DN" idref="s1_7"/>
+				<edge label="P" idref="s1_8"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

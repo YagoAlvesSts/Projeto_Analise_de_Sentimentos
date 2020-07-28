@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="um ótimo produto a motorola deveria dar seguimento na fabricação do modelo pois a durabilidade é ótima.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="um" lemma="um" pos="art" morph="M S" extra="--"/>
+			<t id="s1_2" word="ótimo" lemma="bom" pos="adj" morph="M S" extra="SUP"/>
+			<t id="s1_3" word="produto" lemma="produto" pos="n" morph="M S" sem="cc-h mon ac-cat" extra="--"/>
+			<t id="s1_4" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s1_5" word="motorola" lemma="motorola" pos="n" morph="F S" sem="Aorn" extra="DERP"/>
+			<t id="s1_6" word="deveria" lemma="dever" pos="v-fin" morph="COND 3S VFIN" extra="predco predco fmc aux"/>
+			<t id="s1_7" word="dar" lemma="dar" pos="v-inf" morph="--" extra="mv"/>
+			<t id="s1_8" word="seguimento" lemma="seguimento" pos="n" morph="M S" sem="HH activity" extra="--"/>
+			<t id="s1_9" word="em" lemma="em" pos="prp" morph="--" extra="sam-"/>
+			<t id="s1_10" word="a" lemma="o" pos="art" morph="F S" extra="-sam "/>
+			<t id="s1_11" word="fabricação" lemma="fabricação" pos="n" morph="F S" sem="act" extra="--"/>
+			<t id="s1_12" word="de" lemma="de" pos="prp" morph="--" extra="sam- np-close"/>
+			<t id="s1_13" word="o" lemma="o" pos="art" morph="M S" extra="-sam "/>
+			<t id="s1_14" word="modelo" lemma="modelo" pos="n" morph="M S" sem="ac Hprof" extra="--"/>
+			<t id="s1_15" word="pois" lemma="pois" pos="adv" morph="--" extra="kc"/>
+			<t id="s1_16" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s1_17" word="durabilidade" lemma="durabilidade" pos="n" morph="F S" sem="am" extra="--"/>
+			<t id="s1_18" word="é" lemma="ser" pos="v-fin" morph="PR 3S IND VFIN" extra="nosubj nosubj cjt-STA vK fmc mv"/>
+			<t id="s1_19" word="ótima" lemma="bom" pos="adj" morph="F S" extra="SUP jh"/>
+			<t id="s1_20" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="S" idref="s1_502"/>
+				<edge label="Od" idref="s1_503"/>
+				<edge label="X" idref="s1_504"/>
+				<edge label="PU" idref="s1_20"/>
+			</nt>
+			<nt id="s1_502" cat="np">
+				<edge label="DN" idref="s1_1"/>
+				<edge label="DN" idref="s1_2"/>
+				<edge label="H" idref="s1_3"/>
+			</nt>
+			<nt id="s1_503" cat="np">
+				<edge label="DN" idref="s1_4"/>
+				<edge label="H" idref="s1_5"/>
+			</nt>
+			<nt id="s1_504" cat="par">
+				<edge label="CJT" idref="s1_505"/>
+				<edge label="CJT" idref="s1_511"/>
+			</nt>
+			<nt id="s1_505" cat="x">
+				<edge label="P" idref="s1_506"/>
+				<edge label="S" idref="s1_8"/>
+				<edge label="Op" idref="s1_507"/>
+			</nt>
+			<nt id="s1_506" cat="vp">
+				<edge label="Vaux" idref="s1_6"/>
+				<edge label="Vm" idref="s1_7"/>
+			</nt>
+			<nt id="s1_507" cat="pp">
+				<edge label="H" idref="s1_9"/>
+				<edge label="DP" idref="s1_508"/>
+			</nt>
+			<nt id="s1_508" cat="np">
+				<edge label="DN" idref="s1_10"/>
+				<edge label="H" idref="s1_11"/>
+				<edge label="DN" idref="s1_509"/>
+			</nt>
+			<nt id="s1_509" cat="pp">
+				<edge label="H" idref="s1_12"/>
+				<edge label="DP" idref="s1_510"/>
+			</nt>
+			<nt id="s1_510" cat="np">
+				<edge label="DN" idref="s1_13"/>
+				<edge label="H" idref="s1_14"/>
+			</nt>
+			<nt id="s1_511" cat="x">
+				<edge label="fA" idref="s1_15"/>
+				<edge label="Od" idref="s1_512"/>
+				<edge label="P" idref="s1_18"/>
+				<edge label="Cs" idref="s1_19"/>
+			</nt>
+			<nt id="s1_512" cat="np">
+				<edge label="DN" idref="s1_16"/>
+				<edge label="H" idref="s1_17"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="muito ótimo pra tirar fotos e conectar a internet.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="muito" lemma="muito" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_2" word="ótimo" lemma="bom" pos="adj" morph="M S" extra="SUP jh"/>
+			<t id="s1_3" word="pra" lemma="para" pos="prp" morph="--" extra="--"/>
+			<t id="s1_4" word="tirar" lemma="tirar" pos="v-inf" morph="--" extra="vH mv"/>
+			<t id="s1_5" word="fotos" lemma="foto" pos="n" morph="F P" sem="pict" extra="clb"/>
+			<t id="s1_6" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_7" word="conectar" lemma="conectar" pos="v-inf" morph="--" extra="mv"/>
+			<t id="s1_8" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s1_9" word="internet" lemma="internet" pos="n" morph="F S" sem="Labs" extra="--"/>
+			<t id="s1_10" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="X" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="adjp">
+				<edge label="DA" idref="s1_1"/>
+				<edge label="H" idref="s1_2"/>
+				<edge label="fA" idref="s1_502"/>
+				<edge label="H" idref="s1_3"/>
+				<edge label="DP" idref="s1_4"/>
+				<edge label="DP" idref="s1_503"/>
+				<edge label="S" idref="s1_5"/>
+				<edge label="CO" idref="s1_6"/>
+				<edge label="P" idref="s1_7"/>
+				<edge label="Od" idref="s1_504"/>
+				<edge label="PU" idref="s1_10"/>
+			</nt>
+			<nt id="s1_502" cat="pp">
+			</nt>
+			<nt id="s1_503" cat="fcl">
+			</nt>
+			<nt id="s1_504" cat="np">
+				<edge label="DN" idref="s1_8"/>
+				<edge label="H" idref="s1_9"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s2" ref="2" source="Running text" forest="1" text="e além de fazer maior sucesso com os amigos..">
+	<graph root="s2_500">
+		<terminals>
+			<t id="s2_1" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s2_2" word="além_de" lemma="além_de" pos="prp" morph="--" extra="--"/>
+			<t id="s2_3" word="fazer" lemma="fazer" pos="v-inf" morph="--" extra="mv"/>
+			<t id="s2_4" word="maior" lemma="grande" pos="adj" morph="M S" extra="KOMP"/>
+			<t id="s2_5" word="sucesso" lemma="sucesso" pos="n" morph="M S" sem="am ac" extra="--"/>
+			<t id="s2_6" word="com" lemma="com" pos="prp" morph="--" extra="--"/>
+			<t id="s2_7" word="os" lemma="o" pos="art" morph="M P" extra="--"/>
+			<t id="s2_8" word="amigos" lemma="amigo" pos="n" morph="M P" sem="Hfam" extra="--"/>
+			<t id="s2_9" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s2_10" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s2_500" cat="s">
+				<edge label="fA" idref="s2_501"/>
+			</nt>
+			<nt id="s2_501" cat="pp">
+				<edge label="CO" idref="s2_1"/>
+				<edge label="H" idref="s2_2"/>
+				<edge label="DP" idref="s2_3"/>
+				<edge label="Od" idref="s2_502"/>
+				<edge label="DN" idref="s2_4"/>
+				<edge label="H" idref="s2_5"/>
+				<edge label="fA" idref="s2_503"/>
+				<edge label="H" idref="s2_6"/>
+				<edge label="DP" idref="s2_504"/>
+				<edge label="PU" idref="s2_9"/>
+				<edge label="PU" idref="s2_10"/>
+			</nt>
+			<nt id="s2_502" cat="np">
+			</nt>
+			<nt id="s2_503" cat="pp">
+			</nt>
+			<nt id="s2_504" cat="np">
+				<edge label="DN" idref="s2_7"/>
+				<edge label="H" idref="s2_8"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

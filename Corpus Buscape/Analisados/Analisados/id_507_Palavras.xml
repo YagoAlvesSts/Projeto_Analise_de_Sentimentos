@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="comprei apenas por a marca.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="comprei" lemma="comprar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH fmc mv"/>
+			<t id="s1_2" word="apenas" lemma="apenas" pos="adv" morph="--" extra="--"/>
+			<t id="s1_3" word="por" lemma="por" pos="prp" morph="--" extra="sam-"/>
+			<t id="s1_4" word="a" lemma="o" pos="art" morph="F S" extra="-sam "/>
+			<t id="s1_5" word="marca" lemma="marca" pos="n" morph="F S" sem="ac-sign Labs bar" extra="--"/>
+			<t id="s1_6" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="P" idref="s1_1"/>
+				<edge label="fA" idref="s1_502"/>
+				<edge label="PU" idref="s1_6"/>
+			</nt>
+			<nt id="s1_502" cat="pp">
+				<edge label="DPmod" idref="s1_2"/>
+				<edge label="H" idref="s1_3"/>
+				<edge label="DP" idref="s1_503"/>
+			</nt>
+			<nt id="s1_503" cat="np">
+				<edge label="DN" idref="s1_4"/>
+				<edge label="H" idref="s1_5"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s2" ref="2" source="Running text" forest="1" text="muito ruim em todos os aspectos..">
+	<graph root="s2_500">
+		<terminals>
+			<t id="s2_1" word="muito" lemma="muito" pos="adv" morph="--" extra="quant"/>
+			<t id="s2_2" word="ruim" lemma="ruim" pos="adj" morph="M/F S" extra="n jh"/>
+			<t id="s2_3" word="em" lemma="em" pos="prp" morph="--" extra="np-close"/>
+			<t id="s2_4" word="todos_os" lemma="todo_o" pos="pron-indef" morph="DET M P" extra="quant"/>
+			<t id="s2_5" word="aspectos" lemma="aspecto" pos="n" morph="M P" sem="ac-cat" extra="--"/>
+			<t id="s2_6" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s2_7" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s2_500" cat="s">
+				<edge label="X" idref="s2_501"/>
+			</nt>
+			<nt id="s2_501" cat="adjp">
+				<edge label="DA" idref="s2_1"/>
+				<edge label="H" idref="s2_2"/>
+				<edge label="DN" idref="s2_502"/>
+				<edge label="H" idref="s2_3"/>
+				<edge label="DP" idref="s2_503"/>
+				<edge label="PU" idref="s2_6"/>
+				<edge label="PU" idref="s2_7"/>
+			</nt>
+			<nt id="s2_502" cat="pp">
+			</nt>
+			<nt id="s2_503" cat="np">
+				<edge label="DN" idref="s2_4"/>
+				<edge label="H" idref="s2_5"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

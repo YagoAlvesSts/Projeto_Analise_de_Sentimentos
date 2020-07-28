@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="tem o melhor custo benefício, pois tive um s3 que tem basicamente os mesmos benefícios mas custa muito mais..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="tem" lemma="ter" pos="v-fin" morph="PR 3S IND VFIN" extra="predco predco fmc mv"/>
+			<t id="s1_2" word="o" lemma="o" pos="art" morph="M S" extra="--"/>
+			<t id="s1_3" word="melhor" lemma="bom" pos="adj" morph="M S" extra="KOMP SUP"/>
+			<t id="s1_4" word="custo" lemma="custo" pos="n" morph="M S" sem="mon" extra="--"/>
+			<t id="s1_5" word="benefício" lemma="benefício" pos="n" morph="M S" sem="act-d mon" extra="--"/>
+			<t id="s1_6" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_7" word="pois" lemma="pois" pos="conj-s" morph="--" extra="clb"/>
+			<t id="s1_8" word="tive" lemma="ter" pos="v-fin" morph="PS 1S IND VFIN" extra="nosubj nosubj cjt-STA fmc mv"/>
+			<t id="s1_9" word="um" lemma="um" pos="art" morph="M S" extra="--"/>
+			<t id="s1_10" word="s3" lemma="s3" pos="n" morph="M S" extra="foreign"/>
+			<t id="s1_11" word="que" lemma="que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s1_12" word="tem" lemma="ter" pos="v-fin" morph="PR 3S IND VFIN" extra="mv np-close"/>
+			<t id="s1_13" word="basicamente" lemma="básico" pos="adv" morph="--" extra="nh"/>
+			<t id="s1_14" word="os" lemma="o" pos="art" morph="M P" extra="--"/>
+			<t id="s1_15" word="mesmos" lemma="mesmo" pos="pron-indef" morph="DET M P" extra="diff KOMP"/>
+			<t id="s1_16" word="benefícios" lemma="benefício" pos="n" morph="M P" sem="act-d mon" extra="--"/>
+			<t id="s1_17" word="mas" lemma="mas" pos="conj-c" morph="--" extra="topkc"/>
+			<t id="s1_18" word="custa" lemma="custar" pos="v-fin" morph="PR 3S IND VFIN" extra="vN fmc mv np-close"/>
+			<t id="s1_19" word="muito" lemma="muito" pos="pron-indef" morph="DET M S" extra="quant"/>
+			<t id="s1_20" word="mais" lemma="mais" pos="adv" morph="--" extra="--"/>
+			<t id="s1_21" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_22" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="X" idref="s1_502"/>
+				<edge label="PU" idref="s1_21"/>
+				<edge label="PU" idref="s1_22"/>
+			</nt>
+			<nt id="s1_502" cat="par">
+				<edge label="CJT" idref="s1_503"/>
+				<edge label="PU" idref="s1_6"/>
+				<edge label="CJT" idref="s1_505"/>
+			</nt>
+			<nt id="s1_503" cat="x">
+				<edge label="P" idref="s1_1"/>
+				<edge label="Od" idref="s1_504"/>
+				<edge label="S" idref="s1_5"/>
+			</nt>
+			<nt id="s1_504" cat="np">
+				<edge label="DN" idref="s1_2"/>
+				<edge label="DN" idref="s1_3"/>
+				<edge label="H" idref="s1_4"/>
+			</nt>
+			<nt id="s1_505" cat="x">
+				<edge label="fA" idref="s1_7"/>
+				<edge label="P" idref="s1_8"/>
+				<edge label="Od" idref="s1_506"/>
+			</nt>
+			<nt id="s1_506" cat="np">
+				<edge label="DN" idref="s1_9"/>
+				<edge label="H" idref="s1_10"/>
+				<edge label="DN" idref="s1_507"/>
+			</nt>
+			<nt id="s1_507" cat="fcl">
+				<edge label="S" idref="s1_11"/>
+				<edge label="P" idref="s1_12"/>
+				<edge label="fA" idref="s1_13"/>
+				<edge label="Od" idref="s1_508"/>
+			</nt>
+			<nt id="s1_508" cat="np">
+				<edge label="DN" idref="s1_14"/>
+				<edge label="DN" idref="s1_15"/>
+				<edge label="H" idref="s1_16"/>
+				<edge label="DN" idref="s1_509"/>
+			</nt>
+			<nt id="s1_509" cat="fcl">
+				<edge label="CO" idref="s1_17"/>
+				<edge label="P" idref="s1_18"/>
+				<edge label="As" idref="s1_19"/>
+				<edge label="fA" idref="s1_20"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

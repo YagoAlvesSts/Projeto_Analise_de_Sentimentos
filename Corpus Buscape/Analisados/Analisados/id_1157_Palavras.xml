@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="ele é android number.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="ele" lemma="ele" pos="pron-pers" morph="M 3S NOM" extra="--"/>
+			<t id="s1_2" word="é" lemma="ser" pos="v-fin" morph="PR 3S IND VFIN" extra="vK fmc mv"/>
+			<t id="s1_3" word="android" lemma="android" pos="n" morph="M S" extra="foreign heur"/>
+			<t id="s1_4" word="number" lemma="number" pos="v-inf" morph="--" extra="heur mv"/>
+			<t id="s1_5" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="S" idref="s1_1"/>
+				<edge label="P" idref="s1_2"/>
+				<edge label="Cs" idref="s1_3"/>
+				<edge label="UTT" idref="s1_4"/>
+				<edge label="PU" idref="s1_5"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s2" ref="2" source="Running text" forest="1" text="number, touchscreen, number.">
+	<graph root="s2_500">
+		<terminals>
+			<t id="s2_1" word="number" lemma="number" pos="n" morph="M S" extra="heur"/>
+			<t id="s2_2" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s2_3" word="touchscreen" lemma="touchscreen" pos="n" morph="M S" extra="foreign heur np-close"/>
+			<t id="s2_4" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s2_5" word="number" lemma="number" pos="v-inf" morph="--" extra="heur mv"/>
+			<t id="s2_6" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s2_500" cat="s">
+				<edge label="UTT" idref="s2_501"/>
+			</nt>
+			<nt id="s2_501" cat="fcl">
+				<edge label="S" idref="s2_502"/>
+				<edge label="PU" idref="s2_4"/>
+				<edge label="P" idref="s2_5"/>
+				<edge label="PU" idref="s2_6"/>
+			</nt>
+			<nt id="s2_502" cat="np">
+				<edge label="H" idref="s2_1"/>
+				<edge label="PU" idref="s2_2"/>
+				<edge label="DNc" idref="s2_3"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s3" ref="3" source="Running text" forest="1" text="number polegadas, number 0x1080 pixel, number gigabytes de memória, number megapixel full hd.">
+	<graph root="s3_500">
+		<terminals>
+			<t id="s3_1" word="number" lemma="number" pos="v-inf" morph="--" extra="heur mv"/>
+			<t id="s3_2" word="polegadas" lemma="polegada" pos="n" morph="F P" sem="unit" extra="--"/>
+			<t id="s3_3" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s3_4" word="number" lemma="number" pos="v-inf" morph="--" extra="heur mv"/>
+			<t id="s3_5" word="0x1080" lemma="0x1080" pos="num" morph="M P" extra="card"/>
+			<t id="s3_6" word="pixel" lemma="pixel" pos="n" morph="M P" sem="unit" extra="--"/>
+			<t id="s3_7" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s3_8" word="number" lemma="number" pos="v-inf" morph="--" extra="heur mv"/>
+			<t id="s3_9" word="gigabytes" lemma="gigabyte" pos="n" morph="M P" sem="unit" extra="DERP"/>
+			<t id="s3_10" word="de_memória" lemma="de_memória" pos="adv" morph="--" sem="pp" extra="--"/>
+			<t id="s3_11" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s3_12" word="number" lemma="number" pos="n" morph="M S" extra="heur np-close"/>
+			<t id="s3_13" word="megapixel" lemma="megapixel" pos="n" morph="M S" sem="unit" extra="DERP np-close"/>
+			<t id="s3_14" word="full" lemma="full" pos="n" morph="M S" extra="foreign heur np-close"/>
+			<t id="s3_15" word="hd" lemma="hd" pos="n" morph="M/F S" extra="foreign np-close"/>
+			<t id="s3_16" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s3_500" cat="s">
+				<edge label="UTT" idref="s3_501"/>
+			</nt>
+			<nt id="s3_501" cat="icl">
+				<edge label="P" idref="s3_1"/>
+				<edge label="Od" idref="s3_2"/>
+				<edge label="PU" idref="s3_3"/>
+				<edge label="UTT" idref="s3_502"/>
+				<edge label="P" idref="s3_4"/>
+				<edge label="Od" idref="s3_503"/>
+				<edge label="UTT" idref="s3_504"/>
+				<edge label="P" idref="s3_8"/>
+				<edge label="Od" idref="s3_505"/>
+				<edge label="fA" idref="s3_10"/>
+				<edge label="PU" idref="s3_16"/>
+			</nt>
+			<nt id="s3_502" cat="icl">
+			</nt>
+			<nt id="s3_503" cat="np">
+				<edge label="DN" idref="s3_5"/>
+				<edge label="H" idref="s3_6"/>
+				<edge label="PU" idref="s3_7"/>
+			</nt>
+			<nt id="s3_504" cat="icl">
+			</nt>
+			<nt id="s3_505" cat="np">
+				<edge label="H" idref="s3_9"/>
+				<edge label="PU" idref="s3_11"/>
+				<edge label="DNc" idref="s3_506"/>
+			</nt>
+			<nt id="s3_506" cat="np">
+				<edge label="H" idref="s3_12"/>
+				<edge label="DNc" idref="s3_507"/>
+			</nt>
+			<nt id="s3_507" cat="np">
+				<edge label="H" idref="s3_13"/>
+				<edge label="DNc" idref="s3_508"/>
+			</nt>
+			<nt id="s3_508" cat="np">
+				<edge label="H" idref="s3_14"/>
+				<edge label="DNc" idref="s3_15"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

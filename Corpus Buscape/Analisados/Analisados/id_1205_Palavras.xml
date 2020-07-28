@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="muito massa eu tinha um e quero ter outro..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="muito" lemma="muito" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_2" word="massa" lemma="massa" pos="n" morph="F S" sem="amount f-q food-h cm mon HH" extra="--"/>
+			<t id="s1_3" word="eu" lemma="eu" pos="pron-pers" morph="M/F 1S NOM" extra="--"/>
+			<t id="s1_4" word="tinha" lemma="ter" pos="v-fin" morph="IMPF 1S IND VFIN" extra="cjt-head cjt-head-STA fmc mv"/>
+			<t id="s1_5" word="um" lemma="um" pos="num" morph="M S" extra="card"/>
+			<t id="s1_6" word="e" lemma="e" pos="conj-c" morph="--" extra="topkc"/>
+			<t id="s1_7" word="quero" lemma="querer" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-STA vH fmc mv"/>
+			<t id="s1_8" word="ter" lemma="ter" pos="v-inf" morph="--" extra="mv"/>
+			<t id="s1_9" word="outro" lemma="outro" pos="pron-indef" morph="DET M S" extra="diff KOMP"/>
+			<t id="s1_10" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_11" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="CO" idref="s1_6"/>
+				<edge label="CJT" idref="s1_503"/>
+				<edge label="PU" idref="s1_10"/>
+				<edge label="PU" idref="s1_11"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="fA" idref="s1_1"/>
+				<edge label="fCs" idref="s1_2"/>
+				<edge label="S" idref="s1_3"/>
+				<edge label="P" idref="s1_4"/>
+				<edge label="Od" idref="s1_5"/>
+			</nt>
+			<nt id="s1_503" cat="x">
+				<edge label="P" idref="s1_7"/>
+				<edge label="Od" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="icl">
+				<edge label="P" idref="s1_8"/>
+				<edge label="Od" idref="s1_9"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="não tenho ainda mas quero ter um.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s1_2" word="tenho" lemma="ter" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-head cjt-head-STA fmc mv"/>
+			<t id="s1_3" word="ainda" lemma="ainda" pos="adv" morph="--" extra="--"/>
+			<t id="s1_4" word="mas" lemma="mas" pos="conj-c" morph="--" extra="topkc"/>
+			<t id="s1_5" word="quero" lemma="querer" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-STA vH fmc mv"/>
+			<t id="s1_6" word="ter" lemma="ter" pos="v-inf" morph="--" extra="mv"/>
+			<t id="s1_7" word="um" lemma="um" pos="num" morph="M S" extra="card"/>
+			<t id="s1_8" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="CO" idref="s1_4"/>
+				<edge label="CJT" idref="s1_503"/>
+				<edge label="PU" idref="s1_8"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="fA" idref="s1_1"/>
+				<edge label="P" idref="s1_2"/>
+				<edge label="fA" idref="s1_3"/>
+			</nt>
+			<nt id="s1_503" cat="x">
+				<edge label="P" idref="s1_5"/>
+				<edge label="Od" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="icl">
+				<edge label="P" idref="s1_6"/>
+				<edge label="Od" idref="s1_7"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

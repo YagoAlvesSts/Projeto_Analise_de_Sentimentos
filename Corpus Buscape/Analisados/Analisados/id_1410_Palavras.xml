@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="ótimo de bom e excelente espaço de memoria e bem definido com suas curvas bem arretadas e uma cor muito maravilhosa o que gostei ótimo de bom e excelente espaço de memoria e bem definido com suas curvas bem arretadas e uma cor muito maravilhosa o que não gostei ótimo de bom e excelente espaço de memoria e bem definido com suas curvas bem arretadas e uma cor muito maravilhosa.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="ótimo" lemma="bom" pos="adj" morph="M S" extra="n SUP jh"/>
+			<t id="s1_2" word="de" lemma="de" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_3" word="bom" lemma="bom" pos="adj" morph="M S" extra="--"/>
+			<t id="s1_4" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_5" word="excelente" lemma="excelente" pos="adj" morph="M S" extra="--"/>
+			<t id="s1_6" word="espaço" lemma="espaço" pos="n" morph="M S" sem="Labs Ltop" extra="--"/>
+			<t id="s1_7" word="de" lemma="de" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_8" word="memoria" lemma="memoriar" pos="v-fin" morph="PR 3S IND VFIN" extra="cjt-head cjt-head-STA vH fmc mv"/>
+			<t id="s1_9" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_10" word="bem" lemma="bem" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_11" word="definido" lemma="definir" pos="v-pcp" morph="M S" extra="n jh vH"/>
+			<t id="s1_12" word="com" lemma="com" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_13" word="suas" lemma="seu" pos="pron-poss" morph="DET F P" extra="poss 3S"/>
+			<t id="s1_14" word="curvas" lemma="curva" pos="n" morph="F P" sem="Lpath Labs" extra="--"/>
+			<t id="s1_15" word="bem" lemma="bem" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_16" word="arretadas" lemma="arretar" pos="v-pcp" morph="F P" extra="vH np-close"/>
+			<t id="s1_17" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_18" word="uma" lemma="um" pos="art" morph="F S" extra="--"/>
+			<t id="s1_19" word="cor" lemma="cor" pos="n" morph="F S" sem="f-c" extra="--"/>
+			<t id="s1_20" word="muito" lemma="muito" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_21" word="maravilhosa" lemma="maravilhoso" pos="adj" morph="F S" extra="np-close"/>
+			<t id="s1_22" word="o" lemma="o" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s1_23" word="que" lemma="que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s1_24" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv np-close"/>
+			<t id="s1_25" word="ótimo" lemma="bom" pos="adj" morph="M S" extra="SUP"/>
+			<t id="s1_26" word="de" lemma="de" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_27" word="bom" lemma="bom" pos="adj" morph="M S" extra="--"/>
+			<t id="s1_28" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_29" word="excelente" lemma="excelente" pos="adj" morph="M S" extra="--"/>
+			<t id="s1_30" word="espaço" lemma="espaço" pos="n" morph="M S" sem="Labs Ltop" extra="--"/>
+			<t id="s1_31" word="de" lemma="de" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_32" word="memoria" lemma="memoriar" pos="v-fin" morph="PR 3S IND VFIN" extra="cjt-STA vH fmc mv"/>
+			<t id="s1_33" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_34" word="bem" lemma="bem" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_35" word="definido" lemma="definir" pos="v-pcp" morph="M S" extra="n jh vH"/>
+			<t id="s1_36" word="com" lemma="com" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_37" word="suas" lemma="seu" pos="pron-poss" morph="DET F P" extra="poss 3S"/>
+			<t id="s1_38" word="curvas" lemma="curva" pos="n" morph="F P" sem="Lpath Labs" extra="--"/>
+			<t id="s1_39" word="bem" lemma="bem" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_40" word="arretadas" lemma="arretar" pos="v-pcp" morph="F P" extra="vH np-close"/>
+			<t id="s1_41" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_42" word="uma" lemma="um" pos="art" morph="F S" extra="--"/>
+			<t id="s1_43" word="cor" lemma="cor" pos="n" morph="F S" sem="f-c" extra="--"/>
+			<t id="s1_44" word="muito" lemma="muito" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_45" word="maravilhosa" lemma="maravilhoso" pos="adj" morph="F S" extra="np-close"/>
+			<t id="s1_46" word="o" lemma="o" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s1_47" word="que" lemma="que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s1_48" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s1_49" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv np-close"/>
+			<t id="s1_50" word="ótimo" lemma="bom" pos="adj" morph="M S" extra="SUP"/>
+			<t id="s1_51" word="de" lemma="de" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_52" word="bom" lemma="bom" pos="adj" morph="M S" extra="--"/>
+			<t id="s1_53" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_54" word="excelente" lemma="excelente" pos="adj" morph="M S" extra="--"/>
+			<t id="s1_55" word="espaço" lemma="espaço" pos="n" morph="M S" sem="Labs Ltop" extra="--"/>
+			<t id="s1_56" word="de" lemma="de" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_57" word="memoria" lemma="memoriar" pos="v-fin" morph="PR 3S IND VFIN" extra="cjt-STA vH fmc mv"/>
+			<t id="s1_58" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_59" word="bem" lemma="bem" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_60" word="definido" lemma="definir" pos="v-pcp" morph="M S" extra="jh vH"/>
+			<t id="s1_61" word="com" lemma="com" pos="prp" morph="--" extra="--"/>
+			<t id="s1_62" word="suas" lemma="seu" pos="pron-poss" morph="DET F P" extra="si poss 3S"/>
+			<t id="s1_63" word="curvas" lemma="curva" pos="n" morph="F P" sem="Lpath Labs" extra="--"/>
+			<t id="s1_64" word="bem" lemma="bem" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_65" word="arretadas" lemma="arretar" pos="v-pcp" morph="F P" extra="vH np-close"/>
+			<t id="s1_66" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_67" word="uma" lemma="um" pos="art" morph="F S" extra="--"/>
+			<t id="s1_68" word="cor" lemma="cor" pos="n" morph="F S" sem="f-c" extra="--"/>
+			<t id="s1_69" word="muito" lemma="muito" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_70" word="maravilhosa" lemma="maravilhoso" pos="adj" morph="F S" extra="np-close"/>
+			<t id="s1_71" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="DN" idref="s1_2"/>
+				<edge label="CJT" idref="s1_506"/>
+				<edge label="CJT" idref="s1_516"/>
+				<edge label="PU" idref="s1_71"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="S" idref="s1_1"/>
+				<edge label="S" idref="s1_503"/>
+				<edge label="P" idref="s1_8"/>
+			</nt>
+			<nt id="s1_503" cat="np">
+				<edge label="DN" idref="s1_3"/>
+				<edge label="DN" idref="s1_504"/>
+				<edge label="DN" idref="s1_5"/>
+				<edge label="H" idref="s1_6"/>
+				<edge label="-DN" idref="s1_7"/>
+				<edge label="DN" idref="s1_505"/>
+			</nt>
+			<nt id="s1_504" cat="pp">
+				<edge label="CO" idref="s1_4"/>
+			</nt>
+			<nt id="s1_505" cat="pp">
+				<edge label="CO" idref="s1_9"/>
+				<edge label="H" idref="s1_12"/>
+				<edge label="DP" idref="s1_508"/>
+			</nt>
+			<nt id="s1_506" cat="fcl">
+				<edge label="S" idref="s1_507"/>
+				<edge label="Od" idref="s1_510"/>
+				<edge label="S" idref="s1_22"/>
+				<edge label="S" idref="s1_513"/>
+				<edge label="P" idref="s1_32"/>
+			</nt>
+			<nt id="s1_507" cat="adjp">
+				<edge label="DA" idref="s1_10"/>
+				<edge label="H" idref="s1_11"/>
+			</nt>
+			<nt id="s1_508" cat="np">
+				<edge label="DN" idref="s1_13"/>
+				<edge label="H" idref="s1_14"/>
+				<edge label="DNc" idref="s1_509"/>
+			</nt>
+			<nt id="s1_509" cat="adjp">
+				<edge label="DA" idref="s1_15"/>
+				<edge label="H" idref="s1_16"/>
+			</nt>
+			<nt id="s1_510" cat="np">
+				<edge label="DN" idref="s1_511"/>
+				<edge label="DN" idref="s1_18"/>
+				<edge label="H" idref="s1_19"/>
+				<edge label="DN" idref="s1_512"/>
+				<edge label="DN" idref="s1_26"/>
+			</nt>
+			<nt id="s1_511" cat="adjp">
+				<edge label="CO" idref="s1_17"/>
+				<edge label="DA" idref="s1_20"/>
+				<edge label="H" idref="s1_21"/>
+			</nt>
+			<nt id="s1_512" cat="fcl">
+				<edge label="S" idref="s1_23"/>
+				<edge label="P" idref="s1_24"/>
+				<edge label="fCs" idref="s1_25"/>
+			</nt>
+			<nt id="s1_513" cat="np">
+				<edge label="DN" idref="s1_27"/>
+				<edge label="DN" idref="s1_514"/>
+				<edge label="DN" idref="s1_29"/>
+				<edge label="H" idref="s1_30"/>
+				<edge label="-DN" idref="s1_31"/>
+				<edge label="DN" idref="s1_515"/>
+			</nt>
+			<nt id="s1_514" cat="pp">
+				<edge label="CO" idref="s1_28"/>
+			</nt>
+			<nt id="s1_515" cat="pp">
+				<edge label="CO" idref="s1_33"/>
+				<edge label="H" idref="s1_36"/>
+				<edge label="DP" idref="s1_518"/>
+			</nt>
+			<nt id="s1_516" cat="fcl">
+				<edge label="S" idref="s1_517"/>
+				<edge label="Od" idref="s1_520"/>
+				<edge label="S" idref="s1_46"/>
+				<edge label="P" idref="s1_57"/>
+				<edge label="fA" idref="s1_525"/>
+				<edge label="S" idref="s1_528"/>
+				<edge label="Od" idref="s1_531"/>
+			</nt>
+			<nt id="s1_517" cat="adjp">
+				<edge label="DA" idref="s1_34"/>
+				<edge label="H" idref="s1_35"/>
+			</nt>
+			<nt id="s1_518" cat="np">
+				<edge label="DN" idref="s1_37"/>
+				<edge label="H" idref="s1_38"/>
+				<edge label="DNc" idref="s1_519"/>
+			</nt>
+			<nt id="s1_519" cat="adjp">
+				<edge label="DA" idref="s1_39"/>
+				<edge label="H" idref="s1_40"/>
+			</nt>
+			<nt id="s1_520" cat="np">
+				<edge label="DN" idref="s1_521"/>
+				<edge label="DN" idref="s1_42"/>
+				<edge label="H" idref="s1_43"/>
+				<edge label="DN" idref="s1_522"/>
+				<edge label="DN" idref="s1_51"/>
+			</nt>
+			<nt id="s1_521" cat="adjp">
+				<edge label="CO" idref="s1_41"/>
+				<edge label="DA" idref="s1_44"/>
+				<edge label="H" idref="s1_45"/>
+			</nt>
+			<nt id="s1_522" cat="fcl">
+				<edge label="S" idref="s1_47"/>
+				<edge label="fA" idref="s1_48"/>
+				<edge label="P" idref="s1_49"/>
+				<edge label="fCs" idref="s1_50"/>
+				<edge label="Od" idref="s1_523"/>
+			</nt>
+			<nt id="s1_523" cat="np">
+				<edge label="DN" idref="s1_52"/>
+				<edge label="DN" idref="s1_524"/>
+				<edge label="DN" idref="s1_54"/>
+				<edge label="H" idref="s1_55"/>
+				<edge label="-DN" idref="s1_56"/>
+			</nt>
+			<nt id="s1_524" cat="pp">
+				<edge label="CO" idref="s1_53"/>
+			</nt>
+			<nt id="s1_525" cat="pp">
+				<edge label="DP" idref="s1_526"/>
+			</nt>
+			<nt id="s1_526" cat="np">
+				<edge label="DNc" idref="s1_527"/>
+			</nt>
+			<nt id="s1_527" cat="adjp">
+				<edge label="CO" idref="s1_58"/>
+			</nt>
+			<nt id="s1_528" cat="adjp">
+				<edge label="DA" idref="s1_59"/>
+				<edge label="H" idref="s1_60"/>
+				<edge label="H" idref="s1_61"/>
+				<edge label="DP" idref="s1_529"/>
+			</nt>
+			<nt id="s1_529" cat="np">
+				<edge label="DN" idref="s1_62"/>
+				<edge label="H" idref="s1_63"/>
+				<edge label="DNc" idref="s1_530"/>
+			</nt>
+			<nt id="s1_530" cat="adjp">
+				<edge label="DA" idref="s1_64"/>
+				<edge label="H" idref="s1_65"/>
+			</nt>
+			<nt id="s1_531" cat="np">
+				<edge label="DN" idref="s1_532"/>
+				<edge label="DN" idref="s1_67"/>
+				<edge label="H" idref="s1_68"/>
+			</nt>
+			<nt id="s1_532" cat="adjp">
+				<edge label="CO" idref="s1_66"/>
+				<edge label="DA" idref="s1_69"/>
+				<edge label="H" idref="s1_70"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

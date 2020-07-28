@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="ruim!">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="ruim" lemma="ruim" pos="adj" morph="M/F S" extra="jh"/>
+			<t id="s1_2" word="!" lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="UTT" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="x">
+				<edge label="X" idref="s1_1"/>
+				<edge label="PU" idref="s1_2"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s2" ref="2" source="Running text" forest="1" text="a internet e muito lenta e as funções são complexas o que gostei nada o que não gostei complexo, lento não recomendo!.">
+	<graph root="s2_500">
+		<terminals>
+			<t id="s2_1" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s2_2" word="internet" lemma="internet" pos="n" morph="F S" sem="Labs" extra="--"/>
+			<t id="s2_3" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s2_4" word="muito" lemma="muito" pos="adv" morph="--" extra="quant"/>
+			<t id="s2_5" word="lenta" lemma="lento" pos="adj" morph="F S" extra="nh np-close"/>
+			<t id="s2_6" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s2_7" word="as" lemma="o" pos="art" morph="F P" extra="--"/>
+			<t id="s2_8" word="funções" lemma="função" pos="n" morph="F P" sem="ac pos-soc occ" extra="--"/>
+			<t id="s2_9" word="são" lemma="ser" pos="v-fin" morph="PR 3P IND VFIN" extra="cjt-head cjt-head-STA vK fmc mv"/>
+			<t id="s2_10" word="complexas" lemma="complexo" pos="adj" morph="F P" extra="nh"/>
+			<t id="s2_11" word="o_que" lemma="o_que" pos="spec" morph="M S" extra="clb rel"/>
+			<t id="s2_12" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="nosubj nosubj cjt-STA vH mv"/>
+			<t id="s2_13" word="nada" lemma="nada" pos="adv" morph="--" extra="quant det"/>
+			<t id="s2_14" word="o" lemma="o" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s2_15" word="que" lemma="que" pos="spec" morph="M S" extra="clb rel"/>
+			<t id="s2_16" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s2_17" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="cjt-STA vH mv"/>
+			<t id="s2_18" word="complexo" lemma="complexo" pos="n" morph="M S" sem="ac-cat" extra="--"/>
+			<t id="s2_19" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s2_20" word="lento" lemma="lento" pos="adj" morph="M S" extra="nh"/>
+			<t id="s2_21" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s2_22" word="recomendo" lemma="recomendar" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-STA vH fmc mv"/>
+			<t id="s2_23" word="!" lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s2_24" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s2_500" cat="s">
+				<edge label="STA" idref="s2_501"/>
+			</nt>
+			<nt id="s2_501" cat="par">
+				<edge label="CJT" idref="s2_502"/>
+				<edge label="CJT" idref="s2_505"/>
+				<edge label="CJT" idref="s2_508"/>
+				<edge label="PU" idref="s2_19"/>
+				<edge label="CJT" idref="s2_509"/>
+				<edge label="PU" idref="s2_23"/>
+				<edge label="PU" idref="s2_24"/>
+			</nt>
+			<nt id="s2_502" cat="fcl">
+				<edge label="S" idref="s2_503"/>
+			</nt>
+			<nt id="s2_503" cat="np">
+				<edge label="DN" idref="s2_1"/>
+				<edge label="H" idref="s2_2"/>
+				<edge label="DN" idref="s2_504"/>
+			</nt>
+			<nt id="s2_504" cat="adjp">
+				<edge label="CO" idref="s2_3"/>
+				<edge label="DA" idref="s2_4"/>
+				<edge label="H" idref="s2_5"/>
+			</nt>
+			<nt id="s2_505" cat="x">
+				<edge label="X" idref="s2_506"/>
+				<edge label="S" idref="s2_507"/>
+				<edge label="P" idref="s2_9"/>
+				<edge label="Cs" idref="s2_10"/>
+				<edge label="P" idref="s2_12"/>
+				<edge label="fA" idref="s2_13"/>
+			</nt>
+			<nt id="s2_506" cat="x">
+				<edge label="CO" idref="s2_6"/>
+			</nt>
+			<nt id="s2_507" cat="np">
+				<edge label="DN" idref="s2_7"/>
+				<edge label="H" idref="s2_8"/>
+				<edge label="H" idref="s2_11"/>
+			</nt>
+			<nt id="s2_508" cat="fcl">
+				<edge label="S" idref="s2_14"/>
+				<edge label="X" idref="s2_15"/>
+				<edge label="fA" idref="s2_16"/>
+				<edge label="P" idref="s2_17"/>
+				<edge label="S" idref="s2_18"/>
+			</nt>
+			<nt id="s2_509" cat="x">
+				<edge label="Od" idref="s2_20"/>
+				<edge label="fA" idref="s2_21"/>
+				<edge label="P" idref="s2_22"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="em o momento não tenho um mais quero ter um em breve.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="em" lemma="em" pos="prp" morph="--" extra="sam-"/>
+			<t id="s1_2" word="o" lemma="o" pos="art" morph="M S" extra="-sam "/>
+			<t id="s1_3" word="momento" lemma="momento" pos="n" morph="M S" sem="dur f-q" extra="--"/>
+			<t id="s1_4" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s1_5" word="tenho" lemma="ter" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-head cjt-head-STA fmc mv"/>
+			<t id="s1_6" word="um" lemma="um" pos="art" morph="M S" extra="--"/>
+			<t id="s1_7" word="mais" lemma="mais" pos="adv" morph="--" extra="--"/>
+			<t id="s1_8" word="quero" lemma="querer" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-STA vH fmc mv"/>
+			<t id="s1_9" word="ter" lemma="ter" pos="v-inf" morph="--" extra="mv"/>
+			<t id="s1_10" word="um" lemma="um" pos="num" morph="M S" extra="card"/>
+			<t id="s1_11" word="em_breve" lemma="em_breve" pos="adv" morph="--" extra="--"/>
+			<t id="s1_12" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="DN" idref="s1_6"/>
+				<edge label="CJT" idref="s1_505"/>
+				<edge label="PU" idref="s1_12"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="fA" idref="s1_503"/>
+				<edge label="fA" idref="s1_4"/>
+				<edge label="P" idref="s1_5"/>
+				<edge label="fA" idref="s1_7"/>
+			</nt>
+			<nt id="s1_503" cat="pp">
+				<edge label="H" idref="s1_1"/>
+				<edge label="DP" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="np">
+				<edge label="DN" idref="s1_2"/>
+				<edge label="H" idref="s1_3"/>
+			</nt>
+			<nt id="s1_505" cat="x">
+				<edge label="P" idref="s1_8"/>
+				<edge label="Od" idref="s1_506"/>
+			</nt>
+			<nt id="s1_506" cat="icl">
+				<edge label="P" idref="s1_9"/>
+				<edge label="Od" idref="s1_10"/>
+				<edge label="fA" idref="s1_11"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="pratico e fácil de usar.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="pratico" lemma="praticar" pos="v-fin" morph="PR 1S IND VFIN" extra="vH fmc mv"/>
+			<t id="s1_2" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_3" word="fácil" lemma="fácil" pos="adj" morph="M/F S" extra="jh"/>
+			<t id="s1_4" word="de" lemma="de" pos="prp" morph="--" extra="--"/>
+			<t id="s1_5" word="usar" lemma="usar" pos="v-inf" morph="--" extra="vH mv"/>
+			<t id="s1_6" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="P" idref="s1_1"/>
+				<edge label="CO" idref="s1_2"/>
+				<edge label="Od" idref="s1_502"/>
+				<edge label="PU" idref="s1_6"/>
+			</nt>
+			<nt id="s1_502" cat="adjp">
+				<edge label="H" idref="s1_3"/>
+				<edge label="DA" idref="s1_503"/>
+			</nt>
+			<nt id="s1_503" cat="pp">
+				<edge label="H" idref="s1_4"/>
+				<edge label="DP" idref="s1_5"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

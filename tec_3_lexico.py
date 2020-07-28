@@ -38,7 +38,10 @@ from pathlib import Path
 import spacy
 from spacy import tokens
 
-
+cobertura = 0
+precisao = 0
+mediaf = 0
+acuracia = 0
 #pre processa texto
 def pre_processing_text(text, use_normalizer=False):
 
@@ -125,61 +128,66 @@ def Sentilex():
     return(dic_palavra_polaridade)
 
 
-def lexico_sentimento_SentWordNetPT(review):
-   
+def lexico_sentimento_SentWordNetPT(review,save=True):
 
+
+    with open(os.path.join("léxico/","SentWordNet_PTBR.p"), "rb") as f:
+        sent_words = pickle.load(f)
+    with open(os.path.join("léxico/","SentWordNet_PTBR_polarity.p"), "rb") as f:
+        sent_words_polarity = pickle.load(f)
+    
+            
     word_sentimento = []
     
-    pol = 0
-    word_pol = []
-    #print(SentiWordNet)
-    #atribui polaridade a cada palavra do review
+    #busca cada palavra do review
     for word in review:
-        word = pre_processing_text(word) #trata o texto
-        #chama função de atribuir polaridade a palavra
-        polaridade = atribui_polaridade_sentiwordnet(word)
-        
-        if(polaridade !=  None ):#se polaridade existir no léxico, atribui ao score
-            #print()
-            scorepos= polaridade[0]
-            scoreneg=polaridade[1]
-            if(scorepos > scoreneg):
-                pol = '1'
-            elif(scorepos < scoreneg):
-                pol = '-1'
-            else:
-                pol = '0'
-            word_pol = [word,pol]
-            #adiciona palavra e polaridade a lista
-            word_sentimento.append(word_pol)
-        if(polaridade == None):#se palavra não existe no léxico, atribui 0
-            word_pol = [word,'0']
-            word_sentimento.append(word_pol)
-        
+        wrd = [word,int(sent_words_polarity.get(word,0))] #pega palavra com polaridade no dicionario
+        word_sentimento.append(wrd)
+       
     return (word_sentimento) #retorna review com polaridades
 
 
 def atribui_polaridade_sentiwordnet(word):
+    
+    sent_words_polarity = {}
     #lista que será adicionado valores do léxico
     SentiWordNet = []
+    sent_words =[]
     #lê léxico com o pandas
     df = pd.read_csv('léxico/SentiWordNet_PT/SentiWord Pt-BR v1.0b.txt', delimiter="\t", header=None, names=["ID","PosScore", "NegScore", "Termo"])
     #print(df.values)
     SentiWordNet = df.values #pega valores do léxico de polaridades
     scorepos = 0.0
     scoreneg = 0.0
+    neg = []
+    pos = []
+    cont = 0
     #busca palavra no léxico
     for i,termo in enumerate(SentiWordNet):
         trm = pre_processing_text(termo[3]) #trata a palavra a ser buscada
         if trm == word: #compara palavra do review com o léxico
+            cont += 1
+            #print(termo[3],trm,word)
             #aqui o ideal seria somar, mas atualmente ele só pega polaridade da ultima palavra encontrada
-            scorepos = scorepos + float(termo[1]) #soma polaridades positivas
-            scoreneg = scoreneg + float(termo[2]) #soma polaridades negativas
+                
+            neg.append(float(termo[1]))
+            pos.append(float(termo[2]))
 
+
+                
+            #scorepos = scorepos + float(termo[1])#soma polaridades positivas
+            #scoreneg = scoreneg + float(termo[2])#soma polaridades negativas
+                
+            #print("\tposscore: ",pos,"\tnegscore: ",neg)
             
-            #print("termo:",termo[3],"\tposscore: ",scorepos,"\tnegscore: ",scoreneg)
+                
+        scoreneg = sum(i for i in neg)
 
-            return (scorepos,scoreneg) #retorna score de polaridades
+        scorepos = sum(j for j in pos)
+        
+            
+    #print(scorepos,scoreneg)    
+    return (scorepos,scoreneg) #retorna score de polaridades
 
 def lexico_sentimento_LIWC(review, save=True):
     
@@ -328,7 +336,30 @@ def concatenar(lexico_1, lexico_2, lexico_3, review, save=True):
     #retorna lista palavra e a polaridade de cada palavra
     return (word_sentimento)
 
+def avaliacao(TP, TN, FP, FN, acertos):
+    if TP == 0:
+        print("********** ACURACIA **********\n")
+        acuracia = ((TP+TN)/(TP+TN+FP+FN))*100
+        print("\t\t",acuracia,"\t\t\n\n")
+    else:
+        
+        print("********** COBERTURA **********\n")
+        cobertura = TP / (TP+FN)
+        print("\t\t",cobertura,"\t\t\n\n")
 
+        print("********** PRECISÃO **********\n")
+        precisao = TP / (TP+FP)
+        print("\t\t",precisao,"\t\t\n\n")
+
+        print("********** MÉDIA F **********\n")
+        mediaf = 2 *((precisao * cobertura) / (precisao + cobertura))
+        print("\t\t",mediaf,"\t\t\n\n")
+
+        print("********** ACURACIA **********\n")
+        acuracia = ((TP+TN)/(TP+TN+FP+FN))*100
+        print("\t\t",acuracia,"\t\t\n\n")
+
+    
             
 def CBL(all_reviews):
     all_tokenized_reviews = []
@@ -371,7 +402,7 @@ def CBL(all_reviews):
                     lista.append(plvra)
 
         #REALIZAR AVALIAÇÃO COM SENTWORDNET-PT-BR
-        #frase_polarity = lexico_sentimento_SentWordNetPT(lista)
+        frase_polarity = lexico_sentimento_SentWordNetPT(lista)
                     
                     
         #REALIZAR AVALIAÇÃO COM SENTILEX
@@ -381,7 +412,7 @@ def CBL(all_reviews):
         #frase_polarity = lexico_sentimento_LIWC(lista)
 
         #REALIZAR AVALIAÇÃO COM OpLexicon
-        frase_polarity = lexico_sentimento_OpLexicon(lista)
+        #frase_polarity = lexico_sentimento_OpLexicon(lista)
 
         #REALIZAR AVALIAÇÃO COM LÉXICOS CONCATENADOS
         #frase_polarity = concatenar('LIWC', 'OpLexicon', 'SentiLex', lista)
@@ -456,23 +487,44 @@ def CBL(all_reviews):
         print("REVIEW Nº:\t",cont)
             
     acertos = 0
+    TP = 0
+    TN = 0
+    FP = 0
+    FN = 0
+    zeros = 0
     #busca reviews com polaridade atribuido (de 0 a 5) e compara com resultado da técnica
     for i,polarity in enumerate(polarity_reviews):
         #print(polarity)
         print("\n")
+        if int(polarity[1]) == result_review[i] and result_review[i] == 1.0:
+            TP += 1
+
+        if int(polarity[1]) == result_review[i] and result_review[i] == -1.0:
+            TN += 1
+
+        if int(polarity[1]) != result_review[i] and result_review[i] == 1.0:
+            FP += 1
+
+        if int(polarity[1]) != result_review[i] and result_review[i] == -1.0:
+            FN += 1
+   
         if int(polarity[1]) == result_review[i]:
             acertos += 1 #conta acertos
+            
+        if int(polarity[1]) == 0 or  result_review[i] == 0.0:
+            
+            zeros += 1 #conta reviews que deram 0   
         else:
             print("")
-    
-                
+
+    print("TP: ",TP,"\tTN: ",TN,"\tFP: ",FP,"\tFN: ",FN)
     print("\nTOTAL REVIEWS AVALIADOS:\t",cont)
     print("total de reviews com polaridade:\t",len(all_reviews))
     print("ACERTOS:\t",acertos)
     #realiza acurácia
-    acuracia = acertos/(len(all_reviews))*100
-    print("\n\n\n\n\nacuracia:\t",acuracia,"%")
-
+    #acuracia = acertos/(len(all_reviews))*100
+    #print("\n\n\n\n\nacuracia:\t",acuracia,"%")
+    avaliacao(TP, TN, FP, FN, acertos)
 
 all_reviews = []
 

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="ótimo telefone para gamemaniacos, android e sony dizem tudo..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="ótimo" lemma="bom" pos="adj" morph="M S" extra="SUP"/>
+			<t id="s1_2" word="telefone" lemma="telefone" pos="n" morph="M S" sem="tool" extra="--"/>
+			<t id="s1_3" word="para" lemma="para" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_4" word="gamemaniacos" lemma="gamemaníaco" pos="adj" morph="M P" extra="jh"/>
+			<t id="s1_5" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_6" word="android" lemma="android" pos="n" morph="M S" extra="foreign heur"/>
+			<t id="s1_7" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_8" word="sony" lemma="sony" pos="n" morph="M S" extra="foreign heur"/>
+			<t id="s1_9" word="dizem" lemma="dizer" pos="v-fin" morph="PR 3P IND VFIN" extra="vH fmc mv"/>
+			<t id="s1_10" word="tudo" lemma="tudo" pos="spec" morph="M S" extra="quant"/>
+			<t id="s1_11" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_12" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="S" idref="s1_502"/>
+				<edge label="PU" idref="s1_5"/>
+				<edge label="S" idref="s1_6"/>
+				<edge label="S" idref="s1_8"/>
+				<edge label="P" idref="s1_9"/>
+				<edge label="Od" idref="s1_10"/>
+				<edge label="PU" idref="s1_11"/>
+				<edge label="PU" idref="s1_12"/>
+			</nt>
+			<nt id="s1_502" cat="np">
+				<edge label="DN" idref="s1_1"/>
+				<edge label="H" idref="s1_2"/>
+				<edge label="DN" idref="s1_503"/>
+			</nt>
+			<nt id="s1_503" cat="pp">
+				<edge label="H" idref="s1_3"/>
+				<edge label="DP" idref="s1_4"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="pesquisei e vou comprar só vi vantagens!.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="pesquisei" lemma="pesquisar" pos="v-fin" morph="PS 1S IND VFIN" extra="nosubj nosubj nosubj nosubj cjt-head cjt-head-STA vH fmc mv"/>
+			<t id="s1_2" word="e" lemma="e" pos="conj-c" morph="--" extra="co-fin"/>
+			<t id="s1_3" word="vou" lemma="ir" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj cjt-STA nosubj cjt-STA fmc aux"/>
+			<t id="s1_4" word="comprar" lemma="comprar" pos="v-inf" morph="--" extra="vH mv"/>
+			<t id="s1_5" word="só" lemma="só" pos="adv" morph="--" extra="--"/>
+			<t id="s1_6" word="vi" lemma="ver" pos="v-fin" morph="PS 1S IND VFIN" extra="nosubj nosubj cjt-STA vH fmc mv"/>
+			<t id="s1_7" word="vantagens" lemma="vantagem" pos="n" morph="F P" sem="ac" extra="--"/>
+			<t id="s1_8" word="!" lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_9" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_1"/>
+				<edge label="CO" idref="s1_2"/>
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="CJT" idref="s1_504"/>
+				<edge label="PU" idref="s1_8"/>
+				<edge label="PU" idref="s1_9"/>
+			</nt>
+			<nt id="s1_502" cat="x">
+				<edge label="P" idref="s1_503"/>
+				<edge label="fA" idref="s1_5"/>
+			</nt>
+			<nt id="s1_503" cat="vp">
+				<edge label="Vaux" idref="s1_3"/>
+				<edge label="Vm" idref="s1_4"/>
+			</nt>
+			<nt id="s1_504" cat="x">
+				<edge label="P" idref="s1_6"/>
+				<edge label="Od" idref="s1_7"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

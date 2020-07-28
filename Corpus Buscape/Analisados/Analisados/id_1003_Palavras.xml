@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="celular com ótimo custo-benefício.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="celular" lemma="celular" pos="adj" morph="M/F S" extra="n nh"/>
+			<t id="s1_2" word="com" lemma="com" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_3" word="ótimo" lemma="bom" pos="adj" morph="M S" extra="SUP"/>
+			<t id="s1_4" word="custo-benefício" lemma="custo-benefício" pos="n" morph="M S" sem="mon" extra="--"/>
+			<t id="s1_5" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="UTT" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="x">
+				<edge label="X" idref="s1_1"/>
+				<edge label="DN" idref="s1_502"/>
+				<edge label="H" idref="s1_2"/>
+				<edge label="DP" idref="s1_503"/>
+				<edge label="PU" idref="s1_5"/>
+			</nt>
+			<nt id="s1_502" cat="pp">
+			</nt>
+			<nt id="s1_503" cat="np">
+				<edge label="DN" idref="s1_3"/>
+				<edge label="H" idref="s1_4"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

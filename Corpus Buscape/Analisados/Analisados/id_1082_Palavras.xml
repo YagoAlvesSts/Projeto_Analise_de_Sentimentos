@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="namorei.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="namorei" lemma="namorar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH fmc mv"/>
+			<t id="s1_2" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="UTT" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="x">
+				<edge label="STA" idref="s1_1"/>
+				<edge label="PU" idref="s1_2"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

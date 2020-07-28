@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="ah ah ah ah ah ah ah a ah ah o que gostei ah ah à a a que que ah ah ah ah à a a que que ah ah ah o que nÃ£o gostei ah ah à a a que que ah ah ah ah à a a que que ah ah ah.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-head cjt-head-fA"/>
+			<t id="s1_2" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-fA"/>
+			<t id="s1_3" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-fA"/>
+			<t id="s1_4" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-fA"/>
+			<t id="s1_5" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-fA"/>
+			<t id="s1_6" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-fA"/>
+			<t id="s1_7" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-fA"/>
+			<t id="s1_8" word="a" lemma="a" pos="prp" morph="--" extra="--"/>
+			<t id="s1_9" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-fA"/>
+			<t id="s1_10" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-fA"/>
+			<t id="s1_11" word="o" lemma="o" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s1_12" word="que" lemma="que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s1_13" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv np-close"/>
+			<t id="s1_14" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-fA"/>
+			<t id="s1_15" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-fA"/>
+			<t id="s1_16" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s1_17" word="a" lemma="o" pos="pron-dem" morph="DET F S" extra="cjt-head cjt-head-Co dem"/>
+			<t id="s1_18" word="a" lemma="a" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_19" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s1_20" word="que" lemma="que" pos="spec" morph="M S" extra="clb interr"/>
+			<t id="s1_21" word="que" lemma="que" pos="conj-s" morph="--" extra="clb"/>
+			<t id="s1_22" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-fA"/>
+			<t id="s1_23" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-fA"/>
+			<t id="s1_24" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-fA"/>
+			<t id="s1_25" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-fA"/>
+			<t id="s1_26" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s1_27" word="a" lemma="o" pos="pron-dem" morph="DET F S" extra="cjt-Co dem"/>
+			<t id="s1_28" word="a" lemma="a" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_29" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s1_30" word="que" lemma="que" pos="spec" morph="M S" extra="clb interr"/>
+			<t id="s1_31" word="que" lemma="que" pos="conj-s" morph="--" extra="clb"/>
+			<t id="s1_32" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-fA"/>
+			<t id="s1_33" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-fA"/>
+			<t id="s1_34" word="ah" lemma="ah" pos="intj" morph="--" extra="cjt-fA"/>
+			<t id="s1_35" word="o_que" lemma="o_que" pos="spec" morph="M S" extra="clb rel"/>
+			<t id="s1_36" word="nÃ£o" lemma="nÃ£o" pos="adv" morph="--" extra="--"/>
+			<t id="s1_37" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv"/>
+			<t id="s1_38" word="ah" lemma="ah" pos="intj" morph="--" extra="--"/>
+			<t id="s1_39" word="ah" lemma="ah" pos="intj" morph="--" extra="--"/>
+			<t id="s1_40" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s1_41" word="a" lemma="o" pos="pron-dem" morph="DET F S" extra="cjt-head cjt-head-Co dem"/>
+			<t id="s1_42" word="a" lemma="a" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_43" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s1_44" word="que" lemma="que" pos="spec" morph="M S" extra="interr"/>
+			<t id="s1_45" word="que" lemma="que" pos="conj-s" morph="--" extra="--"/>
+			<t id="s1_46" word="ah" lemma="ah" pos="intj" morph="--" extra="--"/>
+			<t id="s1_47" word="ah" lemma="ah" pos="intj" morph="--" extra="--"/>
+			<t id="s1_48" word="ah" lemma="ah" pos="intj" morph="--" extra="--"/>
+			<t id="s1_49" word="ah" lemma="ah" pos="intj" morph="--" extra="--"/>
+			<t id="s1_50" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s1_51" word="a" lemma="o" pos="pron-dem" morph="DET F S" extra="cjt-Co dem"/>
+			<t id="s1_52" word="a" lemma="a" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_53" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s1_54" word="que" lemma="que" pos="spec" morph="M S" extra="interr"/>
+			<t id="s1_55" word="que" lemma="que" pos="conj-s" morph="--" extra="--"/>
+			<t id="s1_56" word="ah" lemma="ah" pos="intj" morph="--" extra="--"/>
+			<t id="s1_57" word="ah" lemma="ah" pos="intj" morph="--" extra="--"/>
+			<t id="s1_58" word="ah" lemma="ah" pos="intj" morph="--" extra="--"/>
+			<t id="s1_59" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="fA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_1"/>
+				<edge label="CJT" idref="s1_2"/>
+				<edge label="CJT" idref="s1_3"/>
+				<edge label="CJT" idref="s1_4"/>
+				<edge label="CJT" idref="s1_5"/>
+				<edge label="CJT" idref="s1_6"/>
+				<edge label="CJT" idref="s1_7"/>
+				<edge label="fA" idref="s1_8"/>
+				<edge label="CJT" idref="s1_9"/>
+				<edge label="CJT" idref="s1_10"/>
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="CJT" idref="s1_14"/>
+				<edge label="CJT" idref="s1_15"/>
+				<edge label="CJT" idref="s1_22"/>
+				<edge label="CJT" idref="s1_23"/>
+				<edge label="CJT" idref="s1_24"/>
+				<edge label="CJT" idref="s1_25"/>
+				<edge label="CJT" idref="s1_32"/>
+				<edge label="CJT" idref="s1_33"/>
+				<edge label="PU" idref="s1_59"/>
+			</nt>
+			<nt id="s1_502" cat="x">
+				<edge label="STA" idref="s1_503"/>
+				<edge label="DN" idref="s1_504"/>
+				<edge label="H" idref="s1_34"/>
+			</nt>
+			<nt id="s1_503" cat="fcl">
+				<edge label="DP" idref="s1_11"/>
+				<edge label="X" idref="s1_505"/>
+				<edge label="DN" idref="s1_18"/>
+				<edge label="Cs" idref="s1_20"/>
+				<edge label="SUB" idref="s1_21"/>
+				<edge label="DN" idref="s1_28"/>
+				<edge label="Cs" idref="s1_30"/>
+				<edge label="SUB" idref="s1_31"/>
+				<edge label="fA" idref="s1_36"/>
+				<edge label="P" idref="s1_37"/>
+				<edge label="DN" idref="s1_40"/>
+				<edge label="Co" idref="s1_507"/>
+				<edge label="DN" idref="s1_42"/>
+				<edge label="DN" idref="s1_43"/>
+				<edge label="Cs" idref="s1_44"/>
+				<edge label="SUB" idref="s1_45"/>
+				<edge label="DN" idref="s1_50"/>
+				<edge label="DN" idref="s1_52"/>
+				<edge label="DN" idref="s1_53"/>
+				<edge label="Cs" idref="s1_54"/>
+				<edge label="SUB" idref="s1_55"/>
+			</nt>
+			<nt id="s1_504" cat="fcl">
+				<edge label="S" idref="s1_12"/>
+				<edge label="P" idref="s1_13"/>
+			</nt>
+			<nt id="s1_505" cat="np">
+				<edge label="DN" idref="s1_16"/>
+				<edge label="Co" idref="s1_506"/>
+				<edge label="DN" idref="s1_19"/>
+				<edge label="DN" idref="s1_26"/>
+				<edge label="DN" idref="s1_29"/>
+				<edge label="H" idref="s1_35"/>
+				<edge label="fA" idref="s1_38"/>
+				<edge label="fA" idref="s1_39"/>
+			</nt>
+			<nt id="s1_506" cat="par">
+				<edge label="CJT" idref="s1_17"/>
+				<edge label="CJT" idref="s1_27"/>
+			</nt>
+			<nt id="s1_507" cat="par">
+				<edge label="CJT" idref="s1_41"/>
+				<edge label="fA" idref="s1_46"/>
+				<edge label="fA" idref="s1_47"/>
+				<edge label="fA" idref="s1_48"/>
+				<edge label="fA" idref="s1_49"/>
+				<edge label="CJT" idref="s1_51"/>
+				<edge label="fA" idref="s1_56"/>
+				<edge label="fA" idref="s1_57"/>
+				<edge label="fA" idref="s1_58"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

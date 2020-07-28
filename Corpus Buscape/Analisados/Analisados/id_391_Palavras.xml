@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="um motorola, desbloqueado, por esse preço, não da pra perder.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="um" lemma="um" pos="num" morph="M S" extra="card"/>
+			<t id="s1_2" word="motorola" lemma="motorola" pos="n" morph="F S" sem="Aorn" extra="DERP"/>
+			<t id="s1_3" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_4" word="desbloqueado" lemma="desbloquear" pos="v-pcp" morph="M S" extra="vH"/>
+			<t id="s1_5" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_6" word="por" lemma="por" pos="prp" morph="--" extra="--"/>
+			<t id="s1_7" word="esse" lemma="esse" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s1_8" word="preço" lemma="preço" pos="n" morph="M S" sem="f-q" extra="--"/>
+			<t id="s1_9" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_10" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s1_11" word="de" lemma="de" pos="prp" morph="--" extra="sam- np-close"/>
+			<t id="s1_12" word="a" lemma="o" pos="pron-indef" morph="DET F S" extra="-sam"/>
+			<t id="s1_13" word="pra" lemma="para" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_14" word="perder" lemma="perder" pos="v-inf" morph="--" extra="mv"/>
+			<t id="s1_15" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="X" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="np">
+				<edge label="DN" idref="s1_1"/>
+				<edge label="H" idref="s1_2"/>
+				<edge label="PU" idref="s1_3"/>
+				<edge label="fA" idref="s1_502"/>
+				<edge label="PU" idref="s1_9"/>
+				<edge label="fA" idref="s1_506"/>
+				<edge label="PU" idref="s1_15"/>
+			</nt>
+			<nt id="s1_502" cat="pp">
+				<edge label="DP" idref="s1_503"/>
+				<edge label="PU" idref="s1_5"/>
+				<edge label="H" idref="s1_6"/>
+			</nt>
+			<nt id="s1_503" cat="np">
+				<edge label="DN" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="pp">
+				<edge label="DP" idref="s1_505"/>
+			</nt>
+			<nt id="s1_505" cat="icl">
+				<edge label="fCs" idref="s1_4"/>
+				<edge label="DN" idref="s1_7"/>
+				<edge label="H" idref="s1_8"/>
+				<edge label="DN" idref="s1_507"/>
+			</nt>
+			<nt id="s1_506" cat="pp">
+				<edge label="DPmod" idref="s1_10"/>
+				<edge label="H" idref="s1_11"/>
+				<edge label="DP" idref="s1_12"/>
+			</nt>
+			<nt id="s1_507" cat="pp">
+				<edge label="H" idref="s1_13"/>
+				<edge label="DP" idref="s1_508"/>
+			</nt>
+			<nt id="s1_508" cat="icl">
+				<edge label="P" idref="s1_14"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s2" ref="2" source="Running text" forest="1" text="o que gostei preço.">
+	<graph root="s2_500">
+		<terminals>
+			<t id="s2_1" word="o" lemma="o" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s2_2" word="que" lemma="que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s2_3" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv np-close"/>
+			<t id="s2_4" word="preço" lemma="preço" pos="n" morph="M S" sem="f-q" extra="--"/>
+			<t id="s2_5" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s2_500" cat="s">
+				<edge label="UTT" idref="s2_501"/>
+			</nt>
+			<nt id="s2_501" cat="x">
+				<edge label="X" idref="s2_1"/>
+				<edge label="DN" idref="s2_502"/>
+				<edge label="S" idref="s2_2"/>
+				<edge label="P" idref="s2_3"/>
+				<edge label="fCs" idref="s2_4"/>
+				<edge label="PU" idref="s2_5"/>
+			</nt>
+			<nt id="s2_502" cat="fcl">
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

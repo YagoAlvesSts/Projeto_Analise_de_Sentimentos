@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="o produto oferece excelente tecnologia, com um display agradável e com boa duração da bateria..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="o" lemma="o" pos="art" morph="M S" extra="--"/>
+			<t id="s1_2" word="produto" lemma="produto" pos="n" morph="M S" sem="cc-h mon ac-cat" extra="--"/>
+			<t id="s1_3" word="oferece" lemma="oferecer" pos="v-fin" morph="PR 3S IND VFIN" extra="vH fmc mv"/>
+			<t id="s1_4" word="excelente" lemma="excelente" pos="adj" morph="F S" extra="jh"/>
+			<t id="s1_5" word="tecnologia" lemma="tecnologia" pos="n" morph="F S" sem="domain" extra="--"/>
+			<t id="s1_6" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_7" word="com" lemma="com" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_8" word="um" lemma="um" pos="art" morph="M S" extra="--"/>
+			<t id="s1_9" word="display" lemma="display" pos="n" morph="M S" sem="furn" extra="--"/>
+			<t id="s1_10" word="agradável" lemma="agradável" pos="adj" morph="M S" extra="nh np-close"/>
+			<t id="s1_11" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_12" word="com" lemma="com" pos="prp" morph="--" extra="--"/>
+			<t id="s1_13" word="boa" lemma="bom" pos="adj" morph="F S" extra="--"/>
+			<t id="s1_14" word="duração" lemma="duração" pos="n" morph="F S" sem="am" extra="--"/>
+			<t id="s1_15" word="de" lemma="de" pos="prp" morph="--" extra="sam- np-close"/>
+			<t id="s1_16" word="a" lemma="o" pos="art" morph="F S" extra="-sam "/>
+			<t id="s1_17" word="bateria" lemma="bateria" pos="n" morph="F S" sem="tool" extra="--"/>
+			<t id="s1_18" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_19" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="np">
+				<edge label="S" idref="s1_502"/>
+				<edge label="P" idref="s1_3"/>
+				<edge label="Od" idref="s1_503"/>
+				<edge label="PU" idref="s1_6"/>
+				<edge label="DNc" idref="s1_504"/>
+				<edge label="fCs" idref="s1_506"/>
+				<edge label="PU" idref="s1_18"/>
+				<edge label="PU" idref="s1_19"/>
+			</nt>
+			<nt id="s1_502" cat="np">
+				<edge label="DN" idref="s1_1"/>
+				<edge label="H" idref="s1_2"/>
+			</nt>
+			<nt id="s1_503" cat="np">
+				<edge label="DN" idref="s1_4"/>
+				<edge label="H" idref="s1_5"/>
+			</nt>
+			<nt id="s1_504" cat="pp">
+				<edge label="H" idref="s1_7"/>
+				<edge label="DP" idref="s1_505"/>
+			</nt>
+			<nt id="s1_505" cat="np">
+				<edge label="DN" idref="s1_8"/>
+				<edge label="H" idref="s1_9"/>
+				<edge label="DN" idref="s1_10"/>
+			</nt>
+			<nt id="s1_506" cat="pp">
+				<edge label="CO" idref="s1_11"/>
+				<edge label="H" idref="s1_12"/>
+				<edge label="DP" idref="s1_507"/>
+			</nt>
+			<nt id="s1_507" cat="np">
+				<edge label="DN" idref="s1_13"/>
+				<edge label="H" idref="s1_14"/>
+				<edge label="DN" idref="s1_508"/>
+			</nt>
+			<nt id="s1_508" cat="pp">
+				<edge label="H" idref="s1_15"/>
+				<edge label="DP" idref="s1_509"/>
+			</nt>
+			<nt id="s1_509" cat="np">
+				<edge label="DN" idref="s1_16"/>
+				<edge label="H" idref="s1_17"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

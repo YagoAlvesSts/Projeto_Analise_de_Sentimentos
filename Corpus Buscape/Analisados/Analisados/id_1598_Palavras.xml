@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="muito bonito e completarão.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="muito" lemma="muito" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_2" word="bonito" lemma="bonito" pos="adj" morph="M S" extra="jh"/>
+			<t id="s1_3" word="e" lemma="e" pos="conj-c" morph="--" extra="topkc"/>
+			<t id="s1_4" word="completarão" lemma="completar" pos="v-fin" morph="FUT 3P IND VFIN" extra="fmc mv"/>
+			<t id="s1_5" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="Od" idref="s1_502"/>
+				<edge label="CO" idref="s1_3"/>
+				<edge label="P" idref="s1_4"/>
+				<edge label="PU" idref="s1_5"/>
+			</nt>
+			<nt id="s1_502" cat="adjp">
+				<edge label="DA" idref="s1_1"/>
+				<edge label="H" idref="s1_2"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s2" ref="2" source="Running text" forest="1" text="diversos recursos interessantes.">
+	<graph root="s2_500">
+		<terminals>
+			<t id="s2_1" word="diversos" lemma="diverso" pos="adj" morph="M P" extra="jh"/>
+			<t id="s2_2" word="recursos" lemma="recurso" pos="n" morph="M P" sem="ac act-d sem-s mon" extra="--"/>
+			<t id="s2_3" word="interessantes" lemma="interessante" pos="adj" morph="M P" extra="jh np-close"/>
+			<t id="s2_4" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s2_500" cat="s">
+				<edge label="X" idref="s2_501"/>
+			</nt>
+			<nt id="s2_501" cat="np">
+				<edge label="DN" idref="s2_1"/>
+				<edge label="H" idref="s2_2"/>
+				<edge label="DN" idref="s2_3"/>
+				<edge label="PU" idref="s2_4"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s3" ref="3" source="Running text" forest="1" text="o que gostei moderno..">
+	<graph root="s3_500">
+		<terminals>
+			<t id="s3_1" word="o" lemma="o" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s3_2" word="que" lemma="que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s3_3" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv np-close"/>
+			<t id="s3_4" word="moderno" lemma="moderno" pos="adj" morph="M S" extra="--"/>
+			<t id="s3_5" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s3_6" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s3_500" cat="s">
+				<edge label="UTT" idref="s3_501"/>
+			</nt>
+			<nt id="s3_501" cat="x">
+				<edge label="X" idref="s3_1"/>
+				<edge label="DN" idref="s3_502"/>
+				<edge label="S" idref="s3_2"/>
+				<edge label="P" idref="s3_3"/>
+				<edge label="fCs" idref="s3_4"/>
+				<edge label="PU" idref="s3_5"/>
+				<edge label="PU" idref="s3_6"/>
+			</nt>
+			<nt id="s3_502" cat="fcl">
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

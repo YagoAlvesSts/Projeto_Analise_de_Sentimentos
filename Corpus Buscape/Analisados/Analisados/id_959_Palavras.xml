@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="e um produto de boa qualidade e bem solicitado..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_2" word="um" lemma="um" pos="art" morph="M S" extra="--"/>
+			<t id="s1_3" word="produto" lemma="produto" pos="n" morph="M S" sem="cc-h mon ac-cat" extra="--"/>
+			<t id="s1_4" word="de" lemma="de" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_5" word="boa" lemma="bom" pos="adj" morph="F S" extra="--"/>
+			<t id="s1_6" word="qualidade" lemma="qualidade" pos="n" morph="F S" sem="percep-f f-c" extra="--"/>
+			<t id="s1_7" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_8" word="bem" lemma="bem" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_9" word="solicitado" lemma="solicitar" pos="v-pcp" morph="M S" extra="vH np-close"/>
+			<t id="s1_10" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_11" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="X" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="np">
+				<edge label="DN" idref="s1_502"/>
+				<edge label="DN" idref="s1_2"/>
+				<edge label="H" idref="s1_3"/>
+				<edge label="-DN" idref="s1_4"/>
+				<edge label="PU" idref="s1_10"/>
+				<edge label="PU" idref="s1_11"/>
+			</nt>
+			<nt id="s1_502" cat="pp">
+				<edge label="CO" idref="s1_1"/>
+				<edge label="DP" idref="s1_503"/>
+			</nt>
+			<nt id="s1_503" cat="np">
+				<edge label="DN" idref="s1_5"/>
+				<edge label="H" idref="s1_6"/>
+				<edge label="DN" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="adjp">
+				<edge label="CO" idref="s1_7"/>
+				<edge label="DA" idref="s1_8"/>
+				<edge label="H" idref="s1_9"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

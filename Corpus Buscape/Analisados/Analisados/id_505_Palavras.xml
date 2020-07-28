@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="serve apenas para ligações.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="serve" lemma="servir" pos="v-fin" morph="PR 3S IND VFIN" extra="fmc mv"/>
+			<t id="s1_2" word="apenas" lemma="apenas" pos="adv" morph="--" extra="--"/>
+			<t id="s1_3" word="para" lemma="para" pos="prp" morph="--" extra="--"/>
+			<t id="s1_4" word="ligações" lemma="ligação" pos="n" morph="F P" sem="act ac ac-sign Labs" extra="--"/>
+			<t id="s1_5" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="P" idref="s1_1"/>
+				<edge label="Op" idref="s1_502"/>
+				<edge label="PU" idref="s1_5"/>
+			</nt>
+			<nt id="s1_502" cat="pp">
+				<edge label="DPmod" idref="s1_2"/>
+				<edge label="H" idref="s1_3"/>
+				<edge label="DP" idref="s1_4"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s2" ref="2" source="Running text" forest="1" text="o som é ruim.">
+	<graph root="s2_500">
+		<terminals>
+			<t id="s2_1" word="o" lemma="o" pos="art" morph="M S" extra="--"/>
+			<t id="s2_2" word="som" lemma="som" pos="n" morph="M S" sem="percep-l" extra="--"/>
+			<t id="s2_3" word="é" lemma="ser" pos="v-fin" morph="PR 3S IND VFIN" extra="vK fmc mv"/>
+			<t id="s2_4" word="ruim" lemma="ruim" pos="adj" morph="M S" extra="--"/>
+			<t id="s2_5" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s2_500" cat="s">
+				<edge label="STA" idref="s2_501"/>
+			</nt>
+			<nt id="s2_501" cat="fcl">
+				<edge label="S" idref="s2_502"/>
+				<edge label="P" idref="s2_3"/>
+				<edge label="Cs" idref="s2_4"/>
+				<edge label="PU" idref="s2_5"/>
+			</nt>
+			<nt id="s2_502" cat="np">
+				<edge label="DN" idref="s2_1"/>
+				<edge label="H" idref="s2_2"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s3" ref="3" source="Running text" forest="1" text="o gps não funciona decentemente.">
+	<graph root="s3_500">
+		<terminals>
+			<t id="s3_1" word="o" lemma="o" pos="art" morph="M S" extra="--"/>
+			<t id="s3_2" word="gps" lemma="gps" pos="n" morph="M S" extra="foreign heur"/>
+			<t id="s3_3" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s3_4" word="funciona" lemma="funcionar" pos="v-fin" morph="PR 3S IND VFIN" extra="fmc mv"/>
+			<t id="s3_5" word="decentemente" lemma="decentemente" pos="adv" morph="--" extra="jh"/>
+			<t id="s3_6" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s3_500" cat="s">
+				<edge label="STA" idref="s3_501"/>
+			</nt>
+			<nt id="s3_501" cat="fcl">
+				<edge label="S" idref="s3_502"/>
+				<edge label="fA" idref="s3_3"/>
+				<edge label="P" idref="s3_4"/>
+				<edge label="fA" idref="s3_5"/>
+				<edge label="PU" idref="s3_6"/>
+			</nt>
+			<nt id="s3_502" cat="np">
+				<edge label="DN" idref="s3_1"/>
+				<edge label="H" idref="s3_2"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s4" ref="4" source="Running text" forest="1" text="é difícil encontrar um contato.">
+	<graph root="s4_500">
+		<terminals>
+			<t id="s4_1" word="é" lemma="ser" pos="v-fin" morph="PR 3S IND VFIN" extra="vK fmc mv"/>
+			<t id="s4_2" word="difícil" lemma="difícil" pos="adj" morph="M S" extra="nh"/>
+			<t id="s4_3" word="encontrar" lemma="encontrar" pos="v-inf" morph="--" extra="vH mv"/>
+			<t id="s4_4" word="um" lemma="um" pos="art" morph="M S" extra="--"/>
+			<t id="s4_5" word="contato" lemma="contato" pos="n" morph="M S" sem="ac H" extra="--"/>
+			<t id="s4_6" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s4_500" cat="s">
+				<edge label="STA" idref="s4_501"/>
+			</nt>
+			<nt id="s4_501" cat="fcl">
+				<edge label="P" idref="s4_1"/>
+				<edge label="Cs" idref="s4_2"/>
+				<edge label="S" idref="s4_502"/>
+				<edge label="PU" idref="s4_6"/>
+			</nt>
+			<nt id="s4_502" cat="icl">
+				<edge label="P" idref="s4_3"/>
+				<edge label="Od" idref="s4_503"/>
+			</nt>
+			<nt id="s4_503" cat="np">
+				<edge label="DN" idref="s4_4"/>
+				<edge label="H" idref="s4_5"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s5" ref="5" source="Running text" forest="1" text="é lento.">
+	<graph root="s5_500">
+		<terminals>
+			<t id="s5_1" word="é" lemma="ser" pos="v-fin" morph="PR 3S IND VFIN" extra="vK fmc mv"/>
+			<t id="s5_2" word="lento" lemma="lento" pos="adj" morph="M S" extra="nh"/>
+			<t id="s5_3" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s5_500" cat="s">
+				<edge label="STA" idref="s5_501"/>
+			</nt>
+			<nt id="s5_501" cat="fcl">
+				<edge label="P" idref="s5_1"/>
+				<edge label="Cs" idref="s5_2"/>
+				<edge label="PU" idref="s5_3"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s6" ref="6" source="Running text" forest="1" text="o menu não é configurável..">
+	<graph root="s6_500">
+		<terminals>
+			<t id="s6_1" word="o" lemma="o" pos="art" morph="M S" extra="--"/>
+			<t id="s6_2" word="menu" lemma="menu" pos="n" morph="M S" sem="cc-r" extra="--"/>
+			<t id="s6_3" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s6_4" word="é" lemma="ser" pos="v-fin" morph="PR 3S IND VFIN" extra="vK fmc mv"/>
+			<t id="s6_5" word="configurável" lemma="configurável" pos="adj" morph="M S" extra="--"/>
+			<t id="s6_6" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s6_7" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s6_500" cat="s">
+				<edge label="STA" idref="s6_501"/>
+			</nt>
+			<nt id="s6_501" cat="fcl">
+				<edge label="S" idref="s6_502"/>
+				<edge label="fA" idref="s6_3"/>
+				<edge label="P" idref="s6_4"/>
+				<edge label="Cs" idref="s6_5"/>
+				<edge label="PU" idref="s6_6"/>
+				<edge label="PU" idref="s6_7"/>
+			</nt>
+			<nt id="s6_502" cat="np">
+				<edge label="DN" idref="s6_1"/>
+				<edge label="H" idref="s6_2"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

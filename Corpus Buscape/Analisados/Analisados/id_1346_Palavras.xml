@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="não tenho mais vou compra um.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s1_2" word="tenho" lemma="ter" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-head cjt-head-STA fmc mv"/>
+			<t id="s1_3" word="mais" lemma="mais" pos="adv" morph="--" extra="--"/>
+			<t id="s1_4" word="vou" lemma="ir" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-STA fmc mv"/>
+			<t id="s1_5" word="compra" lemma="compra" pos="n" morph="F S" sem="act cc" extra="--"/>
+			<t id="s1_6" word="um" lemma="um" pos="num" morph="M S" extra="card np-close"/>
+			<t id="s1_7" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="CJT" idref="s1_503"/>
+				<edge label="PU" idref="s1_7"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="fA" idref="s1_1"/>
+				<edge label="P" idref="s1_2"/>
+				<edge label="fA" idref="s1_3"/>
+			</nt>
+			<nt id="s1_503" cat="x">
+				<edge label="P" idref="s1_4"/>
+				<edge label="fCs" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="np">
+				<edge label="H" idref="s1_5"/>
+				<edge label="DN" idref="s1_6"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

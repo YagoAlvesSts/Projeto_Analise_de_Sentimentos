@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="porque ele oferece toda praticidade e eficiência que alguém precisa..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="porque" lemma="porque" pos="conj-s" morph="--" extra="clb clb-fs"/>
+			<t id="s1_2" word="ele" lemma="ele" pos="pron-pers" morph="M 3S NOM" extra="--"/>
+			<t id="s1_3" word="oferece" lemma="oferecer" pos="v-fin" morph="PR 3S IND VFIN" extra="vH mv"/>
+			<t id="s1_4" word="toda" lemma="todo" pos="pron-indef" morph="DET F S" extra="quant"/>
+			<t id="s1_5" word="praticidade" lemma="praticidade" pos="n" morph="F S" sem="percep-f" extra="cjt-head cjt-head-Od"/>
+			<t id="s1_6" word="e" lemma="e" pos="conj-c" morph="--" extra="topkc"/>
+			<t id="s1_7" word="eficiência" lemma="eficiência" pos="n" morph="F S" sem="am" extra="cjt-Od"/>
+			<t id="s1_8" word="que" lemma="que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s1_9" word="alguém" lemma="alguém" pos="spec" morph="M S" extra="--"/>
+			<t id="s1_10" word="precisa" lemma="precisar" pos="v-fin" morph="PR 3S IND VFIN" extra="mv np-close"/>
+			<t id="s1_11" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_12" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="fA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="SUB" idref="s1_1"/>
+				<edge label="S" idref="s1_2"/>
+				<edge label="P" idref="s1_3"/>
+				<edge label="Od" idref="s1_502"/>
+				<edge label="PU" idref="s1_11"/>
+				<edge label="PU" idref="s1_12"/>
+			</nt>
+			<nt id="s1_502" cat="par">
+				<edge label="CJT" idref="s1_503"/>
+				<edge label="CJT" idref="s1_504"/>
+			</nt>
+			<nt id="s1_503" cat="np">
+				<edge label="DN" idref="s1_4"/>
+				<edge label="H" idref="s1_5"/>
+			</nt>
+			<nt id="s1_504" cat="np">
+				<edge label="DN" idref="s1_505"/>
+				<edge label="H" idref="s1_7"/>
+			</nt>
+			<nt id="s1_505" cat="fcl">
+				<edge label="CO" idref="s1_6"/>
+				<edge label="Od" idref="s1_8"/>
+				<edge label="S" idref="s1_9"/>
+				<edge label="P" idref="s1_10"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

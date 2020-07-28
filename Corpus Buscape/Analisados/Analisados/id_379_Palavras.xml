@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="a aparência e ótima, mais ele deu problema e já mandei para o conserto e continua estragado.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s1_2" word="aparência" lemma="aparência" pos="n" morph="F S" sem="percep-f" extra="--"/>
+			<t id="s1_3" word="e" lemma="e" pos="conj-c" morph="--" extra="topkc"/>
+			<t id="s1_4" word="ótima" lemma="bom" pos="adj" morph="F S" extra="SUP jh"/>
+			<t id="s1_5" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_6" word="mais" lemma="mais" pos="adv" morph="--" extra="topkc kc"/>
+			<t id="s1_7" word="ele" lemma="ele" pos="pron-pers" morph="M 3S NOM" extra="--"/>
+			<t id="s1_8" word="deu" lemma="dar" pos="v-fin" morph="PS 3S IND VFIN" extra="cjt-head cjt-head-STA fmc mv"/>
+			<t id="s1_9" word="problema" lemma="problema" pos="n" morph="M S" sem="ac" extra="--"/>
+			<t id="s1_10" word="e" lemma="e" pos="conj-c" morph="--" extra="topkc"/>
+			<t id="s1_11" word="já" lemma="já" pos="adv" morph="--" extra="--"/>
+			<t id="s1_12" word="mandei" lemma="mandar" pos="v-fin" morph="PS 1S IND VFIN" extra="cjt-STA vH fmc mv"/>
+			<t id="s1_13" word="para" lemma="para" pos="prp" morph="--" extra="--"/>
+			<t id="s1_14" word="o" lemma="o" pos="art" morph="M S" extra="--"/>
+			<t id="s1_15" word="conserto" lemma="conserto" pos="n" morph="M S" sem="act" extra="--"/>
+			<t id="s1_16" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_17" word="continua" lemma="continuar" pos="v-fin" morph="PR 3S IND VFIN" extra="nosubj nosubj cjt-STA vH vK fmc mv"/>
+			<t id="s1_18" word="estragado" lemma="estragar" pos="v-pcp" morph="M S" extra="--"/>
+			<t id="s1_19" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="UTT" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="x">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="STA" idref="s1_504"/>
+				<edge label="CJT" idref="s1_505"/>
+				<edge label="CO" idref="s1_3"/>
+				<edge label="PU" idref="s1_5"/>
+				<edge label="CO" idref="s1_6"/>
+				<edge label="CO" idref="s1_10"/>
+				<edge label="CJT" idref="s1_508"/>
+				<edge label="PU" idref="s1_19"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="S" idref="s1_503"/>
+				<edge label="S" idref="s1_4"/>
+				<edge label="S" idref="s1_7"/>
+				<edge label="P" idref="s1_8"/>
+				<edge label="Od" idref="s1_9"/>
+				<edge label="fA" idref="s1_11"/>
+				<edge label="P" idref="s1_12"/>
+				<edge label="Op" idref="s1_506"/>
+			</nt>
+			<nt id="s1_503" cat="np">
+				<edge label="DN" idref="s1_1"/>
+				<edge label="H" idref="s1_2"/>
+			</nt>
+			<nt id="s1_504" cat="par">
+			</nt>
+			<nt id="s1_505" cat="fcl">
+			</nt>
+			<nt id="s1_506" cat="pp">
+				<edge label="H" idref="s1_13"/>
+				<edge label="DP" idref="s1_507"/>
+			</nt>
+			<nt id="s1_507" cat="np">
+				<edge label="DN" idref="s1_14"/>
+				<edge label="H" idref="s1_15"/>
+				<edge label="CO" idref="s1_16"/>
+			</nt>
+			<nt id="s1_508" cat="x">
+				<edge label="P" idref="s1_17"/>
+				<edge label="Cs" idref="s1_18"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s2" ref="2" source="Running text" forest="1" text="o que gostei e uma porcaria o que não gostei não recomendaria para pessoa nenhum.">
+	<graph root="s2_500">
+		<terminals>
+			<t id="s2_1" word="o" lemma="o" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s2_2" word="que" lemma="que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s2_3" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv np-close"/>
+			<t id="s2_4" word="e" lemma="e" pos="conj-c" morph="--" extra="topkc"/>
+			<t id="s2_5" word="uma" lemma="um" pos="art" morph="F S" extra="--"/>
+			<t id="s2_6" word="porcaria" lemma="porcaria" pos="n" morph="F S" sem="sit" extra="--"/>
+			<t id="s2_7" word="o" lemma="o" pos="art" morph="M S" extra="--"/>
+			<t id="s2_8" word="que" lemma="que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s2_9" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s2_10" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv np-close"/>
+			<t id="s2_11" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s2_12" word="recomendaria" lemma="recomendar" pos="v-fin" morph="COND 1/3S VFIN" extra="vH fmc mv"/>
+			<t id="s2_13" word="para" lemma="para" pos="prp" morph="--" extra="--"/>
+			<t id="s2_14" word="pessoa" lemma="pessoa" pos="n" morph="F S" sem="H" extra="--"/>
+			<t id="s2_15" word="nenhum" lemma="nenhum" pos="pron-indef" morph="DET M S" extra="quant np-close"/>
+			<t id="s2_16" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s2_500" cat="s">
+				<edge label="UTT" idref="s2_501"/>
+			</nt>
+			<nt id="s2_501" cat="x">
+				<edge label="STA" idref="s2_502"/>
+				<edge label="DN" idref="s2_503"/>
+				<edge label="S" idref="s2_2"/>
+				<edge label="P" idref="s2_3"/>
+				<edge label="S" idref="s2_504"/>
+				<edge label="DN" idref="s2_7"/>
+				<edge label="P" idref="s2_12"/>
+				<edge label="fA" idref="s2_506"/>
+				<edge label="PU" idref="s2_16"/>
+			</nt>
+			<nt id="s2_502" cat="fcl">
+				<edge label="S" idref="s2_1"/>
+			</nt>
+			<nt id="s2_503" cat="fcl">
+			</nt>
+			<nt id="s2_504" cat="np">
+				<edge label="DN" idref="s2_505"/>
+				<edge label="DN" idref="s2_5"/>
+				<edge label="H" idref="s2_6"/>
+			</nt>
+			<nt id="s2_505" cat="fcl">
+				<edge label="CO" idref="s2_4"/>
+				<edge label="S" idref="s2_8"/>
+				<edge label="fA" idref="s2_9"/>
+				<edge label="P" idref="s2_10"/>
+				<edge label="fA" idref="s2_11"/>
+			</nt>
+			<nt id="s2_506" cat="pp">
+				<edge label="H" idref="s2_13"/>
+				<edge label="DP" idref="s2_507"/>
+			</nt>
+			<nt id="s2_507" cat="np">
+				<edge label="H" idref="s2_14"/>
+				<edge label="DN" idref="s2_15"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

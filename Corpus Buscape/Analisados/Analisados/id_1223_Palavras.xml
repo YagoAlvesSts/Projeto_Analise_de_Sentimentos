@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="em o começo tem uma dificuldade mas depois com a pratica é normal..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="em" lemma="em" pos="prp" morph="--" extra="sam-"/>
+			<t id="s1_2" word="o" lemma="o" pos="art" morph="M S" extra="-sam "/>
+			<t id="s1_3" word="começo" lemma="começo" pos="n" morph="M S" sem="temp" extra="--"/>
+			<t id="s1_4" word="tem" lemma="ter" pos="v-fin" morph="PR 3S IND VFIN" extra="nosubj nosubj cjt-head cjt-head-STA fmc mv"/>
+			<t id="s1_5" word="uma" lemma="um" pos="art" morph="F S" extra="--"/>
+			<t id="s1_6" word="dificuldade" lemma="dificuldade" pos="n" morph="F S" sem="am" extra="--"/>
+			<t id="s1_7" word="mas" lemma="mas" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_8" word="depois" lemma="depois" pos="adv" morph="--" extra="--"/>
+			<t id="s1_9" word="com" lemma="com" pos="prp" morph="--" extra="--"/>
+			<t id="s1_10" word="a" lemma="ela" pos="pron-pers" morph="F 3S ACC" extra="--"/>
+			<t id="s1_11" word="pratica" lemma="praticar" pos="v-fin" morph="PR 3S IND VFIN" extra="nosubj nosubj cjt-STA vH fmc mv"/>
+			<t id="s1_12" word="é" lemma="é" pos="adv" morph="--" extra="foc"/>
+			<t id="s1_13" word="normal" lemma="normal" pos="adj" morph="M/F S" extra="nh"/>
+			<t id="s1_14" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_15" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="CJT" idref="s1_506"/>
+				<edge label="PU" idref="s1_14"/>
+				<edge label="PU" idref="s1_15"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="fA" idref="s1_503"/>
+				<edge label="P" idref="s1_4"/>
+				<edge label="Od" idref="s1_505"/>
+				<edge label="fA" idref="s1_9"/>
+			</nt>
+			<nt id="s1_503" cat="pp">
+				<edge label="H" idref="s1_1"/>
+				<edge label="DP" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="np">
+				<edge label="DN" idref="s1_2"/>
+				<edge label="H" idref="s1_3"/>
+				<edge label="CO" idref="s1_7"/>
+				<edge label="FOC" idref="s1_8"/>
+			</nt>
+			<nt id="s1_505" cat="np">
+				<edge label="DN" idref="s1_5"/>
+				<edge label="H" idref="s1_6"/>
+				<edge label="fCs" idref="s1_507"/>
+				<edge label="H" idref="s1_13"/>
+			</nt>
+			<nt id="s1_506" cat="x">
+				<edge label="Od" idref="s1_10"/>
+				<edge label="P" idref="s1_11"/>
+				<edge label="FOC" idref="s1_12"/>
+			</nt>
+			<nt id="s1_507" cat="adjp">
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

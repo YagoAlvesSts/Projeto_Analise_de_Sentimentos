@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="depois que eu adquirir um, eu digo.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="depois" lemma="depois" pos="prp" morph="--" extra="--"/>
+			<t id="s1_2" word="que" lemma="que" pos="conj-s" morph="--" extra="clb-fs"/>
+			<t id="s1_3" word="eu" lemma="eu" pos="pron-pers" morph="M/F 1S NOM" extra="--"/>
+			<t id="s1_4" word="adquirir" lemma="adquirir" pos="v-inf" morph="1S" extra="vH mv"/>
+			<t id="s1_5" word="um" lemma="um" pos="num" morph="M S" extra="card"/>
+			<t id="s1_6" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_7" word="eu" lemma="eu" pos="pron-pers" morph="M/F 1S NOM" extra="--"/>
+			<t id="s1_8" word="digo" lemma="dizer" pos="v-fin" morph="PR 1S IND VFIN" extra="vH mv"/>
+			<t id="s1_9" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="fA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="pp">
+				<edge label="H" idref="s1_1"/>
+				<edge label="DP" idref="s1_502"/>
+				<edge label="X" idref="s1_503"/>
+				<edge label="PU" idref="s1_9"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="SUB" idref="s1_2"/>
+				<edge label="S" idref="s1_3"/>
+			</nt>
+			<nt id="s1_503" cat="icl">
+				<edge label="P" idref="s1_4"/>
+				<edge label="Od" idref="s1_5"/>
+				<edge label="PU" idref="s1_6"/>
+				<edge label="S" idref="s1_7"/>
+				<edge label="P" idref="s1_8"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s2" ref="2" source="Running text" forest="1" text="o que gostei bonito prático.">
+	<graph root="s2_500">
+		<terminals>
+			<t id="s2_1" word="o" lemma="o" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s2_2" word="que" lemma="que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s2_3" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv np-close"/>
+			<t id="s2_4" word="bonito" lemma="bonito" pos="adj" morph="M S" extra="jh"/>
+			<t id="s2_5" word="prático" lemma="prático" pos="n" morph="M S" sem="H" extra="--"/>
+			<t id="s2_6" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s2_500" cat="s">
+				<edge label="UTT" idref="s2_501"/>
+			</nt>
+			<nt id="s2_501" cat="x">
+				<edge label="X" idref="s2_1"/>
+				<edge label="DN" idref="s2_502"/>
+				<edge label="S" idref="s2_2"/>
+				<edge label="P" idref="s2_3"/>
+				<edge label="fCs" idref="s2_503"/>
+				<edge label="DN" idref="s2_4"/>
+				<edge label="H" idref="s2_5"/>
+				<edge label="PU" idref="s2_6"/>
+			</nt>
+			<nt id="s2_502" cat="fcl">
+			</nt>
+			<nt id="s2_503" cat="np">
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

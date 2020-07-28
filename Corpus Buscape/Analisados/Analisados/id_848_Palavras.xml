@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="é o meu segundo smart e gosto do desempenho desse modelo..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="é" lemma="ser" pos="v-fin" morph="PR 3S IND VFIN" extra="vK fmc mv"/>
+			<t id="s1_2" word="o" lemma="o" pos="art" morph="M S" extra="--"/>
+			<t id="s1_3" word="meu" lemma="meu" pos="pron-poss" morph="DET M S" extra="poss 1S"/>
+			<t id="s1_4" word="segundo" lemma="segundo" pos="adj" morph="M S" extra="NUM-ord"/>
+			<t id="s1_5" word="smart" lemma="smart" pos="n" morph="M S" extra="cjt-head cjt-head-Cs heur"/>
+			<t id="s1_6" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_7" word="gosto" lemma="gosto" pos="n" morph="M S" sem="am" extra="cjt-Cs"/>
+			<t id="s1_8" word="de" lemma="de" pos="prp" morph="--" extra="sam- np-close"/>
+			<t id="s1_9" word="o" lemma="o" pos="art" morph="M S" extra="-sam "/>
+			<t id="s1_10" word="desempenho" lemma="desempenho" pos="n" morph="M S" sem="act" extra="--"/>
+			<t id="s1_11" word="de" lemma="de" pos="prp" morph="--" extra="sam- np-long"/>
+			<t id="s1_12" word="esse" lemma="esse" pos="pron-dem" morph="DET M S" extra="dem -sam"/>
+			<t id="s1_13" word="modelo" lemma="modelo" pos="n" morph="M S" sem="ac Hprof" extra="--"/>
+			<t id="s1_14" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_15" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="P" idref="s1_1"/>
+				<edge label="Cs" idref="s1_502"/>
+				<edge label="PU" idref="s1_14"/>
+				<edge label="PU" idref="s1_15"/>
+			</nt>
+			<nt id="s1_502" cat="par">
+				<edge label="CJT" idref="s1_503"/>
+				<edge label="CJT" idref="s1_504"/>
+			</nt>
+			<nt id="s1_503" cat="np">
+				<edge label="DN" idref="s1_2"/>
+				<edge label="DN" idref="s1_3"/>
+				<edge label="DN" idref="s1_4"/>
+				<edge label="H" idref="s1_5"/>
+			</nt>
+			<nt id="s1_504" cat="np">
+				<edge label="DN" idref="s1_505"/>
+				<edge label="H" idref="s1_7"/>
+				<edge label="-DN" idref="s1_8"/>
+				<edge label="DN" idref="s1_507"/>
+			</nt>
+			<nt id="s1_505" cat="pp">
+				<edge label="CO" idref="s1_6"/>
+				<edge label="DP" idref="s1_506"/>
+			</nt>
+			<nt id="s1_506" cat="np">
+				<edge label="DN" idref="s1_9"/>
+				<edge label="H" idref="s1_10"/>
+			</nt>
+			<nt id="s1_507" cat="pp">
+				<edge label="H" idref="s1_11"/>
+				<edge label="DP" idref="s1_508"/>
+			</nt>
+			<nt id="s1_508" cat="np">
+				<edge label="DN" idref="s1_12"/>
+				<edge label="H" idref="s1_13"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

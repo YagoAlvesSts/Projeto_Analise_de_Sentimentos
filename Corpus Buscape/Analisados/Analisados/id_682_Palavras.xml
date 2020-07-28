@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="estou querendo saber mais sobre o produto más não tenho visto ainda no mercado para degustação.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="estou" lemma="estar" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-head cjt-head-STA fmc aux"/>
+			<t id="s1_2" word="querendo" lemma="querer" pos="v-ger" morph="--" extra="vH mv"/>
+			<t id="s1_3" word="saber" lemma="saber" pos="v-inf" morph="--" extra="mv"/>
+			<t id="s1_4" word="mais" lemma="mais" pos="adv" morph="--" extra="--"/>
+			<t id="s1_5" word="sobre" lemma="sobre" pos="prp" morph="--" extra="--"/>
+			<t id="s1_6" word="o" lemma="o" pos="art" morph="M S" extra="--"/>
+			<t id="s1_7" word="produto" lemma="produto" pos="n" morph="M S" sem="cc-h mon ac-cat" extra="--"/>
+			<t id="s1_8" word="más" lemma="má" pos="adj" morph="F P" extra="jh"/>
+			<t id="s1_9" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s1_10" word="tenho" lemma="ter" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-STA fmc aux"/>
+			<t id="s1_11" word="visto" lemma="ver" pos="v-pcp" morph="--" extra="vH mv"/>
+			<t id="s1_12" word="ainda" lemma="ainda" pos="adv" morph="--" extra="--"/>
+			<t id="s1_13" word="em" lemma="em" pos="prp" morph="--" extra="sam-"/>
+			<t id="s1_14" word="o" lemma="o" pos="art" morph="M S" extra="-sam "/>
+			<t id="s1_15" word="mercado" lemma="mercado" pos="n" morph="M S" sem="inst" extra="--"/>
+			<t id="s1_16" word="para" lemma="para" pos="prp" morph="--" extra="--"/>
+			<t id="s1_17" word="degustação" lemma="degustação" pos="n" morph="F S" sem="occ" extra="--"/>
+			<t id="s1_18" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="CJT" idref="s1_507"/>
+				<edge label="PU" idref="s1_18"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="P" idref="s1_503"/>
+				<edge label="Od" idref="s1_504"/>
+			</nt>
+			<nt id="s1_503" cat="vp">
+				<edge label="Vaux" idref="s1_1"/>
+				<edge label="Vm" idref="s1_2"/>
+			</nt>
+			<nt id="s1_504" cat="icl">
+				<edge label="P" idref="s1_3"/>
+				<edge label="fA" idref="s1_4"/>
+				<edge label="Op" idref="s1_505"/>
+				<edge label="Od" idref="s1_8"/>
+			</nt>
+			<nt id="s1_505" cat="pp">
+				<edge label="H" idref="s1_5"/>
+				<edge label="DP" idref="s1_506"/>
+			</nt>
+			<nt id="s1_506" cat="np">
+				<edge label="DN" idref="s1_6"/>
+				<edge label="H" idref="s1_7"/>
+			</nt>
+			<nt id="s1_507" cat="x">
+				<edge label="fA" idref="s1_9"/>
+				<edge label="P" idref="s1_508"/>
+				<edge label="As" idref="s1_509"/>
+				<edge label="fA" idref="s1_511"/>
+			</nt>
+			<nt id="s1_508" cat="vp">
+				<edge label="Vaux" idref="s1_10"/>
+				<edge label="Vm" idref="s1_11"/>
+			</nt>
+			<nt id="s1_509" cat="pp">
+				<edge label="DPmod" idref="s1_12"/>
+				<edge label="H" idref="s1_13"/>
+				<edge label="DP" idref="s1_510"/>
+			</nt>
+			<nt id="s1_510" cat="np">
+				<edge label="DN" idref="s1_14"/>
+				<edge label="H" idref="s1_15"/>
+			</nt>
+			<nt id="s1_511" cat="pp">
+				<edge label="H" idref="s1_16"/>
+				<edge label="DP" idref="s1_17"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s2" ref="2" source="Running text" forest="1" text="o que gostei produto de lançamento o que não gostei não encontrado ainda no mercado..">
+	<graph root="s2_500">
+		<terminals>
+			<t id="s2_1" word="o" lemma="o" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s2_2" word="que" lemma="que" pos="spec" morph="M S" extra="clb rel"/>
+			<t id="s2_3" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv"/>
+			<t id="s2_4" word="produto" lemma="produto" pos="n" morph="M S" sem="cc-h mon ac-cat" extra="--"/>
+			<t id="s2_5" word="de" lemma="de" pos="prp" morph="--" extra="np-close"/>
+			<t id="s2_6" word="lançamento" lemma="lançamento" pos="n" morph="M S" sem="act" extra="--"/>
+			<t id="s2_7" word="o_que" lemma="o_que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s2_8" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s2_9" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv np-close"/>
+			<t id="s2_10" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s2_11" word="encontrado" lemma="encontrar" pos="v-pcp" morph="M S" extra="vH jh mv"/>
+			<t id="s2_12" word="ainda" lemma="ainda" pos="adv" morph="--" extra="--"/>
+			<t id="s2_13" word="em" lemma="em" pos="prp" morph="--" extra="sam-"/>
+			<t id="s2_14" word="o" lemma="o" pos="art" morph="M S" extra="-sam "/>
+			<t id="s2_15" word="mercado" lemma="mercado" pos="n" morph="M S" sem="inst" extra="--"/>
+			<t id="s2_16" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s2_17" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s2_500" cat="s">
+				<edge label="X" idref="s2_501"/>
+			</nt>
+			<nt id="s2_501" cat="adjp">
+				<edge label="H" idref="s2_1"/>
+				<edge label="STA" idref="s2_502"/>
+				<edge label="PU" idref="s2_16"/>
+				<edge label="PU" idref="s2_17"/>
+			</nt>
+			<nt id="s2_502" cat="fcl">
+				<edge label="X" idref="s2_2"/>
+				<edge label="P" idref="s2_3"/>
+				<edge label="S" idref="s2_503"/>
+			</nt>
+			<nt id="s2_503" cat="np">
+				<edge label="H" idref="s2_4"/>
+				<edge label="DN" idref="s2_504"/>
+			</nt>
+			<nt id="s2_504" cat="pp">
+				<edge label="H" idref="s2_5"/>
+				<edge label="DP" idref="s2_505"/>
+			</nt>
+			<nt id="s2_505" cat="np">
+				<edge label="H" idref="s2_6"/>
+				<edge label="DN" idref="s2_506"/>
+			</nt>
+			<nt id="s2_506" cat="fcl">
+				<edge label="Od" idref="s2_7"/>
+				<edge label="fA" idref="s2_8"/>
+				<edge label="P" idref="s2_9"/>
+				<edge label="fCs" idref="s2_507"/>
+			</nt>
+			<nt id="s2_507" cat="icl">
+				<edge label="DA" idref="s2_10"/>
+				<edge label="P" idref="s2_11"/>
+				<edge label="fA" idref="s2_508"/>
+			</nt>
+			<nt id="s2_508" cat="pp">
+				<edge label="DPmod" idref="s2_12"/>
+				<edge label="H" idref="s2_13"/>
+				<edge label="DP" idref="s2_509"/>
+			</nt>
+			<nt id="s2_509" cat="np">
+				<edge label="DN" idref="s2_14"/>
+				<edge label="H" idref="s2_15"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

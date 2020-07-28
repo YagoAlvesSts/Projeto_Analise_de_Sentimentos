@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="é bem legal, mas dura pouco a bateria carregada.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="é" lemma="ser" pos="v-fin" morph="PR 3S IND VFIN" extra="vK fmc mv"/>
+			<t id="s1_2" word="bem" lemma="bem" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_3" word="legal" lemma="legal" pos="adj" morph="M/F S" extra="cjt-head cjt-head-Cs nh"/>
+			<t id="s1_4" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_5" word="mas" lemma="mas" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_6" word="dura" lemma="duro" pos="adj" morph="F S" extra="cjt-Cs jh"/>
+			<t id="s1_7" word="pouco" lemma="pouco" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_8" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s1_9" word="bateria" lemma="bateria" pos="n" morph="F S" sem="tool" extra="cjt-Cs"/>
+			<t id="s1_10" word="carregada" lemma="carregado" pos="adj" morph="F S" extra="nh np-close"/>
+			<t id="s1_11" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="P" idref="s1_1"/>
+				<edge label="Cs" idref="s1_502"/>
+				<edge label="fA" idref="s1_7"/>
+				<edge label="PU" idref="s1_11"/>
+			</nt>
+			<nt id="s1_502" cat="par">
+				<edge label="CJT" idref="s1_503"/>
+				<edge label="PU" idref="s1_4"/>
+				<edge label="CJT" idref="s1_504"/>
+				<edge label="CJT" idref="s1_6"/>
+			</nt>
+			<nt id="s1_503" cat="adjp">
+				<edge label="DA" idref="s1_2"/>
+				<edge label="H" idref="s1_3"/>
+			</nt>
+			<nt id="s1_504" cat="np">
+				<edge label="DN" idref="s1_505"/>
+				<edge label="DN" idref="s1_8"/>
+				<edge label="H" idref="s1_9"/>
+				<edge label="-DN" idref="s1_10"/>
+			</nt>
+			<nt id="s1_505" cat="adjp">
+				<edge label="CO" idref="s1_5"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s2" ref="2" source="Running text" forest="1" text="em o mais é muito bom mesmo esse celular!.">
+	<graph root="s2_500">
+		<terminals>
+			<t id="s2_1" word="em" lemma="em" pos="prp" morph="--" extra="sam-"/>
+			<t id="s2_2" word="o" lemma="o" pos="art" morph="M S" extra="-sam "/>
+			<t id="s2_3" word="mais" lemma="muito" pos="pron-indef" morph="DET M/F S/P" extra="quant KOMP"/>
+			<t id="s2_4" word="é" lemma="ser" pos="v-fin" morph="PR 3S IND VFIN" extra="vK fmc mv"/>
+			<t id="s2_5" word="muito" lemma="muito" pos="adv" morph="--" extra="quant"/>
+			<t id="s2_6" word="bom" lemma="bom" pos="adj" morph="M S" extra="jh"/>
+			<t id="s2_7" word="mesmo" lemma="mesmo" pos="adv" morph="--" extra="quant"/>
+			<t id="s2_8" word="esse" lemma="esse" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s2_9" word="celular" lemma="celular" pos="adj" morph="M S" extra="n nh"/>
+			<t id="s2_10" word="!" lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s2_11" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s2_500" cat="s">
+				<edge label="STA" idref="s2_501"/>
+			</nt>
+			<nt id="s2_501" cat="fcl">
+				<edge label="fA" idref="s2_502"/>
+				<edge label="P" idref="s2_4"/>
+				<edge label="Cs" idref="s2_504"/>
+				<edge label="S" idref="s2_505"/>
+				<edge label="PU" idref="s2_10"/>
+				<edge label="PU" idref="s2_11"/>
+			</nt>
+			<nt id="s2_502" cat="pp">
+				<edge label="H" idref="s2_1"/>
+				<edge label="DP" idref="s2_503"/>
+			</nt>
+			<nt id="s2_503" cat="np">
+				<edge label="DN" idref="s2_2"/>
+				<edge label="H" idref="s2_3"/>
+			</nt>
+			<nt id="s2_504" cat="adjp">
+				<edge label="DA" idref="s2_5"/>
+				<edge label="H" idref="s2_6"/>
+			</nt>
+			<nt id="s2_505" cat="np">
+				<edge label="DN" idref="s2_7"/>
+				<edge label="DN" idref="s2_8"/>
+				<edge label="H" idref="s2_9"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

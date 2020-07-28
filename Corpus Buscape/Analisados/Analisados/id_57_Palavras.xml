@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="celular muito caro para o nível de equipamentos que ele oferece o que não gostei muito difícil de usar-câmera ruim.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="celular" lemma="celular" pos="adj" morph="M/F S" extra="nh"/>
+			<t id="s1_2" word="muito" lemma="muito" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_3" word="caro" lemma="caro" pos="adj" morph="M S" extra="np-close"/>
+			<t id="s1_4" word="para" lemma="para" pos="prp" morph="--" extra="--"/>
+			<t id="s1_5" word="o" lemma="o" pos="art" morph="M S" extra="--"/>
+			<t id="s1_6" word="nível" lemma="nível" pos="n" morph="M S" sem="Labs tool" extra="--"/>
+			<t id="s1_7" word="de" lemma="de" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_8" word="equipamentos" lemma="equipamento" pos="n" morph="M P" sem="cm tool mach" extra="--"/>
+			<t id="s1_9" word="que" lemma="que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s1_10" word="ele" lemma="ele" pos="pron-pers" morph="M 3S NOM" extra="--"/>
+			<t id="s1_11" word="oferece" lemma="oferecer" pos="v-fin" morph="PR 3S IND VFIN" extra="vH mv np-close"/>
+			<t id="s1_12" word="o_que" lemma="o_que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s1_13" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s1_14" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv np-close"/>
+			<t id="s1_15" word="muito" lemma="muito" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_16" word="difícil" lemma="difícil" pos="adj" morph="M/F S" extra="nh"/>
+			<t id="s1_17" word="de" lemma="de" pos="prp" morph="--" extra="--"/>
+			<t id="s1_18" word="usar-câmera" lemma="usar-c�=mera" pos="n" morph="F S" sem="tool" extra="--"/>
+			<t id="s1_19" word="ruim" lemma="ruim" pos="adj" morph="F S" extra="np-close"/>
+			<t id="s1_20" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="UTT" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="x">
+				<edge label="X" idref="s1_1"/>
+				<edge label="DN" idref="s1_502"/>
+				<edge label="DA" idref="s1_2"/>
+				<edge label="H" idref="s1_3"/>
+				<edge label="fA" idref="s1_503"/>
+				<edge label="H" idref="s1_4"/>
+				<edge label="DP" idref="s1_504"/>
+				<edge label="PU" idref="s1_20"/>
+			</nt>
+			<nt id="s1_502" cat="adjp">
+			</nt>
+			<nt id="s1_503" cat="pp">
+			</nt>
+			<nt id="s1_504" cat="np">
+				<edge label="DN" idref="s1_5"/>
+				<edge label="H" idref="s1_6"/>
+				<edge label="DN" idref="s1_505"/>
+			</nt>
+			<nt id="s1_505" cat="pp">
+				<edge label="H" idref="s1_7"/>
+				<edge label="DP" idref="s1_506"/>
+			</nt>
+			<nt id="s1_506" cat="np">
+				<edge label="H" idref="s1_8"/>
+				<edge label="DN" idref="s1_507"/>
+			</nt>
+			<nt id="s1_507" cat="fcl">
+				<edge label="Od" idref="s1_9"/>
+				<edge label="S" idref="s1_508"/>
+				<edge label="P" idref="s1_11"/>
+			</nt>
+			<nt id="s1_508" cat="np">
+				<edge label="H" idref="s1_10"/>
+				<edge label="DN" idref="s1_509"/>
+			</nt>
+			<nt id="s1_509" cat="fcl">
+				<edge label="Od" idref="s1_12"/>
+				<edge label="fA" idref="s1_13"/>
+				<edge label="P" idref="s1_14"/>
+				<edge label="fCs" idref="s1_510"/>
+			</nt>
+			<nt id="s1_510" cat="adjp">
+				<edge label="DA" idref="s1_15"/>
+				<edge label="H" idref="s1_16"/>
+				<edge label="DA" idref="s1_511"/>
+				<edge label="DP" idref="s1_512"/>
+			</nt>
+			<nt id="s1_511" cat="pp">
+				<edge label="H" idref="s1_17"/>
+			</nt>
+			<nt id="s1_512" cat="np">
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

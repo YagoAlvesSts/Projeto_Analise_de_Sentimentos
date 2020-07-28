@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="não tenho por isso não posso descrever experiência.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s1_2" word="tenho" lemma="ter" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-head cjt-head-STA fmc mv"/>
+			<t id="s1_3" word="por" lemma="por" pos="prp" morph="--" extra="--"/>
+			<t id="s1_4" word="isso" lemma="isso" pos="spec" morph="M S" extra="dem"/>
+			<t id="s1_5" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s1_6" word="posso" lemma="poder" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-STA fmc aux"/>
+			<t id="s1_7" word="descrever" lemma="descrever" pos="v-inf" morph="--" extra="vH mv"/>
+			<t id="s1_8" word="experiência" lemma="experiência" pos="n" morph="F S" sem="am ac" extra="--"/>
+			<t id="s1_9" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="CJT" idref="s1_504"/>
+				<edge label="PU" idref="s1_9"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="fA" idref="s1_1"/>
+				<edge label="P" idref="s1_2"/>
+				<edge label="fA" idref="s1_503"/>
+			</nt>
+			<nt id="s1_503" cat="pp">
+				<edge label="H" idref="s1_3"/>
+				<edge label="DP" idref="s1_4"/>
+			</nt>
+			<nt id="s1_504" cat="x">
+				<edge label="fA" idref="s1_5"/>
+				<edge label="P" idref="s1_505"/>
+				<edge label="Od" idref="s1_8"/>
+			</nt>
+			<nt id="s1_505" cat="vp">
+				<edge label="Vaux" idref="s1_6"/>
+				<edge label="Vm" idref="s1_7"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

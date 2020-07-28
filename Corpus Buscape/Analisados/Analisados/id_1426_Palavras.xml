@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="facilidade nas operações o que gostei câmera e sem complicações manuseio..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="facilidade" lemma="facilidade" pos="n" morph="F S" sem="am" extra="--"/>
+			<t id="s1_2" word="em" lemma="em" pos="prp" morph="--" extra="sam- np-close"/>
+			<t id="s1_3" word="as" lemma="o" pos="art" morph="F P" extra="-sam "/>
+			<t id="s1_4" word="operações" lemma="operação" pos="n" morph="F P" sem="act-d" extra="--"/>
+			<t id="s1_5" word="o" lemma="o" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s1_6" word="que" lemma="que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s1_7" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv np-close"/>
+			<t id="s1_8" word="câmera" lemma="c�=mera" pos="n" morph="F S" sem="tool" extra="--"/>
+			<t id="s1_9" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_10" word="sem" lemma="sem" pos="prp" morph="--" extra="--"/>
+			<t id="s1_11" word="complicações" lemma="complicação" pos="n" morph="F P" sem="ac" extra="--"/>
+			<t id="s1_12" word="manuseio" lemma="manusear" pos="v-fin" morph="PR 1S IND VFIN" extra="vH fmc mv"/>
+			<t id="s1_13" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_14" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="S" idref="s1_502"/>
+				<edge label="S" idref="s1_5"/>
+				<edge label="fCs" idref="s1_8"/>
+				<edge label="P" idref="s1_12"/>
+				<edge label="PU" idref="s1_13"/>
+				<edge label="PU" idref="s1_14"/>
+			</nt>
+			<nt id="s1_502" cat="np">
+				<edge label="H" idref="s1_1"/>
+				<edge label="DN" idref="s1_503"/>
+			</nt>
+			<nt id="s1_503" cat="pp">
+				<edge label="H" idref="s1_2"/>
+				<edge label="DP" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="np">
+				<edge label="DN" idref="s1_3"/>
+				<edge label="H" idref="s1_4"/>
+				<edge label="DN" idref="s1_505"/>
+				<edge label="CO" idref="s1_9"/>
+				<edge label="FOC" idref="s1_506"/>
+			</nt>
+			<nt id="s1_505" cat="fcl">
+				<edge label="S" idref="s1_6"/>
+				<edge label="P" idref="s1_7"/>
+			</nt>
+			<nt id="s1_506" cat="pp">
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

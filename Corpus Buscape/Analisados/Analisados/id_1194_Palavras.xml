@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="um belo aparelho, com diversas opções de entretenimento, mais o sinal dentro de casa fica muito fraco..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="um" lemma="um" pos="art" morph="M S" extra="--"/>
+			<t id="s1_2" word="belo" lemma="belo" pos="adj" morph="M S" extra="--"/>
+			<t id="s1_3" word="aparelho" lemma="aparelho" pos="n" morph="M S" sem="tool" extra="--"/>
+			<t id="s1_4" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_5" word="com" lemma="com" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_6" word="diversas" lemma="diverso" pos="adj" morph="F P" extra="jh"/>
+			<t id="s1_7" word="opções" lemma="opção" pos="n" morph="F P" sem="sem-c" extra="--"/>
+			<t id="s1_8" word="de" lemma="de" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_9" word="entretenimento" lemma="entretenimento" pos="n" morph="M S" sem="ac" extra="--"/>
+			<t id="s1_10" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_11" word="mais" lemma="mais" pos="adv" morph="--" extra="kc"/>
+			<t id="s1_12" word="o" lemma="o" pos="art" morph="M S" extra="--"/>
+			<t id="s1_13" word="sinal" lemma="sinal" pos="n" morph="M S" sem="percep-l percep-w ac ac-sign mon sem-r sick-c" extra="--"/>
+			<t id="s1_14" word="dentro_de" lemma="dentro_de" pos="prp" morph="--" extra="--"/>
+			<t id="s1_15" word="casa" lemma="casa" pos="n" morph="F S" sem="build" extra="--"/>
+			<t id="s1_16" word="fica" lemma="ficar" pos="v-fin" morph="PR 3S IND VFIN" extra="vK fmc mv"/>
+			<t id="s1_17" word="muito" lemma="muito" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_18" word="fraco" lemma="fraco" pos="adj" morph="M S" extra="jh"/>
+			<t id="s1_19" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_20" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="fAtop" idref="s1_502"/>
+				<edge label="PU" idref="s1_4"/>
+				<edge label="DNc" idref="s1_503"/>
+				<edge label="S" idref="s1_507"/>
+				<edge label="fA" idref="s1_508"/>
+				<edge label="P" idref="s1_16"/>
+				<edge label="Cs" idref="s1_509"/>
+				<edge label="PU" idref="s1_19"/>
+				<edge label="PU" idref="s1_20"/>
+			</nt>
+			<nt id="s1_502" cat="np">
+				<edge label="DN" idref="s1_1"/>
+				<edge label="DN" idref="s1_2"/>
+				<edge label="H" idref="s1_3"/>
+			</nt>
+			<nt id="s1_503" cat="pp">
+				<edge label="H" idref="s1_5"/>
+				<edge label="DP" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="np">
+				<edge label="DN" idref="s1_6"/>
+				<edge label="H" idref="s1_7"/>
+				<edge label="DN" idref="s1_505"/>
+			</nt>
+			<nt id="s1_505" cat="pp">
+				<edge label="H" idref="s1_8"/>
+				<edge label="DP" idref="s1_506"/>
+			</nt>
+			<nt id="s1_506" cat="np">
+				<edge label="H" idref="s1_9"/>
+				<edge label="PU" idref="s1_10"/>
+				<edge label="CO" idref="s1_11"/>
+			</nt>
+			<nt id="s1_507" cat="np">
+				<edge label="DN" idref="s1_12"/>
+				<edge label="H" idref="s1_13"/>
+			</nt>
+			<nt id="s1_508" cat="pp">
+				<edge label="H" idref="s1_14"/>
+				<edge label="DP" idref="s1_15"/>
+			</nt>
+			<nt id="s1_509" cat="adjp">
+				<edge label="DA" idref="s1_17"/>
+				<edge label="H" idref="s1_18"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="muito pratico, versátil, fácil uso e cabe em qualquer lugar..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="muito" lemma="muito" pos="pron-indef" morph="DET M S" extra="quant"/>
+			<t id="s1_2" word="pratico" lemma="praticar" pos="v-fin" morph="PR 1S IND VFIN" extra="cjt-head cjt-head-STA vH fmc mv"/>
+			<t id="s1_3" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_4" word="versátil" lemma="versátil" pos="adj" morph="M/F S" extra="--"/>
+			<t id="s1_5" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_6" word="fácil" lemma="fácil" pos="adj" morph="M S" extra="--"/>
+			<t id="s1_7" word="uso" lemma="uso" pos="n" morph="M S" sem="act ac" extra="--"/>
+			<t id="s1_8" word="e" lemma="e" pos="conj-c" morph="--" extra="topkc"/>
+			<t id="s1_9" word="cabe" lemma="caber" pos="v-fin" morph="PR 3S IND VFIN" extra="cjt-STA vN fmc mv"/>
+			<t id="s1_10" word="em" lemma="em" pos="prp" morph="--" extra="--"/>
+			<t id="s1_11" word="qualquer" lemma="qualquer" pos="pron-indef" morph="DET M S" extra="quant"/>
+			<t id="s1_12" word="lugar" lemma="lugar" pos="n" morph="M S" sem="L Labs" extra="--"/>
+			<t id="s1_13" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_14" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="PU" idref="s1_5"/>
+				<edge label="CJT" idref="s1_503"/>
+				<edge label="CO" idref="s1_8"/>
+				<edge label="PU" idref="s1_13"/>
+				<edge label="PU" idref="s1_14"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="S" idref="s1_1"/>
+				<edge label="P" idref="s1_2"/>
+				<edge label="PU" idref="s1_3"/>
+				<edge label="fCs" idref="s1_4"/>
+			</nt>
+			<nt id="s1_503" cat="fcl">
+				<edge label="S" idref="s1_504"/>
+				<edge label="P" idref="s1_9"/>
+				<edge label="Op" idref="s1_505"/>
+			</nt>
+			<nt id="s1_504" cat="np">
+				<edge label="DN" idref="s1_6"/>
+				<edge label="H" idref="s1_7"/>
+			</nt>
+			<nt id="s1_505" cat="pp">
+				<edge label="H" idref="s1_10"/>
+				<edge label="DP" idref="s1_506"/>
+			</nt>
+			<nt id="s1_506" cat="np">
+				<edge label="DN" idref="s1_11"/>
+				<edge label="H" idref="s1_12"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

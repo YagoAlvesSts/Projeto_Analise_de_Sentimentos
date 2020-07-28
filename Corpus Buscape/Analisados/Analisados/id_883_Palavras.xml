@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="excelente aparelho, bonito e com grande capacidade de armazenamento, vem com várias funções e muitos aplicativos disponíveis na nokia store..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="excelente" lemma="excelente" pos="adj" morph="M S" extra="--"/>
+			<t id="s1_2" word="aparelho" lemma="aparelho" pos="n" morph="M S" sem="tool" extra="--"/>
+			<t id="s1_3" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_4" word="bonito" lemma="bonito" pos="adj" morph="M S" extra="np-close"/>
+			<t id="s1_5" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_6" word="com" lemma="com" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_7" word="grande" lemma="grande" pos="adj" morph="F S" extra="--"/>
+			<t id="s1_8" word="capacidade_de_armazenamento" lemma="capacidade_de_armazenamento" pos="n" morph="F S" sem="am" extra="--"/>
+			<t id="s1_9" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_10" word="vem" lemma="vir" pos="v-fin" morph="PR 3S IND VFIN" extra="cjt-head cjt-head-STA fmc mv"/>
+			<t id="s1_11" word="com" lemma="com" pos="prp" morph="--" extra="--"/>
+			<t id="s1_12" word="várias" lemma="várias" pos="pron-indef" morph="DET F P" extra="quant"/>
+			<t id="s1_13" word="funções" lemma="função" pos="n" morph="F P" sem="ac pos-soc occ" extra="cjt-head cjt-head-DP"/>
+			<t id="s1_14" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_15" word="muitos" lemma="muito" pos="pron-indef" morph="DET M P" extra="quant"/>
+			<t id="s1_16" word="aplicativos" lemma="aplicativo" pos="n" morph="M P" sem="sem-c" extra="cjt-DP"/>
+			<t id="s1_17" word="disponíveis" lemma="disponível" pos="adj" morph="M P" extra="nh np-close"/>
+			<t id="s1_18" word="em" lemma="em" pos="prp" morph="--" extra="sam- np-long"/>
+			<t id="s1_19" word="a" lemma="o" pos="art" morph="F S" extra="-sam "/>
+			<t id="s1_20" word="nokia" lemma="nokia" pos="n" morph="F S" extra="heur foreign"/>
+			<t id="s1_21" word="store" lemma="storer" pos="v-fin" morph="PR 3S IND VFIN" extra="nosubj nosubj cjt-STA heur fmc mv"/>
+			<t id="s1_22" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_23" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="CJT" idref="s1_21"/>
+				<edge label="PU" idref="s1_22"/>
+				<edge label="PU" idref="s1_23"/>
+			</nt>
+			<nt id="s1_502" cat="np">
+				<edge label="S" idref="s1_503"/>
+				<edge label="DNc" idref="s1_504"/>
+				<edge label="PU" idref="s1_9"/>
+				<edge label="P" idref="s1_10"/>
+				<edge label="fA" idref="s1_506"/>
+			</nt>
+			<nt id="s1_503" cat="np">
+				<edge label="DN" idref="s1_1"/>
+				<edge label="H" idref="s1_2"/>
+				<edge label="PU" idref="s1_3"/>
+				<edge label="DNc" idref="s1_4"/>
+			</nt>
+			<nt id="s1_504" cat="pp">
+				<edge label="CO" idref="s1_5"/>
+				<edge label="H" idref="s1_6"/>
+				<edge label="DP" idref="s1_505"/>
+			</nt>
+			<nt id="s1_505" cat="np">
+				<edge label="DN" idref="s1_7"/>
+				<edge label="H" idref="s1_8"/>
+			</nt>
+			<nt id="s1_506" cat="pp">
+				<edge label="H" idref="s1_11"/>
+				<edge label="DP" idref="s1_507"/>
+			</nt>
+			<nt id="s1_507" cat="par">
+				<edge label="CJT" idref="s1_508"/>
+				<edge label="CJT" idref="s1_509"/>
+			</nt>
+			<nt id="s1_508" cat="np">
+				<edge label="DN" idref="s1_12"/>
+				<edge label="H" idref="s1_13"/>
+			</nt>
+			<nt id="s1_509" cat="np">
+				<edge label="DN" idref="s1_510"/>
+				<edge label="DN" idref="s1_15"/>
+				<edge label="H" idref="s1_16"/>
+				<edge label="-DN" idref="s1_17"/>
+				<edge label="DN" idref="s1_511"/>
+			</nt>
+			<nt id="s1_510" cat="adjp">
+				<edge label="CO" idref="s1_14"/>
+			</nt>
+			<nt id="s1_511" cat="pp">
+				<edge label="H" idref="s1_18"/>
+				<edge label="DP" idref="s1_512"/>
+			</nt>
+			<nt id="s1_512" cat="np">
+				<edge label="DN" idref="s1_19"/>
+				<edge label="H" idref="s1_20"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="ate agora estou satisfeito, comprei a number mês..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="ate" lemma="atar" pos="v-fin" morph="PR 1/3S SUBJ VFIN" extra="nosubj nosubj nosubj nosubj cjt-head cjt-head-STA vH fmc mv"/>
+			<t id="s1_2" word="agora" lemma="agora" pos="adv" morph="--" extra="kc"/>
+			<t id="s1_3" word="estou" lemma="estar" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-STA vK fmc mv"/>
+			<t id="s1_4" word="satisfeito" lemma="satisfazer" pos="v-pcp" morph="M S" extra="jh vH"/>
+			<t id="s1_5" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_6" word="comprei" lemma="comprar" pos="v-fin" morph="PS 1S IND VFIN" extra="nosubj nosubj cjt-STA vH fmc mv"/>
+			<t id="s1_7" word="a" lemma="a" pos="prp" morph="--" extra="--"/>
+			<t id="s1_8" word="number" lemma="number" pos="n" morph="M S" extra="heur"/>
+			<t id="s1_9" word="mês" lemma="mê" pos="n" morph="M P" extra="newlex"/>
+			<t id="s1_10" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_11" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="CJT" idref="s1_503"/>
+				<edge label="PU" idref="s1_5"/>
+				<edge label="CJT" idref="s1_504"/>
+				<edge label="PU" idref="s1_10"/>
+				<edge label="PU" idref="s1_11"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="P" idref="s1_1"/>
+				<edge label="fA" idref="s1_2"/>
+			</nt>
+			<nt id="s1_503" cat="x">
+				<edge label="P" idref="s1_3"/>
+				<edge label="Cs" idref="s1_4"/>
+			</nt>
+			<nt id="s1_504" cat="x">
+				<edge label="P" idref="s1_6"/>
+				<edge label="Op" idref="s1_505"/>
+				<edge label="Od" idref="s1_9"/>
+			</nt>
+			<nt id="s1_505" cat="pp">
+				<edge label="H" idref="s1_7"/>
+				<edge label="DP" idref="s1_8"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

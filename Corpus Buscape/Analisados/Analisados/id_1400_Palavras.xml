@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="é de boa qualidade já usei e encomendaria amigos.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="é" lemma="ser" pos="v-fin" morph="PR 3S IND VFIN" extra="nosubj nosubj nosubj nosubj cjt-head cjt-head-STA vK fmc mv"/>
+			<t id="s1_2" word="de" lemma="de" pos="prp" morph="--" extra="--"/>
+			<t id="s1_3" word="boa" lemma="bom" pos="adj" morph="F S" extra="--"/>
+			<t id="s1_4" word="qualidade" lemma="qualidade" pos="n" morph="F S" sem="percep-f f-c" extra="--"/>
+			<t id="s1_5" word="já" lemma="já" pos="adv" morph="--" extra="--"/>
+			<t id="s1_6" word="usei" lemma="usar" pos="v-fin" morph="PS 1S IND VFIN" extra="nosubj nosubj cjt-STA vH fmc mv"/>
+			<t id="s1_7" word="e" lemma="e" pos="conj-c" morph="--" extra="co-fin"/>
+			<t id="s1_8" word="encomendaria" lemma="encomendar" pos="v-fin" morph="COND 1/3S VFIN" extra="nosubj cjt-STA nosubj cjt-STA vH fmc mv"/>
+			<t id="s1_9" word="amigos" lemma="amigo" pos="n" morph="M P" sem="Hfam" extra="--"/>
+			<t id="s1_10" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="CJT" idref="s1_505"/>
+				<edge label="CO" idref="s1_7"/>
+				<edge label="CJT" idref="s1_506"/>
+				<edge label="PU" idref="s1_10"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="P" idref="s1_1"/>
+				<edge label="Cs" idref="s1_503"/>
+			</nt>
+			<nt id="s1_503" cat="pp">
+				<edge label="H" idref="s1_2"/>
+				<edge label="DP" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="np">
+				<edge label="DN" idref="s1_3"/>
+				<edge label="H" idref="s1_4"/>
+			</nt>
+			<nt id="s1_505" cat="x">
+				<edge label="fA" idref="s1_5"/>
+				<edge label="P" idref="s1_6"/>
+			</nt>
+			<nt id="s1_506" cat="x">
+				<edge label="P" idref="s1_8"/>
+				<edge label="Od" idref="s1_9"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s2" ref="2" source="Running text" forest="1" text="o que gostei superou a minhas especiarias as suas formulas o que não gostei como todo aparelho não resiste a mal uso..">
+	<graph root="s2_500">
+		<terminals>
+			<t id="s2_1" word="o" lemma="o" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s2_2" word="que" lemma="que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s2_3" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv np-close"/>
+			<t id="s2_4" word="superou" lemma="superar" pos="v-fin" morph="PS 3S IND VFIN" extra="cjt-head cjt-head-STA vH fmc mv"/>
+			<t id="s2_5" word="a" lemma="a" pos="prp" morph="--" extra="--"/>
+			<t id="s2_6" word="minhas" lemma="meu" pos="pron-poss" morph="DET F P" extra="poss 1S"/>
+			<t id="s2_7" word="especiarias" lemma="especiaria" pos="n" morph="F P" sem="food-h" extra="--"/>
+			<t id="s2_8" word="as" lemma="o" pos="art" morph="F P" extra="--"/>
+			<t id="s2_9" word="suas" lemma="seu" pos="pron-poss" morph="DET F P" extra="poss 3S"/>
+			<t id="s2_10" word="formulas" lemma="formular" pos="v-fin" morph="PR 2S IND VFIN" extra="cjt-STA vH fmc mv"/>
+			<t id="s2_11" word="o" lemma="o" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s2_12" word="que" lemma="que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s2_13" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s2_14" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv np-close"/>
+			<t id="s2_15" word="como" lemma="como" pos="adv" morph="--" extra="clb clb-fs rel ks"/>
+			<t id="s2_16" word="todo" lemma="todo" pos="pron-indef" morph="DET M S" extra="quant"/>
+			<t id="s2_17" word="aparelho" lemma="aparelho" pos="n" morph="M S" sem="tool" extra="--"/>
+			<t id="s2_18" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s2_19" word="resiste" lemma="resistir" pos="v-fin" morph="PR 3S IND VFIN" extra="mv"/>
+			<t id="s2_20" word="a_mal" lemma="a_mal" pos="adv" morph="--" sem="pp" extra="--"/>
+			<t id="s2_21" word="uso" lemma="uso" pos="n" morph="M S" sem="act ac" extra="--"/>
+			<t id="s2_22" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s2_23" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s2_500" cat="s">
+				<edge label="UTT" idref="s2_501"/>
+			</nt>
+			<nt id="s2_501" cat="x">
+				<edge label="STA" idref="s2_502"/>
+				<edge label="DN" idref="s2_504"/>
+				<edge label="S" idref="s2_2"/>
+				<edge label="P" idref="s2_3"/>
+				<edge label="CJT" idref="s2_508"/>
+				<edge label="PU" idref="s2_22"/>
+				<edge label="PU" idref="s2_23"/>
+			</nt>
+			<nt id="s2_502" cat="par">
+				<edge label="CJT" idref="s2_503"/>
+			</nt>
+			<nt id="s2_503" cat="fcl">
+				<edge label="S" idref="s2_1"/>
+			</nt>
+			<nt id="s2_504" cat="fcl">
+				<edge label="P" idref="s2_4"/>
+				<edge label="fA" idref="s2_505"/>
+			</nt>
+			<nt id="s2_505" cat="pp">
+				<edge label="H" idref="s2_5"/>
+				<edge label="DP" idref="s2_506"/>
+			</nt>
+			<nt id="s2_506" cat="np">
+				<edge label="DN" idref="s2_6"/>
+				<edge label="H" idref="s2_7"/>
+				<edge label="DN" idref="s2_509"/>
+			</nt>
+			<nt id="s2_507" cat="np">
+				<edge label="DN" idref="s2_8"/>
+				<edge label="DN" idref="s2_16"/>
+				<edge label="H" idref="s2_17"/>
+			</nt>
+			<nt id="s2_508" cat="fcl">
+				<edge label="S" idref="s2_9"/>
+				<edge label="P" idref="s2_10"/>
+				<edge label="Od" idref="s2_11"/>
+			</nt>
+			<nt id="s2_509" cat="fcl">
+				<edge label="S" idref="s2_12"/>
+				<edge label="fA" idref="s2_13"/>
+				<edge label="P" idref="s2_14"/>
+				<edge label="fA" idref="s2_510"/>
+			</nt>
+			<nt id="s2_510" cat="fcl">
+				<edge label="fA" idref="s2_15"/>
+				<edge label="fA" idref="s2_18"/>
+				<edge label="P" idref="s2_19"/>
+				<edge label="fA" idref="s2_20"/>
+				<edge label="Od" idref="s2_21"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

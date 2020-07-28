@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="interessante e com muitas funcionalidades.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="interessante" lemma="interessante" pos="adj" morph="M/F S" extra="jh"/>
+			<t id="s1_2" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_3" word="com" lemma="com" pos="prp" morph="--" extra="--"/>
+			<t id="s1_4" word="muitas" lemma="muito" pos="pron-indef" morph="DET F P" extra="quant"/>
+			<t id="s1_5" word="funcionalidades" lemma="funcionalidade" pos="n" morph="F P" sem="percep-f" extra="--"/>
+			<t id="s1_6" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="X" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="adjp">
+				<edge label="H" idref="s1_1"/>
+				<edge label="fA" idref="s1_502"/>
+				<edge label="PU" idref="s1_6"/>
+			</nt>
+			<nt id="s1_502" cat="pp">
+				<edge label="CO" idref="s1_2"/>
+				<edge label="H" idref="s1_3"/>
+				<edge label="DP" idref="s1_503"/>
+			</nt>
+			<nt id="s1_503" cat="np">
+				<edge label="DN" idref="s1_4"/>
+				<edge label="H" idref="s1_5"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

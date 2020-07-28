@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="ótimo custo-benefício, telão bom para navegar, ler e jogos simples..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="ótimo" lemma="bom" pos="adj" morph="M S" extra="SUP"/>
+			<t id="s1_2" word="custo-benefício" lemma="custo-benefício" pos="n" morph="M S" sem="mon" extra="cjt-head cjt-head-X"/>
+			<t id="s1_3" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_4" word="telão" lemma="telão" pos="n" morph="M S" sem="Lcover" extra="cjt-X"/>
+			<t id="s1_5" word="bom" lemma="bom" pos="adj" morph="M S" extra="np-close"/>
+			<t id="s1_6" word="para" lemma="para" pos="prp" morph="--" extra="--"/>
+			<t id="s1_7" word="navegar" lemma="navegar" pos="v-inf" morph="--" extra="cjt-head cjt-head-DP vH mv"/>
+			<t id="s1_8" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_9" word="ler" lemma="ler" pos="v-inf" morph="--" extra="cjt-DP vH mv"/>
+			<t id="s1_10" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_11" word="jogos" lemma="jogo" pos="n" morph="M P" sem="activity occ cc-h game" extra="--"/>
+			<t id="s1_12" word="simples" lemma="simples" pos="adj" morph="M P" extra="jh np-close"/>
+			<t id="s1_13" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_14" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="X" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="PU" idref="s1_3"/>
+				<edge label="CJT" idref="s1_503"/>
+				<edge label="PU" idref="s1_13"/>
+				<edge label="PU" idref="s1_14"/>
+			</nt>
+			<nt id="s1_502" cat="np">
+				<edge label="DN" idref="s1_1"/>
+				<edge label="H" idref="s1_2"/>
+			</nt>
+			<nt id="s1_503" cat="np">
+				<edge label="H" idref="s1_4"/>
+				<edge label="DN" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="adjp">
+				<edge label="H" idref="s1_5"/>
+				<edge label="DA" idref="s1_505"/>
+			</nt>
+			<nt id="s1_505" cat="pp">
+				<edge label="H" idref="s1_6"/>
+				<edge label="DP" idref="s1_506"/>
+			</nt>
+			<nt id="s1_506" cat="par">
+				<edge label="CJT" idref="s1_7"/>
+				<edge label="PU" idref="s1_8"/>
+				<edge label="CJT" idref="s1_507"/>
+			</nt>
+			<nt id="s1_507" cat="icl">
+				<edge label="P" idref="s1_9"/>
+				<edge label="Od" idref="s1_508"/>
+			</nt>
+			<nt id="s1_508" cat="np">
+				<edge label="DN" idref="s1_509"/>
+				<edge label="H" idref="s1_11"/>
+				<edge label="-DN" idref="s1_12"/>
+			</nt>
+			<nt id="s1_509" cat="adjp">
+				<edge label="CO" idref="s1_10"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

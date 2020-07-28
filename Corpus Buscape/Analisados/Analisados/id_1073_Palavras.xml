@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="ele e bom eu acho que não existe negativo em ele.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="ele" lemma="ele" pos="pron-pers" morph="M 3S NOM" extra="--"/>
+			<t id="s1_2" word="e" lemma="e" pos="conj-c" morph="--" extra="topkc"/>
+			<t id="s1_3" word="bom" lemma="bom" pos="adj" morph="M S" extra="jh"/>
+			<t id="s1_4" word="eu" lemma="eu" pos="pron-pers" morph="M/F 1S NOM" extra="--"/>
+			<t id="s1_5" word="acho" lemma="achar" pos="v-fin" morph="PR 1S IND VFIN" extra="vH fmc mv"/>
+			<t id="s1_6" word="que" lemma="que" pos="conj-s" morph="--" extra="clb clb-fs"/>
+			<t id="s1_7" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s1_8" word="existe" lemma="existir" pos="v-fin" morph="PR 3S IND VFIN" extra="mv"/>
+			<t id="s1_9" word="negativo" lemma="negativo" pos="adj" morph="M S" extra="nh"/>
+			<t id="s1_10" word="em" lemma="em" pos="prp" morph="--" extra="sam-"/>
+			<t id="s1_11" word="ele" lemma="ele" pos="pron-pers" morph="M 3S NOM/PIV" extra="-sam"/>
+			<t id="s1_12" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="Od" idref="s1_502"/>
+				<edge label="CO" idref="s1_2"/>
+				<edge label="S" idref="s1_3"/>
+				<edge label="S" idref="s1_4"/>
+				<edge label="P" idref="s1_5"/>
+				<edge label="PU" idref="s1_12"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="S" idref="s1_1"/>
+				<edge label="SUB" idref="s1_6"/>
+				<edge label="fA" idref="s1_7"/>
+				<edge label="P" idref="s1_8"/>
+				<edge label="fCs" idref="s1_9"/>
+				<edge label="fA" idref="s1_503"/>
+			</nt>
+			<nt id="s1_503" cat="pp">
+				<edge label="H" idref="s1_10"/>
+				<edge label="DP" idref="s1_11"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

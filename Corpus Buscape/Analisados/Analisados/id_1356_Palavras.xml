@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="ótimo produto em relação custoxbeneficio.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="ótimo" lemma="bom" pos="adj" morph="M S" extra="SUP"/>
+			<t id="s1_2" word="produto" lemma="produto" pos="n" morph="M S" sem="cc-h mon ac-cat" extra="--"/>
+			<t id="s1_3" word="em" lemma="em" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_4" word="relação" lemma="relação" pos="n" morph="F S" sem="ac sem-r" extra="--"/>
+			<t id="s1_5" word="custoxbeneficio" lemma="custoxbeneficiar" pos="v-fin" morph="PR 1S IND VFIN" extra="heur fmc mv"/>
+			<t id="s1_6" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="S" idref="s1_502"/>
+				<edge label="P" idref="s1_5"/>
+				<edge label="PU" idref="s1_6"/>
+			</nt>
+			<nt id="s1_502" cat="np">
+				<edge label="DN" idref="s1_1"/>
+				<edge label="H" idref="s1_2"/>
+				<edge label="DN" idref="s1_503"/>
+			</nt>
+			<nt id="s1_503" cat="pp">
+				<edge label="H" idref="s1_3"/>
+				<edge label="DP" idref="s1_4"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s2" ref="2" source="Running text" forest="1" text="de fácil utilização, é bonito e resistente.">
+	<graph root="s2_500">
+		<terminals>
+			<t id="s2_1" word="de" lemma="de" pos="prp" morph="--" extra="--"/>
+			<t id="s2_2" word="fácil" lemma="fácil" pos="adj" morph="F S" extra="jh"/>
+			<t id="s2_3" word="utilização" lemma="utilização" pos="n" morph="F S" sem="act" extra="--"/>
+			<t id="s2_4" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s2_5" word="é" lemma="ser" pos="v-fin" morph="PR 3S IND VFIN" extra="vK fmc mv"/>
+			<t id="s2_6" word="bonito" lemma="bonito" pos="adj" morph="M S" extra="cjt-head cjt-head-Cs jh"/>
+			<t id="s2_7" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s2_8" word="resistente" lemma="resistente" pos="adj" morph="M/F S" extra="cjt-Cs nh"/>
+			<t id="s2_9" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s2_500" cat="s">
+				<edge label="STA" idref="s2_501"/>
+			</nt>
+			<nt id="s2_501" cat="fcl">
+				<edge label="fA" idref="s2_502"/>
+				<edge label="PU" idref="s2_4"/>
+				<edge label="P" idref="s2_5"/>
+				<edge label="Cs" idref="s2_504"/>
+				<edge label="PU" idref="s2_9"/>
+			</nt>
+			<nt id="s2_502" cat="pp">
+				<edge label="H" idref="s2_1"/>
+				<edge label="DP" idref="s2_503"/>
+			</nt>
+			<nt id="s2_503" cat="np">
+				<edge label="DN" idref="s2_2"/>
+				<edge label="H" idref="s2_3"/>
+				<edge label="CO" idref="s2_7"/>
+			</nt>
+			<nt id="s2_504" cat="par">
+				<edge label="CJT" idref="s2_6"/>
+				<edge label="CJT" idref="s2_8"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s3" ref="3" source="Running text" forest="1" text="recomendo para quem procura um celular básico..">
+	<graph root="s3_500">
+		<terminals>
+			<t id="s3_1" word="recomendo" lemma="recomendar" pos="v-fin" morph="PR 1S IND VFIN" extra="vH fmc mv"/>
+			<t id="s3_2" word="para" lemma="para" pos="prp" morph="--" extra="--"/>
+			<t id="s3_3" word="quem" lemma="quem" pos="spec" morph="M/F S" extra="clb clb-fs rel"/>
+			<t id="s3_4" word="procura" lemma="procurar" pos="v-fin" morph="PR 3S IND VFIN" extra="vH mv"/>
+			<t id="s3_5" word="um" lemma="um" pos="art" morph="M S" extra="--"/>
+			<t id="s3_6" word="celular" lemma="celular" pos="adj" morph="M S" extra="n nh"/>
+			<t id="s3_7" word="básico" lemma="básico" pos="adj" morph="M S" extra="nh np-close"/>
+			<t id="s3_8" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s3_9" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s3_500" cat="s">
+				<edge label="STA" idref="s3_501"/>
+			</nt>
+			<nt id="s3_501" cat="fcl">
+				<edge label="P" idref="s3_1"/>
+				<edge label="fA" idref="s3_502"/>
+				<edge label="PU" idref="s3_8"/>
+				<edge label="PU" idref="s3_9"/>
+			</nt>
+			<nt id="s3_502" cat="pp">
+				<edge label="H" idref="s3_2"/>
+				<edge label="DP" idref="s3_503"/>
+			</nt>
+			<nt id="s3_503" cat="fcl">
+				<edge label="S" idref="s3_3"/>
+				<edge label="P" idref="s3_4"/>
+				<edge label="Od" idref="s3_504"/>
+				<edge label="DN" idref="s3_7"/>
+			</nt>
+			<nt id="s3_504" cat="np">
+				<edge label="DN" idref="s3_5"/>
+				<edge label="H" idref="s3_6"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="o smartphone lg optimus hub e510 é um smartphone bom embora trave algumas vezes assim que liga..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="o" lemma="o" pos="art" morph="M S" extra="--"/>
+			<t id="s1_2" word="smartphone" lemma="smartphone" pos="n" morph="M S" extra="heur foreign"/>
+			<t id="s1_3" word="lg" lemma="lg" pos="n" morph="M S" extra="foreign"/>
+			<t id="s1_4" word="optimus" lemma="optimu" pos="n" morph="M P" extra="heur"/>
+			<t id="s1_5" word="hub" lemma="hub" pos="n" morph="M S" sem="mach" extra="--"/>
+			<t id="s1_6" word="e510" lemma="e510" pos="n" morph="M S" extra="heur"/>
+			<t id="s1_7" word="é" lemma="ser" pos="v-fin" morph="PR 3S IND VFIN" extra="vK fmc mv"/>
+			<t id="s1_8" word="um" lemma="um" pos="art" morph="M S" extra="--"/>
+			<t id="s1_9" word="smartphone" lemma="smartphone" pos="n" morph="M S" extra="heur foreign"/>
+			<t id="s1_10" word="bom" lemma="bom" pos="adj" morph="M S" extra="np-close"/>
+			<t id="s1_11" word="embora" lemma="embora" pos="conj-s" morph="--" extra="clb clb-fs"/>
+			<t id="s1_12" word="trave" lemma="travar" pos="v-fin" morph="PR 3S SUBJ VFIN" extra="mv"/>
+			<t id="s1_13" word="algumas" lemma="algum" pos="pron-indef" morph="DET F P" extra="quant"/>
+			<t id="s1_14" word="vezes" lemma="vez" pos="n" morph="F P" sem="temp" extra="--"/>
+			<t id="s1_15" word="assim_que" lemma="assim_que" pos="adv" morph="--" extra="clb clb-fs ks rel"/>
+			<t id="s1_16" word="liga" lemma="ligar" pos="v-fin" morph="PR 3S IND VFIN" extra="mv np-close"/>
+			<t id="s1_17" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_18" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="UTT" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="x">
+				<edge label="STA" idref="s1_504"/>
+				<edge label="fA" idref="s1_505"/>
+				<edge label="fCs" idref="s1_4"/>
+				<edge label="S" idref="s1_5"/>
+				<edge label="S" idref="s1_6"/>
+				<edge label="P" idref="s1_7"/>
+				<edge label="Cs" idref="s1_507"/>
+				<edge label="PU" idref="s1_17"/>
+				<edge label="PU" idref="s1_18"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="S" idref="s1_503"/>
+			</nt>
+			<nt id="s1_503" cat="np">
+				<edge label="DN" idref="s1_1"/>
+				<edge label="H" idref="s1_2"/>
+			</nt>
+			<nt id="s1_504" cat="fcl">
+			</nt>
+			<nt id="s1_505" cat="fcl">
+				<edge label="fA" idref="s1_506"/>
+				<edge label="S" idref="s1_3"/>
+				<edge label="SUB" idref="s1_11"/>
+				<edge label="P" idref="s1_12"/>
+				<edge label="fA" idref="s1_508"/>
+				<edge label="fA" idref="s1_509"/>
+			</nt>
+			<nt id="s1_506" cat="fcl">
+			</nt>
+			<nt id="s1_507" cat="np">
+				<edge label="DN" idref="s1_8"/>
+				<edge label="H" idref="s1_9"/>
+				<edge label="DN" idref="s1_10"/>
+			</nt>
+			<nt id="s1_508" cat="np">
+				<edge label="DN" idref="s1_13"/>
+				<edge label="H" idref="s1_14"/>
+			</nt>
+			<nt id="s1_509" cat="fcl">
+				<edge label="fA" idref="s1_15"/>
+				<edge label="P" idref="s1_16"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

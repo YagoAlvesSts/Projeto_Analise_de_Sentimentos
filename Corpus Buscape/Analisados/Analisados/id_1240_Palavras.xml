@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="gosto muito do aparelho, só que em alguns momentos ele trava, até mesmo quando estou recebendo chamada!.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="gosto" lemma="gostar" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-head cjt-head-STA vH fmc mv"/>
+			<t id="s1_2" word="muito" lemma="muito" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_3" word="de" lemma="de" pos="prp" morph="--" extra="sam-"/>
+			<t id="s1_4" word="o" lemma="o" pos="art" morph="M S" extra="-sam "/>
+			<t id="s1_5" word="aparelho" lemma="aparelho" pos="n" morph="M S" sem="tool" extra="--"/>
+			<t id="s1_6" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_7" word="só" lemma="só" pos="adv" morph="--" extra="--"/>
+			<t id="s1_8" word="que" lemma="que" pos="conj-s" morph="--" extra="clb"/>
+			<t id="s1_9" word="em" lemma="em" pos="prp" morph="--" extra="--"/>
+			<t id="s1_10" word="alguns" lemma="algum" pos="pron-indef" morph="DET M P" extra="quant"/>
+			<t id="s1_11" word="momentos" lemma="momento" pos="n" morph="M P" sem="dur f-q" extra="--"/>
+			<t id="s1_12" word="ele" lemma="ele" pos="pron-pers" morph="M 3S NOM" extra="--"/>
+			<t id="s1_13" word="trava" lemma="travar" pos="v-fin" morph="PR 3S IND VFIN" extra="cjt-STA fmc mv"/>
+			<t id="s1_14" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_15" word="até_mesmo" lemma="até_mesmo" pos="adv" morph="--" extra="--"/>
+			<t id="s1_16" word="quando" lemma="quando" pos="adv" morph="--" extra="clb clb-fs rel ks"/>
+			<t id="s1_17" word="estou" lemma="estar" pos="v-fin" morph="PR 1S IND VFIN" extra="aux"/>
+			<t id="s1_18" word="recebendo" lemma="receber" pos="v-ger" morph="--" extra="clb vH mv"/>
+			<t id="s1_19" word="chamada" lemma="chamado" pos="adj" morph="F S" extra="jh"/>
+			<t id="s1_20" word="!" lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_21" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="CJT" idref="s1_505"/>
+				<edge label="PU" idref="s1_20"/>
+				<edge label="PU" idref="s1_21"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="P" idref="s1_1"/>
+				<edge label="fA" idref="s1_2"/>
+				<edge label="Op" idref="s1_503"/>
+				<edge label="PU" idref="s1_6"/>
+				<edge label="fA" idref="s1_7"/>
+			</nt>
+			<nt id="s1_503" cat="pp">
+				<edge label="H" idref="s1_3"/>
+				<edge label="DP" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="np">
+				<edge label="DN" idref="s1_4"/>
+				<edge label="H" idref="s1_5"/>
+			</nt>
+			<nt id="s1_505" cat="fcl">
+				<edge label="SUB" idref="s1_8"/>
+				<edge label="fA" idref="s1_506"/>
+				<edge label="S" idref="s1_12"/>
+				<edge label="P" idref="s1_13"/>
+				<edge label="PU" idref="s1_14"/>
+				<edge label="fA" idref="s1_15"/>
+				<edge label="fA" idref="s1_508"/>
+			</nt>
+			<nt id="s1_506" cat="pp">
+				<edge label="H" idref="s1_9"/>
+				<edge label="DP" idref="s1_507"/>
+			</nt>
+			<nt id="s1_507" cat="np">
+				<edge label="DN" idref="s1_10"/>
+				<edge label="H" idref="s1_11"/>
+			</nt>
+			<nt id="s1_508" cat="fcl">
+				<edge label="fA" idref="s1_16"/>
+				<edge label="P" idref="s1_509"/>
+				<edge label="Od" idref="s1_19"/>
+			</nt>
+			<nt id="s1_509" cat="vp">
+				<edge label="Vaux" idref="s1_17"/>
+				<edge label="Vm" idref="s1_18"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

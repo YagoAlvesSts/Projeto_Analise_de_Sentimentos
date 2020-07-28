@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="camera fraquíssima, video nem pensar, as outras funções tudo bem.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="camera" lemma="c�=mara" pos="n" morph="F S" sem="Lh HH" extra="cjt-head cjt-head-X"/>
+			<t id="s1_2" word="fraquíssima" lemma="fraquíssimo" pos="adj" morph="F S" extra="DERS jh np-close"/>
+			<t id="s1_3" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_4" word="video" lemma="video" pos="ec" morph="--" extra="--"/>
+			<t id="s1_5" word="nem" lemma="nem" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_6" word="pensar" lemma="pensar" pos="v-inf" morph="--" extra="vH mv"/>
+			<t id="s1_7" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_8" word="as" lemma="o" pos="art" morph="F P" extra="--"/>
+			<t id="s1_9" word="outras" lemma="outro" pos="pron-indef" morph="DET F P" extra="diff KOMP"/>
+			<t id="s1_10" word="funções" lemma="função" pos="n" morph="F P" sem="ac pos-soc occ" extra="cjt-X"/>
+			<t id="s1_11" word="tudo" lemma="tudo" pos="spec" morph="M S" extra="cjt-X quant"/>
+			<t id="s1_12" word="bem" lemma="bem" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_13" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="X" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="H" idref="s1_1"/>
+				<edge label="PU" idref="s1_3"/>
+				<edge label="UTT" idref="s1_503"/>
+				<edge label="CO" idref="s1_5"/>
+				<edge label="P" idref="s1_6"/>
+				<edge label="PU" idref="s1_7"/>
+				<edge label="CJT" idref="s1_504"/>
+				<edge label="CJT" idref="s1_11"/>
+				<edge label="fA" idref="s1_12"/>
+				<edge label="PU" idref="s1_13"/>
+			</nt>
+			<nt id="s1_502" cat="np">
+				<edge label="DN" idref="s1_2"/>
+			</nt>
+			<nt id="s1_503" cat="icl">
+				<edge label="PREF" idref="s1_4"/>
+			</nt>
+			<nt id="s1_504" cat="np">
+				<edge label="DN" idref="s1_8"/>
+				<edge label="DN" idref="s1_9"/>
+				<edge label="H" idref="s1_10"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s2" ref="2" source="Running text" forest="1" text="o que gostei design o que não gostei camera e filmadora.">
+	<graph root="s2_500">
+		<terminals>
+			<t id="s2_1" word="o" lemma="o" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s2_2" word="que" lemma="que" pos="spec" morph="M S" extra="clb rel"/>
+			<t id="s2_3" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv"/>
+			<t id="s2_4" word="design" lemma="design" pos="n" morph="M S" sem="percep-f domain" extra="--"/>
+			<t id="s2_5" word="o_que" lemma="o_que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s2_6" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s2_7" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv np-close"/>
+			<t id="s2_8" word="camera" lemma="c�=mara" pos="n" morph="F S" sem="Lh HH" extra="cjt-head cjt-head-S"/>
+			<t id="s2_9" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s2_10" word="filmadora" lemma="filmadora" pos="n" morph="F S" sem="mach" extra="cjt-S"/>
+			<t id="s2_11" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s2_500" cat="s">
+				<edge label="X" idref="s2_501"/>
+			</nt>
+			<nt id="s2_501" cat="adjp">
+				<edge label="H" idref="s2_1"/>
+				<edge label="STA" idref="s2_502"/>
+				<edge label="PU" idref="s2_11"/>
+			</nt>
+			<nt id="s2_502" cat="fcl">
+				<edge label="X" idref="s2_2"/>
+				<edge label="P" idref="s2_3"/>
+				<edge label="S" idref="s2_503"/>
+			</nt>
+			<nt id="s2_503" cat="np">
+				<edge label="H" idref="s2_4"/>
+				<edge label="DN" idref="s2_504"/>
+				<edge label="S" idref="s2_505"/>
+				<edge label="CO" idref="s2_9"/>
+			</nt>
+			<nt id="s2_504" cat="fcl">
+				<edge label="Od" idref="s2_5"/>
+				<edge label="fA" idref="s2_6"/>
+				<edge label="P" idref="s2_7"/>
+			</nt>
+			<nt id="s2_505" cat="par">
+				<edge label="CJT" idref="s2_8"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

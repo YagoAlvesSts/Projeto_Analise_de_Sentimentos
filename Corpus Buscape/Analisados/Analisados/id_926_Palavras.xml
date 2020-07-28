@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="um bom produto de fácil manuseio.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="um" lemma="um" pos="art" morph="M S" extra="--"/>
+			<t id="s1_2" word="bom" lemma="bom" pos="adj" morph="M S" extra="--"/>
+			<t id="s1_3" word="produto" lemma="produto" pos="n" morph="M S" sem="cc-h mon ac-cat" extra="--"/>
+			<t id="s1_4" word="de_fácil_manuseio" lemma="de_fácil_manuseio" pos="adj" morph="M S" extra="nh np-close"/>
+			<t id="s1_5" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="X" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="np">
+				<edge label="DN" idref="s1_1"/>
+				<edge label="DN" idref="s1_2"/>
+				<edge label="H" idref="s1_3"/>
+				<edge label="DN" idref="s1_4"/>
+				<edge label="PU" idref="s1_5"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s2" ref="2" source="Running text" forest="1" text="bateria de ótima duração.">
+	<graph root="s2_500">
+		<terminals>
+			<t id="s2_1" word="bateria" lemma="bateria" pos="n" morph="F S" sem="tool" extra="--"/>
+			<t id="s2_2" word="de" lemma="de" pos="prp" morph="--" extra="np-close"/>
+			<t id="s2_3" word="ótima" lemma="bom" pos="adj" morph="F S" extra="SUP"/>
+			<t id="s2_4" word="duração" lemma="duração" pos="n" morph="F S" sem="am" extra="--"/>
+			<t id="s2_5" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s2_500" cat="s">
+				<edge label="X" idref="s2_501"/>
+			</nt>
+			<nt id="s2_501" cat="np">
+				<edge label="H" idref="s2_1"/>
+				<edge label="DN" idref="s2_502"/>
+				<edge label="PU" idref="s2_5"/>
+			</nt>
+			<nt id="s2_502" cat="pp">
+				<edge label="H" idref="s2_2"/>
+				<edge label="DP" idref="s2_503"/>
+			</nt>
+			<nt id="s2_503" cat="np">
+				<edge label="DN" idref="s2_3"/>
+				<edge label="H" idref="s2_4"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s3" ref="3" source="Running text" forest="1" text="para quem necessita de um aparelho para enviar sms e mms essa é a melhor escolha, porém para quem quer estar conectado o tempo todo as redes sociais como eu, rsrs esta não é a melhor escolha pois não contém wi-fi e as redes sociais são pagas com o auxilio de créditos da operadora.">
+	<graph root="s3_500">
+		<terminals>
+			<t id="s3_1" word="para" lemma="para" pos="prp" morph="--" extra="clb"/>
+			<t id="s3_2" word="quem" lemma="quem" pos="spec" morph="F S" extra="clb-fs rel"/>
+			<t id="s3_3" word="necessita" lemma="necessitar" pos="v-fin" morph="PR 3S IND VFIN" extra="vH mv"/>
+			<t id="s3_4" word="de" lemma="de" pos="prp" morph="--" extra="--"/>
+			<t id="s3_5" word="um" lemma="um" pos="art" morph="M S" extra="--"/>
+			<t id="s3_6" word="aparelho" lemma="aparelho" pos="n" morph="M S" sem="tool" extra="--"/>
+			<t id="s3_7" word="para" lemma="para" pos="prp" morph="--" extra="--"/>
+			<t id="s3_8" word="enviar" lemma="enviar" pos="v-inf" morph="--" extra="vH mv"/>
+			<t id="s3_9" word="sms" lemma="sms" pos="n" morph="M S" extra="cjt-head cjt-head-Od foreign heur"/>
+			<t id="s3_10" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s3_11" word="mms" lemma="mms" pos="n" morph="M S" extra="cjt-Od foreign heur"/>
+			<t id="s3_12" word="essa" lemma="esse" pos="pron-dem" morph="DET F S" extra="dem"/>
+			<t id="s3_13" word="é" lemma="ser" pos="v-fin" morph="PR 3S IND VFIN" extra="nosubj nosubj nosubj nosubj nosubj nosubj nosubj nosubj cjt-head cjt-head-STA vK fmc mv"/>
+			<t id="s3_14" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s3_15" word="melhor" lemma="bom" pos="adj" morph="F S" extra="KOMP SUP jh"/>
+			<t id="s3_16" word="escolha" lemma="escolha" pos="n" morph="F S" sem="act HH" extra="--"/>
+			<t id="s3_17" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s3_18" word="porém" lemma="porém" pos="adv" morph="--" extra="kc"/>
+			<t id="s3_19" word="para" lemma="para" pos="prp" morph="--" extra="--"/>
+			<t id="s3_20" word="quem" lemma="quem" pos="spec" morph="M/F S/P" extra="clb-fs rel"/>
+			<t id="s3_21" word="quer" lemma="querer" pos="v-fin" morph="PR 3S IND VFIN" extra="vH mv np-close"/>
+			<t id="s3_22" word="estar" lemma="estar" pos="v-inf" morph="--" extra="vK mv"/>
+			<t id="s3_23" word="conectado" lemma="conectar" pos="v-pcp" morph="M S" extra="mv"/>
+			<t id="s3_24" word="o" lemma="o" pos="art" morph="M S" extra="--"/>
+			<t id="s3_25" word="tempo" lemma="tempo" pos="n" morph="M S" sem="am temp per ac-cat wea" extra="--"/>
+			<t id="s3_26" word="todo" lemma="todo" pos="pron-indef" morph="DET M S" extra="quant np-close"/>
+			<t id="s3_27" word="as" lemma="o" pos="art" morph="F P" extra="--"/>
+			<t id="s3_28" word="redes" lemma="rede" pos="n" morph="F P" sem="con HH furn Lh coll-sem" extra="--"/>
+			<t id="s3_29" word="sociais" lemma="social" pos="adj" morph="F P" extra="jh np-close"/>
+			<t id="s3_30" word="como" lemma="como" pos="prp" morph="--" extra="com adv-rel np-long"/>
+			<t id="s3_31" word="eu" lemma="eu" pos="pron-pers" morph="M/F 1S NOM" extra="asarg"/>
+			<t id="s3_32" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s3_33" word="rsrs" lemma="rsr" pos="n" morph="M P" extra="heur foreign"/>
+			<t id="s3_34" word="esta" lemma="este" pos="pron-dem" morph="DET F S" extra="dem"/>
+			<t id="s3_35" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s3_36" word="é" lemma="ser" pos="v-fin" morph="PR 3S IND VFIN" extra="cjt-STA vK fmc mv"/>
+			<t id="s3_37" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s3_38" word="melhor" lemma="bom" pos="adj" morph="F S" extra="KOMP SUP jh"/>
+			<t id="s3_39" word="escolha" lemma="escolha" pos="n" morph="F S" sem="act HH" extra="--"/>
+			<t id="s3_40" word="pois" lemma="pois" pos="adv" morph="--" extra="kc"/>
+			<t id="s3_41" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s3_42" word="contém" lemma="conter" pos="v-fin" morph="PR 3S IND VFIN" extra="nosubj nosubj cjt-STA fmc mv"/>
+			<t id="s3_43" word="wi-fi" lemma="wi-fer" pos="v-fin" morph="PS 1S IND VFIN" extra="nosubj nosubj cjt-STA foreign heur fmc mv"/>
+			<t id="s3_44" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s3_45" word="as" lemma="o" pos="art" morph="F P" extra="--"/>
+			<t id="s3_46" word="redes" lemma="rede" pos="n" morph="F P" sem="con HH furn Lh coll-sem" extra="--"/>
+			<t id="s3_47" word="sociais" lemma="social" pos="adj" morph="F P" extra="jh np-close"/>
+			<t id="s3_48" word="são" lemma="ser" pos="v-fin" morph="PR 3P IND VFIN" extra="cjt-STA fmc aux"/>
+			<t id="s3_49" word="pagas" lemma="pagar" pos="v-pcp" morph="F P" extra="vH mv"/>
+			<t id="s3_50" word="com" lemma="com" pos="prp" morph="--" extra="--"/>
+			<t id="s3_51" word="o" lemma="ele" pos="pron-pers" morph="M 3S ACC" extra="--"/>
+			<t id="s3_52" word="auxilio" lemma="auxiliar" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-STA vH fmc mv"/>
+			<t id="s3_53" word="de" lemma="de" pos="prp" morph="--" extra="--"/>
+			<t id="s3_54" word="créditos" lemma="crédito" pos="n" morph="M P" sem="mon" extra="--"/>
+			<t id="s3_55" word="de" lemma="de" pos="prp" morph="--" extra="sam- np-close"/>
+			<t id="s3_56" word="a" lemma="o" pos="art" morph="F S" extra="-sam "/>
+			<t id="s3_57" word="operadora" lemma="operadora" pos="n" morph="F S" sem="Hprof" extra="--"/>
+			<t id="s3_58" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s3_500" cat="s">
+				<edge label="DP" idref="s3_501"/>
+			</nt>
+			<nt id="s3_501" cat="fcl">
+				<edge label="fA" idref="s3_1"/>
+				<edge label="S" idref="s3_2"/>
+				<edge label="P" idref="s3_3"/>
+				<edge label="Op" idref="s3_502"/>
+				<edge label="fA" idref="s3_504"/>
+				<edge label="PU" idref="s3_58"/>
+			</nt>
+			<nt id="s3_502" cat="pp">
+				<edge label="H" idref="s3_4"/>
+				<edge label="DP" idref="s3_503"/>
+			</nt>
+			<nt id="s3_503" cat="np">
+				<edge label="DN" idref="s3_5"/>
+				<edge label="H" idref="s3_6"/>
+			</nt>
+			<nt id="s3_504" cat="pp">
+				<edge label="H" idref="s3_7"/>
+				<edge label="DP" idref="s3_505"/>
+			</nt>
+			<nt id="s3_505" cat="icl">
+				<edge label="P" idref="s3_8"/>
+				<edge label="Od" idref="s3_506"/>
+				<edge label="CO" idref="s3_10"/>
+				<edge label="STA" idref="s3_507"/>
+			</nt>
+			<nt id="s3_506" cat="par">
+				<edge label="CJT" idref="s3_9"/>
+				<edge label="CJT" idref="s3_11"/>
+			</nt>
+			<nt id="s3_507" cat="par">
+				<edge label="CJT" idref="s3_508"/>
+				<edge label="CJT" idref="s3_515"/>
+				<edge label="CJT" idref="s3_519"/>
+				<edge label="CJT" idref="s3_43"/>
+				<edge label="CJT" idref="s3_520"/>
+				<edge label="CJT" idref="s3_524"/>
+			</nt>
+			<nt id="s3_508" cat="fcl">
+				<edge label="S" idref="s3_12"/>
+				<edge label="P" idref="s3_13"/>
+				<edge label="Cs" idref="s3_509"/>
+				<edge label="PU" idref="s3_17"/>
+				<edge label="fA" idref="s3_18"/>
+			</nt>
+			<nt id="s3_509" cat="np">
+				<edge label="DN" idref="s3_14"/>
+				<edge label="DN" idref="s3_15"/>
+				<edge label="H" idref="s3_16"/>
+				<edge label="DN" idref="s3_510"/>
+			</nt>
+			<nt id="s3_510" cat="fcl">
+				<edge label="As" idref="s3_511"/>
+				<edge label="P" idref="s3_21"/>
+				<edge label="Od" idref="s3_512"/>
+			</nt>
+			<nt id="s3_511" cat="pp">
+				<edge label="H" idref="s3_19"/>
+				<edge label="DP" idref="s3_20"/>
+			</nt>
+			<nt id="s3_512" cat="icl">
+				<edge label="P" idref="s3_22"/>
+				<edge label="Cs" idref="s3_513"/>
+			</nt>
+			<nt id="s3_513" cat="icl">
+				<edge label="P" idref="s3_23"/>
+				<edge label="fA" idref="s3_514"/>
+				<edge label="PU" idref="s3_32"/>
+				<edge label="Cs" idref="s3_33"/>
+			</nt>
+			<nt id="s3_514" cat="np">
+				<edge label="DN" idref="s3_24"/>
+				<edge label="H" idref="s3_25"/>
+				<edge label="DN" idref="s3_26"/>
+			</nt>
+			<nt id="s3_515" cat="fcl">
+				<edge label="S" idref="s3_516"/>
+				<edge label="S" idref="s3_34"/>
+				<edge label="fA" idref="s3_35"/>
+				<edge label="P" idref="s3_36"/>
+				<edge label="Cs" idref="s3_518"/>
+			</nt>
+			<nt id="s3_516" cat="np">
+				<edge label="DN" idref="s3_27"/>
+				<edge label="H" idref="s3_28"/>
+				<edge label="DN" idref="s3_29"/>
+				<edge label="DN" idref="s3_517"/>
+			</nt>
+			<nt id="s3_517" cat="pp">
+				<edge label="H" idref="s3_30"/>
+				<edge label="DP" idref="s3_31"/>
+			</nt>
+			<nt id="s3_518" cat="np">
+				<edge label="DN" idref="s3_37"/>
+				<edge label="DN" idref="s3_38"/>
+				<edge label="H" idref="s3_39"/>
+			</nt>
+			<nt id="s3_519" cat="x">
+				<edge label="fA" idref="s3_40"/>
+				<edge label="fA" idref="s3_41"/>
+				<edge label="P" idref="s3_42"/>
+			</nt>
+			<nt id="s3_520" cat="fcl">
+				<edge label="S" idref="s3_521"/>
+				<edge label="P" idref="s3_523"/>
+				<edge label="fA" idref="s3_50"/>
+			</nt>
+			<nt id="s3_521" cat="np">
+				<edge label="DN" idref="s3_522"/>
+				<edge label="DN" idref="s3_45"/>
+				<edge label="H" idref="s3_46"/>
+				<edge label="-DN" idref="s3_47"/>
+			</nt>
+			<nt id="s3_522" cat="adjp">
+				<edge label="CO" idref="s3_44"/>
+			</nt>
+			<nt id="s3_523" cat="vp">
+				<edge label="Vaux" idref="s3_48"/>
+				<edge label="Vm" idref="s3_49"/>
+			</nt>
+			<nt id="s3_524" cat="x">
+				<edge label="Od" idref="s3_51"/>
+				<edge label="P" idref="s3_52"/>
+				<edge label="fA" idref="s3_525"/>
+			</nt>
+			<nt id="s3_525" cat="pp">
+				<edge label="H" idref="s3_53"/>
+				<edge label="DP" idref="s3_526"/>
+			</nt>
+			<nt id="s3_526" cat="np">
+				<edge label="H" idref="s3_54"/>
+				<edge label="DN" idref="s3_527"/>
+			</nt>
+			<nt id="s3_527" cat="pp">
+				<edge label="H" idref="s3_55"/>
+				<edge label="DP" idref="s3_528"/>
+			</nt>
+			<nt id="s3_528" cat="np">
+				<edge label="DN" idref="s3_56"/>
+				<edge label="H" idref="s3_57"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s4" ref="4" source="Running text" forest="1" text="bom, enfim, é um ótimo celular pra quem quer praticidade e não complexidade..">
+	<graph root="s4_500">
+		<terminals>
+			<t id="s4_1" word="bom" lemma="bom" pos="adj" morph="M S" extra="--"/>
+			<t id="s4_2" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s4_3" word="enfim" lemma="enfim" pos="adv" morph="--" extra="--"/>
+			<t id="s4_4" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s4_5" word="é" lemma="ser" pos="v-fin" morph="PR 3S IND VFIN" extra="vK fmc mv"/>
+			<t id="s4_6" word="um" lemma="um" pos="art" morph="M S" extra="--"/>
+			<t id="s4_7" word="ótimo" lemma="bom" pos="adj" morph="M S" extra="n SUP jh"/>
+			<t id="s4_8" word="celular" lemma="celular" pos="adj" morph="M/F S" extra="nh np-close"/>
+			<t id="s4_9" word="pra" lemma="para" pos="prp" morph="--" extra="--"/>
+			<t id="s4_10" word="quem" lemma="quem" pos="spec" morph="M/F S" extra="clb clb-fs rel"/>
+			<t id="s4_11" word="quer" lemma="querer" pos="v-fin" morph="PR 3S IND VFIN" extra="vH mv"/>
+			<t id="s4_12" word="praticidade" lemma="praticidade" pos="n" morph="F S" sem="percep-f" extra="--"/>
+			<t id="s4_13" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s4_14" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s4_15" word="complexidade" lemma="complexidade" pos="n" morph="F S" sem="am" extra="--"/>
+			<t id="s4_16" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s4_17" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s4_500" cat="s">
+				<edge label="STA" idref="s4_501"/>
+			</nt>
+			<nt id="s4_501" cat="fcl">
+				<edge label="fCs" idref="s4_1"/>
+				<edge label="PU" idref="s4_2"/>
+				<edge label="fA" idref="s4_3"/>
+				<edge label="PU" idref="s4_4"/>
+				<edge label="P" idref="s4_5"/>
+				<edge label="Cs" idref="s4_502"/>
+				<edge label="DN" idref="s4_8"/>
+				<edge label="fA" idref="s4_503"/>
+				<edge label="PU" idref="s4_16"/>
+				<edge label="PU" idref="s4_17"/>
+			</nt>
+			<nt id="s4_502" cat="np">
+				<edge label="DN" idref="s4_6"/>
+				<edge label="H" idref="s4_7"/>
+			</nt>
+			<nt id="s4_503" cat="pp">
+				<edge label="H" idref="s4_9"/>
+				<edge label="DP" idref="s4_504"/>
+				<edge label="CO" idref="s4_13"/>
+			</nt>
+			<nt id="s4_504" cat="fcl">
+				<edge label="S" idref="s4_10"/>
+				<edge label="P" idref="s4_11"/>
+				<edge label="Od" idref="s4_12"/>
+				<edge label="Co" idref="s4_505"/>
+			</nt>
+			<nt id="s4_505" cat="np">
+				<edge label="DN" idref="s4_14"/>
+				<edge label="H" idref="s4_15"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

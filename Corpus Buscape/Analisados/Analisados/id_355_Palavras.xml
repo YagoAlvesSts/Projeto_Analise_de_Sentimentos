@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="com number ano de uso o botão voltar parou de funcionar e o celular fica reiniciando sozinho..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="com" lemma="com" pos="prp" morph="--" extra="--"/>
+			<t id="s1_2" word="number" lemma="number" pos="n" morph="M S" extra="heur"/>
+			<t id="s1_3" word="ano" lemma="ano" pos="n" morph="M S" sem="dur temp per unit" extra="--"/>
+			<t id="s1_4" word="de" lemma="de" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_5" word="uso" lemma="uso" pos="n" morph="M S" sem="act ac" extra="--"/>
+			<t id="s1_6" word="o" lemma="o" pos="art" morph="M S" extra="--"/>
+			<t id="s1_7" word="botão" lemma="botão" pos="n" morph="M S" sem="anbo cc-handle" extra="--"/>
+			<t id="s1_8" word="voltar" lemma="voltar" pos="v-inf" morph="3S" extra="mv"/>
+			<t id="s1_9" word="parou" lemma="parar" pos="v-fin" morph="PS 3S IND VFIN" extra="predco predco fmc aux"/>
+			<t id="s1_10" word="de" lemma="de" pos="prp" morph="--" extra="--"/>
+			<t id="s1_11" word="funcionar" lemma="funcionar" pos="v-inf" morph="--" extra="mv"/>
+			<t id="s1_12" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_13" word="o" lemma="o" pos="art" morph="M S" extra="--"/>
+			<t id="s1_14" word="celular" lemma="celular" pos="adj" morph="M S" extra="n nh"/>
+			<t id="s1_15" word="fica" lemma="ficar" pos="v-fin" morph="PR 3S IND VFIN" extra="cjt-STA fmc aux"/>
+			<t id="s1_16" word="reiniciando" lemma="reiniciar" pos="v-ger" morph="--" extra="mv"/>
+			<t id="s1_17" word="sozinho" lemma="sozinho" pos="adj" morph="M S" extra="--"/>
+			<t id="s1_18" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_19" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="fA" idref="s1_502"/>
+				<edge label="fCs" idref="s1_503"/>
+				<edge label="H" idref="s1_3"/>
+				<edge label="DN" idref="s1_504"/>
+				<edge label="PU" idref="s1_18"/>
+				<edge label="PU" idref="s1_19"/>
+			</nt>
+			<nt id="s1_502" cat="pp">
+				<edge label="H" idref="s1_1"/>
+				<edge label="DP" idref="s1_2"/>
+			</nt>
+			<nt id="s1_503" cat="np">
+			</nt>
+			<nt id="s1_504" cat="pp">
+				<edge label="H" idref="s1_4"/>
+				<edge label="DP" idref="s1_5"/>
+				<edge label="S" idref="s1_505"/>
+				<edge label="S" idref="s1_8"/>
+				<edge label="X" idref="s1_506"/>
+			</nt>
+			<nt id="s1_505" cat="np">
+				<edge label="DN" idref="s1_6"/>
+				<edge label="H" idref="s1_7"/>
+			</nt>
+			<nt id="s1_506" cat="par">
+				<edge label="CJT" idref="s1_507"/>
+				<edge label="CO" idref="s1_12"/>
+			</nt>
+			<nt id="s1_507" cat="x">
+				<edge label="P" idref="s1_508"/>
+				<edge label="CJT" idref="s1_509"/>
+			</nt>
+			<nt id="s1_508" cat="vp">
+				<edge label="Vaux" idref="s1_9"/>
+				<edge label="SUBaux" idref="s1_10"/>
+				<edge label="Vm" idref="s1_11"/>
+			</nt>
+			<nt id="s1_509" cat="fcl">
+				<edge label="fCs" idref="s1_510"/>
+				<edge label="S" idref="s1_14"/>
+				<edge label="P" idref="s1_511"/>
+			</nt>
+			<nt id="s1_510" cat="np">
+				<edge label="DN" idref="s1_13"/>
+				<edge label="H" idref="s1_17"/>
+			</nt>
+			<nt id="s1_511" cat="vp">
+				<edge label="Vaux" idref="s1_15"/>
+				<edge label="Vm" idref="s1_16"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="celular bastante restrito sem nenhuma opção de funcionalidade camera de péssima qualidade o que não gostei péssimo.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="celular" lemma="celular" pos="adj" morph="M/F S" extra="cjt-head cjt-head-X nh"/>
+			<t id="s1_2" word="bastante" lemma="bastante" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_3" word="restrito" lemma="restringir" pos="v-pcp" morph="M S" extra="vH np-close"/>
+			<t id="s1_4" word="sem" lemma="sem" pos="prp" morph="--" extra="np-long"/>
+			<t id="s1_5" word="nenhuma" lemma="nenhum" pos="pron-indef" morph="DET F S" extra="quant"/>
+			<t id="s1_6" word="opção" lemma="opção" pos="n" morph="F S" sem="sem-c" extra="--"/>
+			<t id="s1_7" word="de" lemma="de" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_8" word="funcionalidade" lemma="funcionalidade" pos="n" morph="F S" sem="percep-f" extra="--"/>
+			<t id="s1_9" word="camera" lemma="c�=mara" pos="n" morph="F S" sem="Lh HH" extra="cjt-X"/>
+			<t id="s1_10" word="de" lemma="de" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_11" word="péssima" lemma="mal" pos="adj" morph="F S" extra="SUP"/>
+			<t id="s1_12" word="qualidade" lemma="qualidade" pos="n" morph="F S" sem="percep-f f-c" extra="--"/>
+			<t id="s1_13" word="o" lemma="o" pos="pron-dem" morph="DET M S" extra="cjt-X dem"/>
+			<t id="s1_14" word="que" lemma="que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s1_15" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s1_16" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv np-close"/>
+			<t id="s1_17" word="péssimo" lemma="mal" pos="adj" morph="M S" extra="SUP"/>
+			<t id="s1_18" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="X" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="DN" idref="s1_503"/>
+				<edge label="CJT" idref="s1_507"/>
+				<edge label="CJT" idref="s1_13"/>
+				<edge label="PU" idref="s1_18"/>
+			</nt>
+			<nt id="s1_502" cat="adjp">
+				<edge label="H" idref="s1_1"/>
+			</nt>
+			<nt id="s1_503" cat="adjp">
+				<edge label="DA" idref="s1_2"/>
+				<edge label="H" idref="s1_3"/>
+				<edge label="fA" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="pp">
+				<edge label="H" idref="s1_4"/>
+				<edge label="DP" idref="s1_505"/>
+			</nt>
+			<nt id="s1_505" cat="np">
+				<edge label="DN" idref="s1_5"/>
+				<edge label="H" idref="s1_6"/>
+				<edge label="DN" idref="s1_506"/>
+			</nt>
+			<nt id="s1_506" cat="pp">
+				<edge label="H" idref="s1_7"/>
+				<edge label="DP" idref="s1_8"/>
+			</nt>
+			<nt id="s1_507" cat="np">
+				<edge label="H" idref="s1_9"/>
+				<edge label="DN" idref="s1_508"/>
+			</nt>
+			<nt id="s1_508" cat="pp">
+				<edge label="H" idref="s1_10"/>
+				<edge label="DP" idref="s1_509"/>
+			</nt>
+			<nt id="s1_509" cat="np">
+				<edge label="DN" idref="s1_11"/>
+				<edge label="H" idref="s1_12"/>
+				<edge label="DN" idref="s1_510"/>
+			</nt>
+			<nt id="s1_510" cat="fcl">
+				<edge label="S" idref="s1_14"/>
+				<edge label="fA" idref="s1_15"/>
+				<edge label="P" idref="s1_16"/>
+				<edge label="fCs" idref="s1_17"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

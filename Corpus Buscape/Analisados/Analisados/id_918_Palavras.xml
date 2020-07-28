@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="fácil de manusear, só a bateria que dura pouco!!!.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="fácil" lemma="fácil" pos="adj" morph="M/F S" extra="--"/>
+			<t id="s1_2" word="de" lemma="de" pos="prp" morph="--" extra="--"/>
+			<t id="s1_3" word="manusear" lemma="manusear" pos="v-inf" morph="--" extra="vH mv"/>
+			<t id="s1_4" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_5" word="só" lemma="só" pos="adv" morph="--" extra="--"/>
+			<t id="s1_6" word="a" lemma="o" pos="art" morph="F S" extra="--"/>
+			<t id="s1_7" word="bateria" lemma="bateria" pos="n" morph="F S" sem="tool" extra="--"/>
+			<t id="s1_8" word="que" lemma="que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s1_9" word="dura" lemma="durar" pos="v-fin" morph="PR 3S IND VFIN" extra="vN mv np-close"/>
+			<t id="s1_10" word="pouco" lemma="pouco" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_11" word="!" lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_12" word="!" lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_13" word="!" lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_14" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="fCs" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="adjp">
+				<edge label="H" idref="s1_1"/>
+				<edge label="DA" idref="s1_502"/>
+				<edge label="PU" idref="s1_4"/>
+				<edge label="X" idref="s1_503"/>
+				<edge label="PU" idref="s1_11"/>
+				<edge label="PU" idref="s1_12"/>
+				<edge label="PU" idref="s1_13"/>
+				<edge label="PU" idref="s1_14"/>
+			</nt>
+			<nt id="s1_502" cat="pp">
+				<edge label="H" idref="s1_2"/>
+				<edge label="DP" idref="s1_3"/>
+			</nt>
+			<nt id="s1_503" cat="np">
+				<edge label="DN" idref="s1_5"/>
+				<edge label="DN" idref="s1_6"/>
+				<edge label="H" idref="s1_7"/>
+				<edge label="DN" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="fcl">
+				<edge label="S" idref="s1_8"/>
+				<edge label="P" idref="s1_9"/>
+				<edge label="fA" idref="s1_10"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

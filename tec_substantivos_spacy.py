@@ -36,8 +36,8 @@ def pre_processing_text(text, use_normalizer=False):
 
     text = text.lower()
 
-    input_chars = ["\n", ".", "!", "?", "ç", " / ", " - ", "|", "ã", "õ", "á", "é", "í", "ó", "ú", "â", "ê", "î", "ô", "û", "à", "è", "ì", "ò", "ù"]
-    output_chars = [" . ", " . ", " . ", " . ", "c", "/", "-", "", "a", "o", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u"]
+    input_chars = ["ç","ã", "õ", "á", "é", "í", "ó", "ú", "â", "ê", "î", "ô", "û", "à", "è", "ì", "ò", "ù"]
+    output_chars = ["c", "a", "o", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u"]
 
     for i in range(len(input_chars)):
         text = text.replace(input_chars[i], output_chars[i])  
@@ -51,57 +51,62 @@ def pre_processing_text(text, use_normalizer=False):
 #faz chamada da biblioteca spacy e atribui a uma variável
 spc = spacy.load('pt_core_news_sm')
 
-with(open("USO_GERAL.p", "rb")) as f:
-    all_reviews = pickle.load(f)
+with open(os.path.join("Processed_Reviews.p"), "rb") as file: #->Processed_Reviews
+        all_reviews = pickle.load(file)
 #print(all_reviews)
 
-
-#converte reviews lidos em string
-reviews = str(all_reviews)
+spc = spacy.load('pt_core_news_sm')
 tratados = []
-
-#atribuindo o texto ao modelo spacy
-doc = spc(reviews)
-
+wd = []
 #verifica cada review
-for review in doc:
-
-    #print(review)
-    #atribuindo o texto ao modelo spacy
-    
-
-    #print(review)
-    #dando split no texto
-    doc.text.split()
-    #print(doc)
-    tagger = []
-    words = []
-    #realiza marcação de cada palavra
-    for i, word in enumerate(doc):
-        if not word.is_punct:
-            if not word.is_space:
-                #print(word.text, word.pos_)
-                
-                tagger = [(word.text, word.pos_)]#pega palavra e pos tagger
-                words.append(tagger) #atribui palavra e pos tagger a lista
-        if i > len(doc):
-            break
-
-    #print(words)
-        tratados.append(words) #adiciona cada review a lista após tratado a lista
+for review in all_reviews:
+        
+        review= str(review)
+        review = pre_processing_text(review)
+        #atribuindo o texto ao modelo spacy
+        words = spc(review)
 
 
-print(tratados)
+        #dando split no texto
+        words.text.split()
+        lista = []
+
+        #retira pontuação e espaços do review
+        tagger = []
+        
+
+        #realiza marcação de cada palavra
+        for i,word in enumerate(words):
+            #print(i,word)
+            
+            if not word.is_punct:
+                if not word.is_space:
+                    if not word.text.isalpha():
+                        #print(word.text, word.pos_)
+                        tagger = [word.text, word.pos_] #pega palavra e pos tagger
+                        wd.append(tagger) #atribui palavra e pos tagger a lista
+            if i > len(words):
+                break
+        #print(wd)
+        
+#print(wd)
 
 nouns = []
-for j,termo in enumerate(tratados):
+
+
+
+for j,termo in enumerate(wd):
     if termo[1] == 'NOUN':
         nouns.append(termo[0])
+        
+
+print(nouns)
 
 #verifica frequencia que palavras aparece
 def freq(list): 
      frequencia = FreqDist(list)
      #print("\nFrequência das palavras: \n", frequencia)
+
 
 freq(nouns)
 
@@ -113,13 +118,15 @@ def frequen(list):
 
 
 #print ("\n",len(nouns))
+     
 frequen(nouns)
 
 fr = []
 c = Counter(nouns)
+#print(c)
 
 fr = c.keys()
-        
+
 #print("\n",fr,"\n")
 
 lista = []
@@ -158,5 +165,6 @@ with open(os.path.join("Aspectos","SUBSfreq_Spacy.p"), "wb") as f:
 
 file = open(os.path.join("Aspectos","SUBSfreq_Spacy.p"), "rb")
 lista = pickle.load(file)
-#print("SUBSTANTIVOS .P \n", lista) 
+#print("SUBSTANTIVOS .P \n", lista)
+print("PRONTIN !!!")
 

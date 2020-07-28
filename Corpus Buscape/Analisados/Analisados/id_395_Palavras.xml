@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="já conhecia fui roubada e estou muito satisfeita o que gostei tudo ok.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="já" lemma="já" pos="adv" morph="--" extra="--"/>
+			<t id="s1_2" word="conhecia" lemma="conhecer" pos="v-fin" morph="IMPF 1/3S IND VFIN" extra="nosubj nosubj nosubj nosubj cjt-head cjt-head-STA vH fmc mv"/>
+			<t id="s1_3" word="fui" lemma="ser" pos="v-fin" morph="PS 1S IND VFIN" extra="nosubj nosubj cjt-STA fmc aux"/>
+			<t id="s1_4" word="roubada" lemma="roubar" pos="v-pcp" morph="F S" extra="vH mv"/>
+			<t id="s1_5" word="e" lemma="e" pos="conj-c" morph="--" extra="--"/>
+			<t id="s1_6" word="estou" lemma="estar" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-STA vK fmc mv"/>
+			<t id="s1_7" word="muito" lemma="muito" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_8" word="satisfeita" lemma="satisfazer" pos="v-pcp" morph="F S" extra="jh vH"/>
+			<t id="s1_9" word="o_que" lemma="o_que" pos="spec" morph="M S" extra="clb rel"/>
+			<t id="s1_10" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="cjt-STA vH mv"/>
+			<t id="s1_11" word="tudo" lemma="tudo" pos="spec" morph="M S" extra="quant"/>
+			<t id="s1_12" word="ok" lemma="ok" pos="n" morph="M/F S" extra="foreign"/>
+			<t id="s1_13" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="CJT" idref="s1_503"/>
+				<edge label="CJT" idref="s1_505"/>
+				<edge label="CJT" idref="s1_507"/>
+				<edge label="PU" idref="s1_13"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="fA" idref="s1_1"/>
+				<edge label="P" idref="s1_2"/>
+			</nt>
+			<nt id="s1_503" cat="x">
+				<edge label="P" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="vp">
+				<edge label="Vaux" idref="s1_3"/>
+				<edge label="Vm" idref="s1_4"/>
+			</nt>
+			<nt id="s1_505" cat="fcl">
+				<edge label="X" idref="s1_506"/>
+			</nt>
+			<nt id="s1_506" cat="x">
+				<edge label="CO" idref="s1_5"/>
+			</nt>
+			<nt id="s1_507" cat="x">
+				<edge label="P" idref="s1_6"/>
+				<edge label="Cs" idref="s1_508"/>
+				<edge label="P" idref="s1_10"/>
+				<edge label="fA" idref="s1_11"/>
+				<edge label="S" idref="s1_12"/>
+			</nt>
+			<nt id="s1_508" cat="adjp">
+				<edge label="DA" idref="s1_7"/>
+				<edge label="H" idref="s1_8"/>
+				<edge label="H" idref="s1_9"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

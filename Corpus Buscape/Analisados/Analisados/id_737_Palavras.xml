@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="horrível só tenho isso a dizer.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="horrível" lemma="horrível" pos="adj" morph="M/F S" extra="jh"/>
+			<t id="s1_2" word="só" lemma="só" pos="adv" morph="--" extra="--"/>
+			<t id="s1_3" word="tenho" lemma="ter" pos="v-fin" morph="PR 1S IND VFIN" extra="fmc mv"/>
+			<t id="s1_4" word="isso" lemma="isso" pos="spec" morph="M S" extra="dem"/>
+			<t id="s1_5" word="a" lemma="a" pos="prp" morph="--" extra="--"/>
+			<t id="s1_6" word="dizer" lemma="dizer" pos="v-inf" morph="--" extra="vH mv"/>
+			<t id="s1_7" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="Od" idref="s1_1"/>
+				<edge label="fA" idref="s1_2"/>
+				<edge label="P" idref="s1_3"/>
+				<edge label="Od" idref="s1_4"/>
+				<edge label="fA" idref="s1_502"/>
+				<edge label="PU" idref="s1_7"/>
+			</nt>
+			<nt id="s1_502" cat="pp">
+				<edge label="H" idref="s1_5"/>
+				<edge label="DP" idref="s1_6"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

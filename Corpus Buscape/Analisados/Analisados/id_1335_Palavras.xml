@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="estou querendo adiquirir- lo com base no tablet galaxy number.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="estou" lemma="estar" pos="v-fin" morph="PR 1S IND VFIN" extra="fmc aux"/>
+			<t id="s1_2" word="querendo" lemma="querer" pos="v-ger" morph="--" extra="vH mv"/>
+			<t id="s1_3" word="adiquirir-" lemma="adiquirir" pos="v-inf" morph="--" extra="hyfen heur mv"/>
+			<t id="s1_4" word="lo" lemma="ele" pos="pron-pers" morph="M 3S ACC" extra="--"/>
+			<t id="s1_5" word="com" lemma="com" pos="prp" morph="--" extra="--"/>
+			<t id="s1_6" word="base" lemma="base" pos="n" morph="F S" sem="Labs geom part-build ac-cat cm-liq inst" extra="--"/>
+			<t id="s1_7" word="em" lemma="em" pos="prp" morph="--" extra="sam-"/>
+			<t id="s1_8" word="o" lemma="o" pos="art" morph="M S" extra="-sam "/>
+			<t id="s1_9" word="tablet" lemma="tablet" pos="n" morph="M S" extra="heur"/>
+			<t id="s1_10" word="galaxy" lemma="galaxy" pos="n" morph="M S" extra="foreign heur"/>
+			<t id="s1_11" word="number" lemma="number" pos="n" morph="M S" extra="heur"/>
+			<t id="s1_12" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="fcl">
+				<edge label="P" idref="s1_502"/>
+				<edge label="Od" idref="s1_503"/>
+				<edge label="PU" idref="s1_12"/>
+			</nt>
+			<nt id="s1_502" cat="vp">
+				<edge label="Vaux" idref="s1_1"/>
+				<edge label="Vm" idref="s1_2"/>
+			</nt>
+			<nt id="s1_503" cat="fcl">
+				<edge label="P" idref="s1_3"/>
+				<edge label="Od" idref="s1_4"/>
+				<edge label="fA" idref="s1_504"/>
+				<edge label="fA" idref="s1_505"/>
+				<edge label="S" idref="s1_11"/>
+			</nt>
+			<nt id="s1_504" cat="pp">
+				<edge label="H" idref="s1_5"/>
+				<edge label="DP" idref="s1_6"/>
+			</nt>
+			<nt id="s1_505" cat="pp">
+				<edge label="H" idref="s1_7"/>
+				<edge label="DP" idref="s1_506"/>
+				<edge label="fCs" idref="s1_10"/>
+			</nt>
+			<nt id="s1_506" cat="np">
+				<edge label="DN" idref="s1_8"/>
+				<edge label="H" idref="s1_9"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

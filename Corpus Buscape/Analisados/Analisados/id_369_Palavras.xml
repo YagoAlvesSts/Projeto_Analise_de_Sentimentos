@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="trava muito e já está descascando..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="trava" lemma="travar" pos="v-fin" morph="PR 3S IND VFIN" extra="nosubj nosubj cjt-head cjt-head-STA fmc mv"/>
+			<t id="s1_2" word="muito" lemma="muito" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_3" word="e" lemma="e" pos="conj-c" morph="--" extra="topkc"/>
+			<t id="s1_4" word="já" lemma="já" pos="adv" morph="--" extra="--"/>
+			<t id="s1_5" word="está" lemma="estar" pos="v-fin" morph="PR 3S IND VFIN" extra="nosubj nosubj cjt-STA fmc aux"/>
+			<t id="s1_6" word="descascando" lemma="descascar" pos="v-ger" morph="--" extra="vH mv"/>
+			<t id="s1_7" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_8" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="STA" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="par">
+				<edge label="CJT" idref="s1_502"/>
+				<edge label="CO" idref="s1_3"/>
+				<edge label="CJT" idref="s1_503"/>
+				<edge label="PU" idref="s1_7"/>
+				<edge label="PU" idref="s1_8"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+				<edge label="P" idref="s1_1"/>
+				<edge label="fA" idref="s1_2"/>
+			</nt>
+			<nt id="s1_503" cat="x">
+				<edge label="fA" idref="s1_4"/>
+				<edge label="P" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="vp">
+				<edge label="Vaux" idref="s1_5"/>
+				<edge label="Vm" idref="s1_6"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

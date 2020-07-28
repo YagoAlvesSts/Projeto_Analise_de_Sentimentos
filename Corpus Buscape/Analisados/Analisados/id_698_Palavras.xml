@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="complicado o que gostei bonitinho o que não gostei menu difícil botões de manuseio complicado.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="complicado" lemma="complicar" pos="v-pcp" morph="M S" extra="jh mv"/>
+			<t id="s1_2" word="o" lemma="o" pos="pron-dem" morph="DET M S" extra="dem"/>
+			<t id="s1_3" word="que" lemma="que" pos="spec" morph="M S" extra="clb clb-fs rel"/>
+			<t id="s1_4" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv np-close"/>
+			<t id="s1_5" word="bonitinho" lemma="bonitinho" pos="adj" morph="M S" extra="DERS"/>
+			<t id="s1_6" word="o_que" lemma="o_que" pos="spec" morph="M S" extra="clb rel"/>
+			<t id="s1_7" word="não" lemma="não" pos="adv" morph="--" extra="--"/>
+			<t id="s1_8" word="gostei" lemma="gostar" pos="v-fin" morph="PS 1S IND VFIN" extra="vH mv"/>
+			<t id="s1_9" word="menu" lemma="menu" pos="n" morph="M S" extra="newlex"/>
+			<t id="s1_10" word="difícil" lemma="difícil" pos="adj" morph="M S" extra="nh np-close"/>
+			<t id="s1_11" word="botões" lemma="botão" pos="n" morph="M P" sem="anbo cc-handle" extra="--"/>
+			<t id="s1_12" word="de" lemma="de" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_13" word="manuseio" lemma="manuseio" pos="n" morph="M S" sem="act-d" extra="--"/>
+			<t id="s1_14" word="complicado" lemma="complicado" pos="adj" morph="M S" extra="nh np-close"/>
+			<t id="s1_15" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="UTT" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="x">
+				<edge label="UTT" idref="s1_1"/>
+				<edge label="S" idref="s1_2"/>
+				<edge label="DN" idref="s1_502"/>
+				<edge label="S" idref="s1_3"/>
+				<edge label="P" idref="s1_4"/>
+				<edge label="fCs" idref="s1_5"/>
+				<edge label="STA" idref="s1_503"/>
+				<edge label="X" idref="s1_6"/>
+				<edge label="fA" idref="s1_7"/>
+				<edge label="P" idref="s1_8"/>
+				<edge label="S" idref="s1_504"/>
+				<edge label="fCs" idref="s1_505"/>
+				<edge label="H" idref="s1_11"/>
+				<edge label="DN" idref="s1_506"/>
+				<edge label="PU" idref="s1_15"/>
+			</nt>
+			<nt id="s1_502" cat="fcl">
+			</nt>
+			<nt id="s1_503" cat="fcl">
+			</nt>
+			<nt id="s1_504" cat="np">
+				<edge label="H" idref="s1_9"/>
+				<edge label="DN" idref="s1_10"/>
+			</nt>
+			<nt id="s1_505" cat="np">
+			</nt>
+			<nt id="s1_506" cat="pp">
+				<edge label="H" idref="s1_12"/>
+				<edge label="DP" idref="s1_507"/>
+			</nt>
+			<nt id="s1_507" cat="np">
+				<edge label="H" idref="s1_13"/>
+				<edge label="DN" idref="s1_14"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

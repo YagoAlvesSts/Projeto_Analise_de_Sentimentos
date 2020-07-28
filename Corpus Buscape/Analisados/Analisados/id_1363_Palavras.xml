@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="excelente som muito claro para conversar com outro celular mesmo em lugares fechados..">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="excelente" lemma="excelente" pos="adj" morph="M S" extra="--"/>
+			<t id="s1_2" word="som" lemma="som" pos="n" morph="M S" sem="percep-l" extra="--"/>
+			<t id="s1_3" word="muito" lemma="muito" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_4" word="claro" lemma="claro" pos="adj" morph="M S" extra="nh np-close"/>
+			<t id="s1_5" word="para" lemma="para" pos="prp" morph="--" extra="--"/>
+			<t id="s1_6" word="conversar" lemma="conversar" pos="v-inf" morph="--" extra="vH mv"/>
+			<t id="s1_7" word="com" lemma="com" pos="prp" morph="--" extra="--"/>
+			<t id="s1_8" word="outro" lemma="outro" pos="pron-indef" morph="DET M S" extra="diff KOMP"/>
+			<t id="s1_9" word="celular" lemma="celular" pos="adj" morph="M S" extra="n nh"/>
+			<t id="s1_10" word="mesmo" lemma="mesmo" pos="adv" morph="--" extra="quant"/>
+			<t id="s1_11" word="em" lemma="em" pos="prp" morph="--" extra="np-close"/>
+			<t id="s1_12" word="lugares" lemma="lugar" pos="n" morph="M P" sem="L Labs" extra="--"/>
+			<t id="s1_13" word="fechados" lemma="fechado" pos="adj" morph="M P" extra="jh np-close"/>
+			<t id="s1_14" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s1_15" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="X" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="np">
+				<edge label="DN" idref="s1_1"/>
+				<edge label="H" idref="s1_2"/>
+				<edge label="DN" idref="s1_502"/>
+				<edge label="fA" idref="s1_503"/>
+				<edge label="DNc" idref="s1_507"/>
+				<edge label="PU" idref="s1_14"/>
+				<edge label="PU" idref="s1_15"/>
+			</nt>
+			<nt id="s1_502" cat="adjp">
+				<edge label="DA" idref="s1_3"/>
+				<edge label="H" idref="s1_4"/>
+			</nt>
+			<nt id="s1_503" cat="pp">
+				<edge label="H" idref="s1_5"/>
+				<edge label="DP" idref="s1_504"/>
+			</nt>
+			<nt id="s1_504" cat="icl">
+				<edge label="P" idref="s1_6"/>
+				<edge label="Op" idref="s1_505"/>
+			</nt>
+			<nt id="s1_505" cat="pp">
+				<edge label="H" idref="s1_7"/>
+				<edge label="DP" idref="s1_506"/>
+			</nt>
+			<nt id="s1_506" cat="np">
+				<edge label="DN" idref="s1_8"/>
+				<edge label="H" idref="s1_9"/>
+			</nt>
+			<nt id="s1_507" cat="pp">
+				<edge label="DPmod" idref="s1_10"/>
+				<edge label="H" idref="s1_11"/>
+				<edge label="DP" idref="s1_508"/>
+			</nt>
+			<nt id="s1_508" cat="np">
+				<edge label="H" idref="s1_12"/>
+				<edge label="DN" idref="s1_13"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>

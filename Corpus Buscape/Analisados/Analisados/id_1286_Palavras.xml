@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+
+	<body>
+<s id="s1" ref="1" source="Running text" forest="1" text="perfeito.">
+	<graph root="s1_500">
+		<terminals>
+			<t id="s1_1" word="perfeito" lemma="perfeito" pos="adj" morph="M S" extra="jh"/>
+			<t id="s1_2" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s1_500" cat="s">
+				<edge label="UTT" idref="s1_501"/>
+			</nt>
+			<nt id="s1_501" cat="x">
+				<edge label="X" idref="s1_1"/>
+				<edge label="PU" idref="s1_2"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s2" ref="2" source="Running text" forest="1" text="ótima camera de number.">
+	<graph root="s2_500">
+		<terminals>
+			<t id="s2_1" word="ótima" lemma="bom" pos="adj" morph="F S" extra="SUP jh"/>
+			<t id="s2_2" word="camera" lemma="c�=mara" pos="n" morph="F S" sem="Lh HH" extra="--"/>
+			<t id="s2_3" word="de" lemma="de" pos="prp" morph="--" extra="np-close"/>
+			<t id="s2_4" word="number" lemma="number" pos="n" morph="M S" extra="heur"/>
+			<t id="s2_5" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s2_500" cat="s">
+				<edge label="X" idref="s2_501"/>
+			</nt>
+			<nt id="s2_501" cat="np">
+				<edge label="DN" idref="s2_1"/>
+				<edge label="H" idref="s2_2"/>
+				<edge label="DN" idref="s2_502"/>
+				<edge label="PU" idref="s2_5"/>
+			</nt>
+			<nt id="s2_502" cat="pp">
+				<edge label="H" idref="s2_3"/>
+				<edge label="DP" idref="s2_4"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+<s id="s3" ref="3" source="Running text" forest="1" text="7m p, windows phone, lindo design recomendo..">
+	<graph root="s3_500">
+		<terminals>
+			<t id="s3_1" word="7m" lemma="7m" pos="num" morph="M/F P" extra="card"/>
+			<t id="s3_2" word="p" lemma="p" pos="n" morph="M/F S" extra="foreign"/>
+			<t id="s3_3" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s3_4" word="windows" lemma="window" pos="n" morph="M P" extra="heur foreign"/>
+			<t id="s3_5" word="phone" lemma="phoner" pos="v-fin" morph="PR 3S IND VFIN" extra="cjt-head cjt-head-STA heur fmc mv"/>
+			<t id="s3_6" word="," lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s3_7" word="lindo" lemma="lindo" pos="adj" morph="M S" extra="jh"/>
+			<t id="s3_8" word="design" lemma="design" pos="n" morph="M S" sem="percep-f domain" extra="--"/>
+			<t id="s3_9" word="recomendo" lemma="recomendar" pos="v-fin" morph="PR 1S IND VFIN" extra="nosubj nosubj cjt-STA vH fmc mv"/>
+			<t id="s3_10" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+			<t id="s3_11" word="." lemma="--" pos="pu" morph="--" extra="--"/>
+		</terminals>
+
+		<nonterminals>
+			<nt id="s3_500" cat="s">
+				<edge label="STA" idref="s3_501"/>
+			</nt>
+			<nt id="s3_501" cat="par">
+				<edge label="CJT" idref="s3_502"/>
+				<edge label="PU" idref="s3_6"/>
+				<edge label="CJT" idref="s3_504"/>
+				<edge label="PU" idref="s3_10"/>
+				<edge label="PU" idref="s3_11"/>
+			</nt>
+			<nt id="s3_502" cat="fcl">
+				<edge label="fAtop" idref="s3_503"/>
+				<edge label="PU" idref="s3_3"/>
+				<edge label="S" idref="s3_4"/>
+				<edge label="P" idref="s3_5"/>
+			</nt>
+			<nt id="s3_503" cat="np">
+				<edge label="DN" idref="s3_1"/>
+				<edge label="H" idref="s3_2"/>
+			</nt>
+			<nt id="s3_504" cat="x">
+				<edge label="fCs" idref="s3_505"/>
+				<edge label="P" idref="s3_9"/>
+			</nt>
+			<nt id="s3_505" cat="np">
+				<edge label="DN" idref="s3_7"/>
+				<edge label="H" idref="s3_8"/>
+			</nt>
+		</nonterminals>
+	</graph>
+</s>
+
+	</body>
+</corpus>
