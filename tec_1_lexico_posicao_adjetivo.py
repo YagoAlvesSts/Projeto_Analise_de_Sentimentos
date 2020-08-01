@@ -358,6 +358,47 @@ def TreeTagger(texto): #Função para passar o texto e vai retornar a palavra o 
         
     return pos_tag
 
+def palavras(save="False"):
+    count = 0
+    analisados = []
+    
+    while count <= 1682:
+        '''tive que pegar os arquivos desse jeito pq tem muitos arquivos dai na hora que ele abre ele pula do 0 para o 10000 mas pode abrir do jeito mais chic'''
+        endereco = "Corpus Buscape/Analisados/Analisados/id_" + str(count) + "_Palavras.xml" 
+        print(endereco)
+        pos_tags = []
+        
+        with open(endereco, "r", errors='ignore') as file: #não usei encoding utf8 pq alguns da erro corrigi os caracteres com o fix_encoding
+            text = file.readlines()
+            for line in text:
+                if "<t id=" in line:
+                    pos_tag = []
+                    aux = line.split('<t id=')[1]
+                    ident = line.split('<t id="')[1].split('" word=')[0]
+                    word = line.split('word="')[1].split('" lemma=')[0]
+                    word = fix_encoding(word)
+                    lemma = line.split('lemma="')[1].split('" pos=')[0]
+                    lemma = fix_encoding(lemma)
+                    pos = line.split('pos="')[1].split('" morph=')[0]
+
+                    pos_tag.append(ident)
+                    pos_tag.append(word)
+                    pos_tag.append(lemma)
+                    pos_tag.append(pos)
+                    
+                    pos_tags.append(pos_tag)
+        print(pos_tags)
+
+        analisados.append(pos_tags)
+        count += 1                  
+        
+    print(analisados)
+    if save:
+        with open(os.path.join("Corpus Buscape/Analisados/salvando_teste","analisados_processados.p"), "wb") as f:
+            pickle.dump(analisados, f)
+
+    return analisados
+
 
 def most_commom(lst):
     data = Counter(lst)
@@ -378,10 +419,13 @@ def pre_processamento(text):
 
     return text
 
+#VARIAVEIS GLOBAIS PARA AVALIAÇÃO
 cobertura = 0
 precisao = 0
 mediaf = 0
 acuracia = 0
+#################################
+
 def avaliacao(TP, TN, FP, FN, acertos):
     if TP == 0:
         print("********** ACURACIA **********\n")
@@ -842,6 +886,7 @@ def tec_posicao_adjetivo_spacy(all_reviews):
         #print("\nFRASE COM POLARIDADE PÓS TÉCNICA:\n",frase_polarity)
          
         polaridade_rev = 0
+        
         #soma polaridades do review após aplicar técnica
         for item,pol in frase_polarity:
             valor = int(pol)
@@ -1142,6 +1187,253 @@ def tec_posicao_adjetivo_TreeTagger(all_reviews):
     #print("\n\n\n\n\nacuracia:\t",acuracia,"%")
     avaliacao(TP, TN, FP, FN, acertos)
     
+
+def tec_posicao_adjetivo_Palavras(all_reviews):
+    all_tokenized_reviews = []
+    #palavras de negação para utilizar em técnica
+    negacao = ['jamais','nada','nem','nenhum','ninguem','nunca','nao','tampouco', 'mal'] #mal
+    
+    
+    with open(os.path.join("Processed_Reviews_polarity.p"), "rb") as file:  #Processed_Reviews_polarity
+        polarity_reviews = pickle.load(file)
+    result_review = []
+    
+    #faz chamada da biblioteca spacy e atribui a uma variável
+    tratados = []
+
+    
+    
+    sent_words = Sentilex()
+    cont = 0
+    
+    
+    #verifica cada review
+    for i,review in enumerate(all_reviews):
+        print("REVIEW: \n",review)
+        lista=[]
+        for token in review:
+            
+            palavra = pre_processing_text(token[1])
+            lista.append(palavra)
+
+            
+        #REALIZAR AVALIAÇÃO COM SENTWORDNET-PT-BR
+        frase_polarity = lexico_sentimento_SentWordNetPT(lista)
+                           
+        #REALIZAR AVALIAÇÃO COM SENTILEX
+        #frase_polarity = lexico_sentimento_SentiLex(lista)
+
+        #REALIZAR AVALIAÇÃO COM LIWC
+        #frase_polarity = lexico_sentimento_LIWC(lista)
+
+        #REALIZAR AVALIAÇÃO COM OpLexicon
+        #frase_polarity = lexico_sentimento_OpLexicon(lista)
+
+        #REALIZAR AVALIAÇÃO COM LÉXICOS CONCATENADOS
+        #frase_polarity = concatenar('LIWC', 'OpLexicon', 'SentiLex', lista)
+
+        
+        
+        #print(lista)
+        print("\n")
+        print("REVIEW COM POLARIDADE: \n",frase_polarity)
+        #print("\n")
+        wd =[]
+        
+        for tok in review:
+            palavr = pre_processing_text(tok[1])
+            termo = [palavr,tok[3]]
+            wd.append(termo)
+        
+            
+        print("REVIEW COM POS TAG: \n",wd)
+        print("\n")
+
+        
+        
+        #pega cada palavra do review
+        for j,termo in enumerate(wd):
+            apont = j
+                
+            anterior=wd[j-1]
+                
+            #print("ANTERIOR: ",anterior)
+            #print("PALAVRA \t",j,termo)
+            
+            #busca termos que são substantivos
+            if (termo[1] == 'n'):
+                #print("ANTERIOR: ",anterior)
+                #print("PALAVRA \t",termo)
+                #print("\n****** ENTROU \t 1 ******\n", termo)
+                x=j+2
+                    
+                posterior = wd[j+1:x] #fatia a lista para pegar termo posterior
+                #print("POSTERIOR", posterior)
+                #print("Verificou substantivo\n")
+                        
+                for wrd,ps in posterior:
+                    post = wrd
+                        
+                #print("verificando se: ",anterior[0]," é negação")
+
+                #busca se termo anterior é palavra de negação    
+                if anterior[0] in negacao:
+                    #print("\n****** ENTROU \t 2 ******\n", anterior)
+                    #print("verificou negação")
+                    palavra = termo[0]
+                    #busca palavra na lista que contém polaridade
+                    for l,item in enumerate(frase_polarity):
+                        ap = l
+                        y = l+2
+                                
+                        poeio=frase_polarity[l+1:y]
+                                
+                        for w,p in poeio:
+                            pt = w
+                        #print(palavra,item[0])
+                        #se palavra de negação existe, atribui polaridade negativa
+                        if palavra == item[0] and post == pt:
+                            item[1] = '-1'
+
+                                                                                                                                                                  
+                if(anterior[1]=='adj') : #verifica se termo anterior é adjetivo
+                    ant = anterior[0]
+                    #print("\n****** ENTROU \t 3 ******\n", anterior)
+                    #print("Entrou Adjetivo antes\n")
+                    #print(ant)
+                    #print(anterior[1])
+                    palavra = termo[0]
+                        
+                        
+                    #busca palavra na lista que contém polaridade    
+                    for k,item in enumerate(frase_polarity):
+                        #print("\n****** ENTROU \t 4 ******\n", item)
+                        ap = k
+                            
+                        z = k+2
+                            
+                        poeio=frase_polarity[k+1:z]
+                            
+                        for w,p in poeio:
+                            pt = w
+
+                        #pega polaridade do adjetivo        
+                        if ant == item[0]:
+                            polaridade_adj = item[1]
+                            #print("\n****** ENTROU \t 5 ******\n", item)
+
+                        #atribui polaridade do adjetivo ao substantivo          
+                        if palavra == item[0]:
+                            item[1] = polaridade_adj
+                            #print("\n****** ENTROU \t 6 ******\n", item)
+                                          
+            
+                for wrd,ps in posterior:
+                    #verifica se termo posterior é adjetivo
+                    if(ps == 'adj' ):
+                        #print("Entrou adjetivo depois",)                        
+                        palavra = termo[0]
+                        ant = anterior[0]
+
+                        #busca palavra na lista que contém polaridade    
+                        for k,item in enumerate(frase_polarity):
+                            ap = k
+                                
+                            z = k+2
+
+                            antes, tg = frase_polarity[k-1]
+
+                            post_polar = frase_polarity[k+1:z]
+                                
+                            for a,b in post_polar:
+                                polaridade_adj_pos = b
+                                    
+                                    
+                            #print("VERIFICANDO DENTRO DA LISTA COM POLARIDADE")
+                                #pega polaridade do adjetivo
+                                if wrd == item[0]:
+                                    polaridade_adj_pos = item[1]
+                                    #print("entrou e recolheu polaridade1")
+                                #atribui polaridade do adjetivo ao substantivo
+                                for g,item in enumerate(frase_polarity):    
+                                    if palavra == item[0]:
+                                        item[1] = polaridade_adj_pos
+                                        #print("entrou e atribuiu polaridade")
+                        
+                           
+              
+        print("\nFRASE COM POLARIDADE PÓS TÉCNICA:\n",frase_polarity)
+         
+        polaridade_rev = 0
+        #soma polaridades do review após aplicar técnica
+        for item,pol in frase_polarity:
+            valor = int(pol)
+            polaridade_rev = polaridade_rev + valor
+        
+        print("\n",polaridade_rev,"\n")
+        #busca se resultado da soma torna review positivo
+        if polaridade_rev >= 1:
+            polaridade_rev = 1
+            cont +=1
+            result_review.append(1)
+
+        #busca se resultado da soma torna review negativo    
+        if polaridade_rev <= -1:
+            polaridade_rev = -1
+            cont +=1
+            result_review.append(-1)
+
+        #busca se resultado da soma torna review neutro    
+        if polaridade_rev == 0:
+            polaridade_rev = 0
+            cont +=1
+            result_review.append(0)
+
+        print("REVIEW Nº:\t",cont)
+        
+        
+    #print("\n",polaridade_rev,"\n")        
+    acertos = 0
+    TP = 0
+    TN = 0
+    FP = 0
+    FN = 0
+    zeros = 0
+    #busca reviews com polaridade atribuido (de 0 a 5) e compara com resultado da técnica
+    for i,polarity in enumerate(polarity_reviews):
+        #print(polarity)
+        print("\n")
+        if int(polarity[1]) == result_review[i] and result_review[i] == 1.0:
+            TP += 1
+
+        if int(polarity[1]) == result_review[i] and result_review[i] == -1.0:
+            TN += 1
+
+        if int(polarity[1]) != result_review[i] and result_review[i] == 1.0:
+            FP += 1
+
+        if int(polarity[1]) != result_review[i] and result_review[i] == -1.0:
+            FN += 1
+   
+        if int(polarity[1]) == result_review[i]:
+            acertos += 1 #conta acertos
+            
+        if int(polarity[1]) == 0 or  result_review[i] == 0.0:
+            
+            zeros += 1 #conta reviews que deram 0   
+        else:
+            print("")
+    
+    print("TP: ",TP,"\tTN: ",TN,"\tFP: ",FP,"\tFN: ",FN)            
+    print("TOTAL REVIEWS AVALIADOS:\t",cont)
+    print("total de reviews com polaridade:\t",len(all_reviews))
+    print("ACERTOS:\t",acertos)
+    #realiza acurácia
+    #acuracia = acertos/(len(all_reviews))*100
+    #print("\n\n\n\n\nacuracia:\t",acuracia,"%")
+    avaliacao(TP, TN, FP, FN, acertos)
+
+
     
 
 all_reviews = []
@@ -1157,9 +1449,10 @@ for dirpath, _, files in os.walk("./Corpus Buscape/treinamento/lexico"):
         pickle.dump(all_reviews, f) #Processed_Reviews 
 """
 
-with open(os.path.join("USO_GERAL.p"), "rb") as file: #->Processed_Reviews
+with open(os.path.join("Corpus Buscape/Analisados/salvando_teste/analisados_processados.p"), "rb") as file: #->Processed_Reviews
         all_reviews = pickle.load(file)
-
-tec_posicao_adjetivo_spacy(all_reviews)
+        
+#print(all_reviews)
+tec_posicao_adjetivo_Palavras(all_reviews)
 
 

@@ -42,11 +42,8 @@ import spacy
 from spacy import tokens
 
 
+with open(os.path.join("Corpus Buscape/Analisados/salvando_teste/USO_GERAL_analisados_processados.p"), "rb") as file:  #Processed_Reviews_polarity
+    polarity_reviews = pickle.load(file)
+    
 
-with open(os.path.join("léxico/","SentWordNet_PTBR200.p"), "rb") as f:
-    sent_words = pickle.load(f)
-with open(os.path.join("léxico/","SentWordNet_PTBR_polarity200.p"), "rb") as f:
-    sent_words_polarity = pickle.load(f)
-
-print("sent_words: \n",sent_words)
-print("sent_words_polarity: \n",sent_words_polarity)
+print("sent_words: \n",polarity_reviews)

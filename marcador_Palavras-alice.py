@@ -3,13 +3,13 @@ import pickle
 from ftfy import fix_encoding
 
 
-def palavras(save="False"):
+def palavras(save="True"):
     count = 0
     analisados = []
     
-    while count <= 1682:
+    while count <= 5:
         '''tive que pegar os arquivos desse jeito pq tem muitos arquivos dai na hora que ele abre ele pula do 0 para o 10000 mas pode abrir do jeito mais chic'''
-        endereco = "Corpus Buscape/Analisados/Analisados/id_" + str(count) + "_Palavras.xml" 
+        endereco = "Corpus Buscape/Analisados/teste/id_" + str(count) + "_Palavras.xml" 
         print(endereco)
         pos_tags = []
         
@@ -39,12 +39,12 @@ def palavras(save="False"):
         
     print(analisados)
     if save:
-        with open(os.path.join("Corpus Buscape/Analisados/salvando_teste","analisados.p"), "wb") as f:
+        with open(os.path.join("Corpus Buscape/Analisados/salvando_teste","USO_GERAL_analisados_processados.p"), "wb") as f:
             pickle.dump(analisados, f)
 
     return analisados
 
-palavras(save="False")    
+palavras(save="True")    
     
 
             
