@@ -101,11 +101,16 @@ def aspecto_substantivo_TreeTagger(save = "False"):
     #print(aspects[:200])
     print("PRONTIN !!!")
     if save:
+
+        
         with open(os.path.join("Aspectos","noun_aspects_TreeTagger.p"), "wb") as f:
             pickle.dump(aspects, f)
         arquivo = open('Aspectos/noun_aspects_TreeTagger.txt','w')
         arquivo.write(' '.join(aspects))
         arquivo.close()
+        f = open('Aspectos/all_noun_aspects_TreeTagger.txt','w')
+        f.write(' '.join(aspects))
+        f.close()
 
 
 
