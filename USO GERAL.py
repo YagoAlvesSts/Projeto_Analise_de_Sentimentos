@@ -41,9 +41,7 @@ from pathlib import Path
 import spacy
 from spacy import tokens
 
+palavra = 'maravilhoso'
 
-with open(os.path.join("Corpus Buscape/Analisados/salvando_teste/USO_GERAL_analisados_processados.p"), "rb") as file:  #Processed_Reviews_polarity
-    polarity_reviews = pickle.load(file)
-    
-
-print("sent_words: \n",polarity_reviews)
+with open(os.path.join("Aspectos","teste_embedding.p"), "wb") as f:
+    pickle.dump(palavra, f)

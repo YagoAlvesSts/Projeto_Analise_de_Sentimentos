@@ -1457,9 +1457,7 @@ def tec_aspecto_palavra_TreeTagger(all_reviews):
     all_tokenized_reviews = []
     #palavras de negação para utilizar em técnica
     negacao = ['jamais','nada','nem','nenhum','ninguem','nunca','nao','tampouco', 'mal'] #mal
-
-    with open(os.path.join("Aspectos/ontol_embedding_aspects_treetagger.p"), "rb") as file: #-.Processed_Reviews_polarity
-        aspectos = pickle.load(file)
+    
 
     with open(os.path.join("Processed_Reviews_polarity.p"), "rb") as file: #-.Processed_Reviews_polarity
         polarity_reviews = pickle.load(file)
@@ -1521,7 +1519,7 @@ def tec_aspecto_palavra_TreeTagger(all_reviews):
             
             #busca termos que são substantivos
             
-            if token[1] in aspectos:
+            if (token[1] == 'NCMS') or (token[1] == 'NCFS') or (token[1] == 'NCFP') or (token[1] == 'NCCP') or (token[1] == 'NCCS') or (token[1] == 'NCCI'):
                 x=i+2
                 posterior = words[i+1:x] #fatia a lista para pegar termo posterior
                 #print("Verificou substantivo\n")
@@ -2121,7 +2119,7 @@ def tec_aspecto_palavra_Palavras(all_reviews):
     
     #verifica cada review
     for i,review in enumerate(all_reviews):
-        print("REVIEW: \n",review)
+        #print("REVIEW: \n",review)
         
         lista=[]
         for token in review:
@@ -2134,10 +2132,10 @@ def tec_aspecto_palavra_Palavras(all_reviews):
                     
                     
         #REALIZAR AVALIAÇÃO COM SENTILEX
-        frase_polarity = lexico_sentimento_SentiLex(lista)
+        #frase_polarity = lexico_sentimento_SentiLex(lista)
 
         #REALIZAR AVALIAÇÃO COM LIWC
-        #frase_polarity = lexico_sentimento_LIWC(lista)
+        frase_polarity = lexico_sentimento_LIWC(lista)
 
         #REALIZAR AVALIAÇÃO COM OpLexicon
         #frase_polarity = lexico_sentimento_OpLexicon(lista)
@@ -2146,9 +2144,9 @@ def tec_aspecto_palavra_Palavras(all_reviews):
         #frase_polarity = concatenar('LIWC', 'OpLexicon', 'SentiLex', lista)
         
         #print(frase_polarity)
-        print("\n")
-        print("REVIEW COM POLARIDADE: \n",frase_polarity)
-        print("\n")
+        #print("\n")
+        #print("REVIEW COM POLARIDADE: \n",frase_polarity)
+        #print("\n")
         
         frase_polarity2 = frase_polarity
         
@@ -2162,7 +2160,7 @@ def tec_aspecto_palavra_Palavras(all_reviews):
             wd.append(termo)
 
         #print(wd)
-        print("\n")
+        #print("\n")
         existe = False
         #pega cada palavra do review
         for i,termo in enumerate(wd):
@@ -2386,10 +2384,10 @@ for dirpath, _, files in os.walk("./Corpus Buscape/treinamento/lexico"):
         pickle.dump(all_reviews, f) Processed_Reviews 
 """
 
-with open(os.path.join("Processed_Reviews.p"), "rb") as file: #->Processed_Reviews Corpus Buscape/Analisados/salvando_teste/analisados_processados
+with open(os.path.join("Corpus Buscape/Analisados/salvando_teste/analisados_processados.p"), "rb") as file: #->Processed_Reviews
         all_reviews = pickle.load(file)
 
-tec_aspecto_palavra_TreeTagger(all_reviews)
+tec_aspecto_palavra_Palavras(all_reviews)
 #tec_aspecto_palavra_spacy
 
 

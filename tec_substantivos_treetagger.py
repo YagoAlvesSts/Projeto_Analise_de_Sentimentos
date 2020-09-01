@@ -5,6 +5,9 @@ import subprocess
 from collections import Counter
 
 def most_commom(lst):
+    #length = len(lst)
+
+    #porc = ((length * 3)/100)
     data = Counter(lst)
     return(data.most_common())
 

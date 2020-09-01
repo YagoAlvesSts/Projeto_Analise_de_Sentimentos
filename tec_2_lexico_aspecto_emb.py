@@ -1458,7 +1458,7 @@ def tec_aspecto_palavra_TreeTagger(all_reviews):
     #palavras de negação para utilizar em técnica
     negacao = ['jamais','nada','nem','nenhum','ninguem','nunca','nao','tampouco', 'mal'] #mal
 
-    with open(os.path.join("Aspectos/noun_aspects_TreeTagger.p"), "rb") as file: #-.Processed_Reviews_polarity
+    with open(os.path.join("Aspectos/ontol_embedding_aspects_treetagger.p"), "rb") as file: #-.Processed_Reviews_polarity
         aspectos = pickle.load(file)
 
     with open(os.path.join("Processed_Reviews_polarity.p"), "rb") as file: #-.Processed_Reviews_polarity

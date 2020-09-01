@@ -23,20 +23,20 @@ def create_aspects_lexicon_embeddings( seeds_type, number_synonym=3,save=True):
     """
     #lê aspectos extraídos de ontologias
     file = open(os.path.join("Aspectos","noun_aspects_TreeTagger.p"), "rb")
-    s1 = pickle.load(file)
-    file2 = open(os.path.join("Aspectos","noun_aspects_TreeTagger.p"), "rb")
-    s2 = pickle.load(file2)
+    seeds = pickle.load(file)
+    #file2 = open(os.path.join("Aspectos","noun_aspects_TreeTagger.p"), "rb")
+    #s2 = pickle.load(file2)
 
-    print(s1)
-    print(s2)
-    seeds = s1+s2 #concatena implícitos e explícitos
+    #print(s1)
+    #print(s2)
+    #seeds = s1+s2 #concatena implícitos e explícitos
 
     print(seeds)
     
     
     #busca cada palavra do review
     for word in seeds:
-        
+        #print(word)
         aspects_list.append(word)#atribui palavra a lista de aspectos
         if word in model.wv.vocab: #busca palavra em vocabulário de treinamento
             #busca 3 palavras mais próximas de palavra semente

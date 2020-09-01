@@ -1209,7 +1209,7 @@ def tec_posicao_adjetivo_Palavras(all_reviews):
     
     #verifica cada review
     for i,review in enumerate(all_reviews):
-        print("REVIEW: \n",review)
+        #print("REVIEW: \n",review)
         lista=[]
         for token in review:
             
@@ -1218,10 +1218,10 @@ def tec_posicao_adjetivo_Palavras(all_reviews):
 
             
         #REALIZAR AVALIAÇÃO COM SENTWORDNET-PT-BR
-        frase_polarity = lexico_sentimento_SentWordNetPT(lista)
+        #frase_polarity = lexico_sentimento_SentWordNetPT(lista)
                            
         #REALIZAR AVALIAÇÃO COM SENTILEX
-        #frase_polarity = lexico_sentimento_SentiLex(lista)
+        frase_polarity = lexico_sentimento_SentiLex(lista)
 
         #REALIZAR AVALIAÇÃO COM LIWC
         #frase_polarity = lexico_sentimento_LIWC(lista)
@@ -1235,8 +1235,8 @@ def tec_posicao_adjetivo_Palavras(all_reviews):
         
         
         #print(lista)
-        print("\n")
-        print("REVIEW COM POLARIDADE: \n",frase_polarity)
+        #print("\n")
+        #print("REVIEW COM POLARIDADE: \n",frase_polarity)
         #print("\n")
         wd =[]
         
@@ -1246,8 +1246,8 @@ def tec_posicao_adjetivo_Palavras(all_reviews):
             wd.append(termo)
         
             
-        print("REVIEW COM POS TAG: \n",wd)
-        print("\n")
+        #print("REVIEW COM POS TAG: \n",wd)
+        #print("\n")
 
         
         
@@ -1362,7 +1362,7 @@ def tec_posicao_adjetivo_Palavras(all_reviews):
                         
                            
               
-        print("\nFRASE COM POLARIDADE PÓS TÉCNICA:\n",frase_polarity)
+        #print("\nFRASE COM POLARIDADE PÓS TÉCNICA:\n",frase_polarity)
          
         polaridade_rev = 0
         #soma polaridades do review após aplicar técnica

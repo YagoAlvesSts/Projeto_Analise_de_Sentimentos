@@ -2119,7 +2119,7 @@ def tec_aspecto_palavra_Palavras(all_reviews):
     
     #verifica cada review
     for i,review in enumerate(all_reviews):
-        print("REVIEW: \n",review)
+        #print("REVIEW: \n",review)
         
         lista=[]
         for token in review:
@@ -2144,9 +2144,9 @@ def tec_aspecto_palavra_Palavras(all_reviews):
         #frase_polarity = concatenar('LIWC', 'OpLexicon', 'SentiLex', lista)
         
         #print(frase_polarity)
-        print("\n")
-        print("REVIEW COM POLARIDADE: \n",frase_polarity)
-        print("\n")
+        #print("\n")
+        #print("REVIEW COM POLARIDADE: \n",frase_polarity)
+        #print("\n")
         
         frase_polarity2 = frase_polarity
         
@@ -2160,7 +2160,7 @@ def tec_aspecto_palavra_Palavras(all_reviews):
             wd.append(termo)
 
         #print(wd)
-        print("\n")
+        #print("\n")
         existe = False
         #pega cada palavra do review
         for i,termo in enumerate(wd):
